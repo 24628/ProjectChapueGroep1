@@ -1,0 +1,4 @@
+C:\Users\merli\source\repos\chappo\Chapoo\ChapooDal\obj\Debug\netcoreapp3.1\ChapooDal.csprojAssemblyReference.cache
+C:\Users\merli\source\repos\chappo\Chapoo\ChapooDal\obj\Debug\netcoreapp3.1\ChapooDal.AssemblyInfoInputs.cache
+C:\Users\merli\source\repos\chappo\Chapoo\ChapooDal\obj\Debug\netcoreapp3.1\ChapooDal.AssemblyInfo.cs
+C:\Users\merli\source\repos\chappo\Chapoo\ChapooDal\obj\Debug\netcoreapp3.1\ChapooDal.csproj.CoreCompileInputs.cache

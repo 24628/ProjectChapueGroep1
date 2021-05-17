@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "dYFGAwE2JxKHDA7ZlPkZpTGDqpIJGuwjJIE6t752BP2NA3SZomCERt/uHoE46BRUcAGVJj3QFoqRUn7rNqI2ww==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\merli\\source\\repos\\chappo\\Chapoo\\ChapooDatabaseModel\\ChapooDatabaseModel.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\merli\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\merli\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
