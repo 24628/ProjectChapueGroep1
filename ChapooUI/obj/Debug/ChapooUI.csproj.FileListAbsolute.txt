@@ -7,3 +7,12 @@ C:\Users\merli\source\repos\chappo\Chapoo\ChapooUI\obj\Debug\ChapooUI.csproj.Gen
 C:\Users\merli\source\repos\chappo\Chapoo\ChapooUI\obj\Debug\ChapooUI.csproj.CoreCompileInputs.cache
 C:\Users\merli\source\repos\chappo\Chapoo\ChapooUI\obj\Debug\ChapooUI.exe
 C:\Users\merli\source\repos\chappo\Chapoo\ChapooUI\obj\Debug\ChapooUI.pdb
+C:\Users\merli\source\repos\ProjectChapueGroep1\ChapooUI\bin\Debug\ChapooUI.exe.config
+C:\Users\merli\source\repos\ProjectChapueGroep1\ChapooUI\bin\Debug\ChapooUI.exe
+C:\Users\merli\source\repos\ProjectChapueGroep1\ChapooUI\bin\Debug\ChapooUI.pdb
+C:\Users\merli\source\repos\ProjectChapueGroep1\ChapooUI\obj\Debug\ChapooUI.csprojAssemblyReference.cache
+C:\Users\merli\source\repos\ProjectChapueGroep1\ChapooUI\obj\Debug\ChapooUI.Properties.Resources.resources
+C:\Users\merli\source\repos\ProjectChapueGroep1\ChapooUI\obj\Debug\ChapooUI.csproj.GenerateResource.cache
+C:\Users\merli\source\repos\ProjectChapueGroep1\ChapooUI\obj\Debug\ChapooUI.csproj.CoreCompileInputs.cache
+C:\Users\merli\source\repos\ProjectChapueGroep1\ChapooUI\obj\Debug\ChapooUI.exe
+C:\Users\merli\source\repos\ProjectChapueGroep1\ChapooUI\obj\Debug\ChapooUI.pdb

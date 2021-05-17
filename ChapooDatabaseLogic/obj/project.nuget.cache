@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "YHiXq3jCxlMoK75tHK2JeSpPc4BAIhCsaMKh054A9cATtMDupotgVmdUHeiFdF3AobjIEWUAExy+P/NExVXJkw==",
+  "dgSpecHash": "dxTAIQV0ILasqXk7A1WyHcGAnu2dvUAWDrpQgCS8Ye8F8huIafwHPxYlpJmgsQq4TG+JNJ+jSpCcX+lBdWOnTA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\merli\\source\\repos\\chappo\\Chapoo\\ChapooDatabaseLogic\\ChapooDatabaseLogic.csproj",
+  "projectFilePath": "C:\\Users\\merli\\source\\repos\\ProjectChapueGroep1\\ChapooDatabaseLogic\\ChapooDatabaseLogic.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\merli\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\merli\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"

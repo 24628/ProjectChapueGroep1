@@ -5,11 +5,11 @@ VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChapooUI", "ChapooUI\ChapooUI.csproj", "{1F2B5F7F-D4BC-49A6-8C58-1B1C62511A2B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChapooProjectDal", "ChapooProjectDal\ChapooProjectDal.csproj", "{E2B9219C-1393-4CAB-8229-64D017245AE6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChapooDatabaseModel", "ChapooDatabaseModel\ChapooDatabaseModel.csproj", "{45D0844A-94D4-44B4-BBE8-45D87BF281A7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChapooDatabaseModel", "ChapooDatabaseModel\ChapooDatabaseModel.csproj", "{45D0844A-94D4-44B4-BBE8-45D87BF281A7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChapooDatabaseLogic", "ChapooDatabaseLogic\ChapooDatabaseLogic.csproj", "{0C384418-FFDD-4D5B-8035-AE249259ECEA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChapooDatabaseLogic", "ChapooDatabaseLogic\ChapooDatabaseLogic.csproj", "{0C384418-FFDD-4D5B-8035-AE249259ECEA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChapooDatabaseDal", "ChapooDatabaseDal\ChapooDatabaseDal.csproj", "{BFC8D9BE-6689-49FC-AFF6-7C3082A14633}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,10 +21,6 @@ Global
 		{1F2B5F7F-D4BC-49A6-8C58-1B1C62511A2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1F2B5F7F-D4BC-49A6-8C58-1B1C62511A2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1F2B5F7F-D4BC-49A6-8C58-1B1C62511A2B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E2B9219C-1393-4CAB-8229-64D017245AE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E2B9219C-1393-4CAB-8229-64D017245AE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E2B9219C-1393-4CAB-8229-64D017245AE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E2B9219C-1393-4CAB-8229-64D017245AE6}.Release|Any CPU.Build.0 = Release|Any CPU
 		{45D0844A-94D4-44B4-BBE8-45D87BF281A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{45D0844A-94D4-44B4-BBE8-45D87BF281A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{45D0844A-94D4-44B4-BBE8-45D87BF281A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -33,6 +29,10 @@ Global
 		{0C384418-FFDD-4D5B-8035-AE249259ECEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0C384418-FFDD-4D5B-8035-AE249259ECEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0C384418-FFDD-4D5B-8035-AE249259ECEA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFC8D9BE-6689-49FC-AFF6-7C3082A14633}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFC8D9BE-6689-49FC-AFF6-7C3082A14633}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFC8D9BE-6689-49FC-AFF6-7C3082A14633}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFC8D9BE-6689-49FC-AFF6-7C3082A14633}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

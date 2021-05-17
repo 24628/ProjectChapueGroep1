@@ -219,11 +219,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\merli\\source\\repos\\chappo\\Chapoo\\ChapooDatabaseLogic\\ChapooDatabaseLogic.csproj",
+      "projectUniqueName": "C:\\Users\\merli\\source\\repos\\ProjectChapueGroep1\\ChapooDatabaseLogic\\ChapooDatabaseLogic.csproj",
       "projectName": "ChapooDatabaseLogic",
-      "projectPath": "C:\\Users\\merli\\source\\repos\\chappo\\Chapoo\\ChapooDatabaseLogic\\ChapooDatabaseLogic.csproj",
+      "projectPath": "C:\\Users\\merli\\source\\repos\\ProjectChapueGroep1\\ChapooDatabaseLogic\\ChapooDatabaseLogic.csproj",
       "packagesPath": "C:\\Users\\merli\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\merli\\source\\repos\\chappo\\Chapoo\\ChapooDatabaseLogic\\obj\\",
+      "outputPath": "C:\\Users\\merli\\source\\repos\\ProjectChapueGroep1\\ChapooDatabaseLogic\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\merli\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -240,11 +240,11 @@
         "netstandard2.0": {
           "targetAlias": "netstandard2.0",
           "projectReferences": {
-            "C:\\Users\\merli\\source\\repos\\chappo\\Chapoo\\ChapooDatabaseModel\\ChapooDatabaseModel.csproj": {
-              "projectPath": "C:\\Users\\merli\\source\\repos\\chappo\\Chapoo\\ChapooDatabaseModel\\ChapooDatabaseModel.csproj"
+            "C:\\Users\\merli\\source\\repos\\ProjectChapueGroep1\\ChapooDatabaseModel\\ChapooDatabaseModel.csproj": {
+              "projectPath": "C:\\Users\\merli\\source\\repos\\ProjectChapueGroep1\\ChapooDatabaseModel\\ChapooDatabaseModel.csproj"
             },
-            "C:\\Users\\merli\\source\\repos\\chappo\\Chapoo\\ChapooUI\\ChapooUI.csproj": {
-              "projectPath": "C:\\Users\\merli\\source\\repos\\chappo\\Chapoo\\ChapooUI\\ChapooUI.csproj"
+            "C:\\Users\\merli\\source\\repos\\ProjectChapueGroep1\\ChapooUI\\ChapooUI.csproj": {
+              "projectPath": "C:\\Users\\merli\\source\\repos\\ProjectChapueGroep1\\ChapooUI\\ChapooUI.csproj"
             }
           }
         }
