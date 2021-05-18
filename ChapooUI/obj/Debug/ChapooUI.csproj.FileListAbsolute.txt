@@ -16,3 +16,12 @@ C:\Users\merli\source\repos\ProjectChapueGroep1\ChapooUI\obj\Debug\ChapooUI.cspr
 C:\Users\merli\source\repos\ProjectChapueGroep1\ChapooUI\obj\Debug\ChapooUI.csproj.CoreCompileInputs.cache
 C:\Users\merli\source\repos\ProjectChapueGroep1\ChapooUI\obj\Debug\ChapooUI.exe
 C:\Users\merli\source\repos\ProjectChapueGroep1\ChapooUI\obj\Debug\ChapooUI.pdb
+C:\Users\merli\source\repos\ProjectChapueGroep1\ChapooUI\obj\Debug\ChapooUI.LoginForm.resources
+C:\Users\merli\source\repos\ProjectChapueGroep1\ChapooUI\bin\Debug\ChapooDatabaseDal.dll
+C:\Users\merli\source\repos\ProjectChapueGroep1\ChapooUI\bin\Debug\ChapooDatabaseLogic.dll
+C:\Users\merli\source\repos\ProjectChapueGroep1\ChapooUI\bin\Debug\ChapooDatabaseModel.dll
+C:\Users\merli\source\repos\ProjectChapueGroep1\ChapooUI\bin\Debug\ChapooDatabaseDal.pdb
+C:\Users\merli\source\repos\ProjectChapueGroep1\ChapooUI\bin\Debug\ChapooDatabaseDal.dll.config
+C:\Users\merli\source\repos\ProjectChapueGroep1\ChapooUI\bin\Debug\ChapooDatabaseLogic.pdb
+C:\Users\merli\source\repos\ProjectChapueGroep1\ChapooUI\bin\Debug\ChapooDatabaseModel.pdb
+C:\Users\merli\source\repos\ProjectChapueGroep1\ChapooUI\obj\Debug\ChapooUI.csproj.CopyComplete

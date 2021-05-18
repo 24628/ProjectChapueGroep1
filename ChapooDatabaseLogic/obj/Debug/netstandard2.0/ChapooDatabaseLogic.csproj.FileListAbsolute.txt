@@ -1,0 +1,15 @@
+C:\Users\merli\source\repos\ProjectChapueGroep1\ChapooDatabaseLogic\obj\Debug\netstandard2.0\ChapooDatabaseLogic.csprojAssemblyReference.cache
+C:\Users\merli\source\repos\ProjectChapueGroep1\ChapooDatabaseLogic\obj\Debug\netstandard2.0\ChapooDatabaseLogic.AssemblyInfoInputs.cache
+C:\Users\merli\source\repos\ProjectChapueGroep1\ChapooDatabaseLogic\obj\Debug\netstandard2.0\ChapooDatabaseLogic.AssemblyInfo.cs
+C:\Users\merli\source\repos\ProjectChapueGroep1\ChapooDatabaseLogic\obj\Debug\netstandard2.0\ChapooDatabaseLogic.csproj.CoreCompileInputs.cache
+C:\Users\merli\source\repos\ProjectChapueGroep1\ChapooDatabaseLogic\bin\Debug\netstandard2.0\ChapooDatabaseLogic.deps.json
+C:\Users\merli\source\repos\ProjectChapueGroep1\ChapooDatabaseLogic\bin\Debug\netstandard2.0\ChapooDatabaseLogic.dll
+C:\Users\merli\source\repos\ProjectChapueGroep1\ChapooDatabaseLogic\bin\Debug\netstandard2.0\ChapooDatabaseLogic.pdb
+C:\Users\merli\source\repos\ProjectChapueGroep1\ChapooDatabaseLogic\bin\Debug\netstandard2.0\ChapooDatabaseDal.dll
+C:\Users\merli\source\repos\ProjectChapueGroep1\ChapooDatabaseLogic\bin\Debug\netstandard2.0\ChapooDatabaseModel.dll
+C:\Users\merli\source\repos\ProjectChapueGroep1\ChapooDatabaseLogic\bin\Debug\netstandard2.0\ChapooDatabaseDal.pdb
+C:\Users\merli\source\repos\ProjectChapueGroep1\ChapooDatabaseLogic\bin\Debug\netstandard2.0\ChapooDatabaseDal.dll.config
+C:\Users\merli\source\repos\ProjectChapueGroep1\ChapooDatabaseLogic\bin\Debug\netstandard2.0\ChapooDatabaseModel.pdb
+C:\Users\merli\source\repos\ProjectChapueGroep1\ChapooDatabaseLogic\obj\Debug\netstandard2.0\ChapooDatabaseLogic.csproj.CopyComplete
+C:\Users\merli\source\repos\ProjectChapueGroep1\ChapooDatabaseLogic\obj\Debug\netstandard2.0\ChapooDatabaseLogic.dll
+C:\Users\merli\source\repos\ProjectChapueGroep1\ChapooDatabaseLogic\obj\Debug\netstandard2.0\ChapooDatabaseLogic.pdb

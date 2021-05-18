@@ -1,12 +1,16 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ChapooDatabaseDal\ChapooDatabaseDal.csproj" />
     <ProjectReference Include="..\ChapooDatabaseModel\ChapooDatabaseModel.csproj" />
-    <ProjectReference Include="..\ChapooUI\ChapooUI.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.2" />
   </ItemGroup>
 
 </Project>

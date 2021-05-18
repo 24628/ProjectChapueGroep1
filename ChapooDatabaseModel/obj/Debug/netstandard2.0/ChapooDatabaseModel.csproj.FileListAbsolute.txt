@@ -1,0 +1,9 @@
+C:\Users\merli\source\repos\ProjectChapueGroep1\ChapooDatabaseModel\bin\Debug\netstandard2.0\ChapooDatabaseModel.deps.json
+C:\Users\merli\source\repos\ProjectChapueGroep1\ChapooDatabaseModel\bin\Debug\netstandard2.0\ChapooDatabaseModel.dll
+C:\Users\merli\source\repos\ProjectChapueGroep1\ChapooDatabaseModel\bin\Debug\netstandard2.0\ChapooDatabaseModel.pdb
+C:\Users\merli\source\repos\ProjectChapueGroep1\ChapooDatabaseModel\obj\Debug\netstandard2.0\ChapooDatabaseModel.csprojAssemblyReference.cache
+C:\Users\merli\source\repos\ProjectChapueGroep1\ChapooDatabaseModel\obj\Debug\netstandard2.0\ChapooDatabaseModel.AssemblyInfoInputs.cache
+C:\Users\merli\source\repos\ProjectChapueGroep1\ChapooDatabaseModel\obj\Debug\netstandard2.0\ChapooDatabaseModel.AssemblyInfo.cs
+C:\Users\merli\source\repos\ProjectChapueGroep1\ChapooDatabaseModel\obj\Debug\netstandard2.0\ChapooDatabaseModel.csproj.CoreCompileInputs.cache
+C:\Users\merli\source\repos\ProjectChapueGroep1\ChapooDatabaseModel\obj\Debug\netstandard2.0\ChapooDatabaseModel.dll
+C:\Users\merli\source\repos\ProjectChapueGroep1\ChapooDatabaseModel\obj\Debug\netstandard2.0\ChapooDatabaseModel.pdb

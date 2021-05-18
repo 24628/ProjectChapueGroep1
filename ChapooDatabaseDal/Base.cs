@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data.SqlClient;
 using System.Configuration;
+using System.Collections.Specialized;
 using System.Data;
 
 namespace SomerenDAL
@@ -13,7 +14,7 @@ namespace SomerenDAL
         {
             // DO NOT FORGET TO INSERT YOUR CONNECTION STRING NAMED 'SOMEREN DATABASE' IN YOUR APP.CONFIG!!
 
-            conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ChapooDatabase"].ConnectionString);
+            conn = new SqlConnection("Data Source=den1.mssql7.gear.host;Initial Catalog=dbchapoo202101; User=dbchapoo202101; Password=Uf5APHgR!rY-");
             adapter = new SqlDataAdapter();
 
         }

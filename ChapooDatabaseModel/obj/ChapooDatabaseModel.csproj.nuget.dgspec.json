@@ -27,11 +27,7 @@
         "frameworks": {
           "netstandard2.0": {
             "targetAlias": "netstandard2.0",
-            "projectReferences": {
-              "C:\\Users\\merli\\source\\repos\\ProjectChapueGroep1\\ChapooUI\\ChapooUI.csproj": {
-                "projectPath": "C:\\Users\\merli\\source\\repos\\ProjectChapueGroep1\\ChapooUI\\ChapooUI.csproj"
-              }
-            }
+            "projectReferences": {}
           }
         },
         "warningProperties": {
@@ -63,16 +59,6 @@
           "warn": true,
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
         }
-      }
-    },
-    "C:\\Users\\merli\\source\\repos\\ProjectChapueGroep1\\ChapooUI\\ChapooUI.csproj": {
-      "restore": {
-        "projectUniqueName": "C:\\Users\\merli\\source\\repos\\ProjectChapueGroep1\\ChapooUI\\ChapooUI.csproj",
-        "projectName": "ChapooUI",
-        "projectPath": "C:\\Users\\merli\\source\\repos\\ProjectChapueGroep1\\ChapooUI\\ChapooUI.csproj"
-      },
-      "frameworks": {
-        "net472": {}
       }
     }
   }
