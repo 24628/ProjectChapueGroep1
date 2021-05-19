@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChapooUI", "ChapooUI\ChapooUI.csproj", "{1F2B5F7F-D4BC-49A6-8C58-1B1C62511A2B}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChapooDatabaseModel", "ChapooDatabaseModel\ChapooDatabaseModel.csproj", "{45D0844A-94D4-44B4-BBE8-45D87BF281A7}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChapooDatabaseLogic", "ChapooDatabaseLogic\ChapooDatabaseLogic.csproj", "{0C384418-FFDD-4D5B-8035-AE249259ECEA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChapooDatabaseDal", "ChapooDatabaseDal\ChapooDatabaseDal.csproj", "{BFC8D9BE-6689-49FC-AFF6-7C3082A14633}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChapooDatabaseDal", "ChapooDatabaseDal\ChapooDatabaseDal.csproj", "{BFC8D9BE-6689-49FC-AFF6-7C3082A14633}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChapooDatabaseUI", "ChapooDatabaseUI\ChapooDatabaseUI.csproj", "{C5CEFF08-2438-48A3-B67B-D001520B6D7B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{1F2B5F7F-D4BC-49A6-8C58-1B1C62511A2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1F2B5F7F-D4BC-49A6-8C58-1B1C62511A2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1F2B5F7F-D4BC-49A6-8C58-1B1C62511A2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1F2B5F7F-D4BC-49A6-8C58-1B1C62511A2B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{45D0844A-94D4-44B4-BBE8-45D87BF281A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{45D0844A-94D4-44B4-BBE8-45D87BF281A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{45D0844A-94D4-44B4-BBE8-45D87BF281A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -33,6 +29,10 @@ Global
 		{BFC8D9BE-6689-49FC-AFF6-7C3082A14633}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BFC8D9BE-6689-49FC-AFF6-7C3082A14633}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BFC8D9BE-6689-49FC-AFF6-7C3082A14633}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5CEFF08-2438-48A3-B67B-D001520B6D7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5CEFF08-2438-48A3-B67B-D001520B6D7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5CEFF08-2438-48A3-B67B-D001520B6D7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5CEFF08-2438-48A3-B67B-D001520B6D7B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

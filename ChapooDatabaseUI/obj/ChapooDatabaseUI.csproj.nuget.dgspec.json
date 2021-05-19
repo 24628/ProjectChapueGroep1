@@ -1,0 +1,276 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\IIwar\\source\\repos\\ProjectChapueGroep1\\ChapooDatabaseUI\\ChapooDatabaseUI.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\IIwar\\Source\\Repos\\ProjectChapueGroep1\\ChapooDatabaseDal\\ChapooDatabaseDal.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\IIwar\\Source\\Repos\\ProjectChapueGroep1\\ChapooDatabaseDal\\ChapooDatabaseDal.csproj",
+        "projectName": "ChapooDatabaseDal",
+        "projectPath": "C:\\Users\\IIwar\\Source\\Repos\\ProjectChapueGroep1\\ChapooDatabaseDal\\ChapooDatabaseDal.csproj",
+        "packagesPath": "C:\\Users\\IIwar\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\IIwar\\Source\\Repos\\ProjectChapueGroep1\\ChapooDatabaseDal\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\IIwar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "C:\\Users\\IIwar\\Source\\Repos\\ProjectChapueGroep1\\ChapooDatabaseModel\\ChapooDatabaseModel.csproj": {
+                "projectPath": "C:\\Users\\IIwar\\Source\\Repos\\ProjectChapueGroep1\\ChapooDatabaseModel\\ChapooDatabaseModel.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "dependencies": {
+            "System.Configuration.ConfigurationManager": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\IIwar\\Source\\Repos\\ProjectChapueGroep1\\ChapooDatabaseLogic\\ChapooDatabaseLogic.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\IIwar\\Source\\Repos\\ProjectChapueGroep1\\ChapooDatabaseLogic\\ChapooDatabaseLogic.csproj",
+        "projectName": "ChapooDatabaseLogic",
+        "projectPath": "C:\\Users\\IIwar\\Source\\Repos\\ProjectChapueGroep1\\ChapooDatabaseLogic\\ChapooDatabaseLogic.csproj",
+        "packagesPath": "C:\\Users\\IIwar\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\IIwar\\Source\\Repos\\ProjectChapueGroep1\\ChapooDatabaseLogic\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\IIwar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "C:\\Users\\IIwar\\Source\\Repos\\ProjectChapueGroep1\\ChapooDatabaseDal\\ChapooDatabaseDal.csproj": {
+                "projectPath": "C:\\Users\\IIwar\\Source\\Repos\\ProjectChapueGroep1\\ChapooDatabaseDal\\ChapooDatabaseDal.csproj"
+              },
+              "C:\\Users\\IIwar\\Source\\Repos\\ProjectChapueGroep1\\ChapooDatabaseModel\\ChapooDatabaseModel.csproj": {
+                "projectPath": "C:\\Users\\IIwar\\Source\\Repos\\ProjectChapueGroep1\\ChapooDatabaseModel\\ChapooDatabaseModel.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "dependencies": {
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\IIwar\\Source\\Repos\\ProjectChapueGroep1\\ChapooDatabaseModel\\ChapooDatabaseModel.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\IIwar\\Source\\Repos\\ProjectChapueGroep1\\ChapooDatabaseModel\\ChapooDatabaseModel.csproj",
+        "projectName": "ChapooDatabaseModel",
+        "projectPath": "C:\\Users\\IIwar\\Source\\Repos\\ProjectChapueGroep1\\ChapooDatabaseModel\\ChapooDatabaseModel.csproj",
+        "packagesPath": "C:\\Users\\IIwar\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\IIwar\\Source\\Repos\\ProjectChapueGroep1\\ChapooDatabaseModel\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\IIwar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\IIwar\\source\\repos\\ProjectChapueGroep1\\ChapooDatabaseUI\\ChapooDatabaseUI.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\IIwar\\source\\repos\\ProjectChapueGroep1\\ChapooDatabaseUI\\ChapooDatabaseUI.csproj",
+        "projectName": "ChapooDatabaseUI",
+        "projectPath": "C:\\Users\\IIwar\\source\\repos\\ProjectChapueGroep1\\ChapooDatabaseUI\\ChapooDatabaseUI.csproj",
+        "packagesPath": "C:\\Users\\IIwar\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\IIwar\\source\\repos\\ProjectChapueGroep1\\ChapooDatabaseUI\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\IIwar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\Users\\IIwar\\source\\repos\\ProjectChapueGroep1\\ChapooDatabaseLogic\\ChapooDatabaseLogic.csproj": {
+                "projectPath": "C:\\Users\\IIwar\\source\\repos\\ProjectChapueGroep1\\ChapooDatabaseLogic\\ChapooDatabaseLogic.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[3.1.13, 3.1.13]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WindowsForms": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
