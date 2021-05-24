@@ -90,3 +90,8 @@ C:\Users\merli\Source\Repos\ProjectChapueGroep1\ChapooDatabaseUI\obj\Debug\netco
 C:\Users\merli\source\repos\ProjectChapueGroep1\ChapooDatabaseUI\obj\Debug\netcoreapp3.1\ChapooDatabaseUI.BaseForm.resources
 C:\Users\merli\source\repos\ProjectChapueGroep1\ChapooDatabaseUI\obj\Debug\netcoreapp3.1\ChapooUI.LoginForm.resources
 C:\Users\merli\source\repos\ProjectChapueGroep1\ChapooDatabaseUI\obj\Debug\netcoreapp3.1\ChapooDatabaseUI.DashboardForm.resources
+C:\Users\merli\source\repos\ProjectChapueGroep1\ChapooDatabaseUI\obj\Debug\netcoreapp3.1\ChapooDatabaseUI.BarEmployeeForm.resources
+C:\Users\merli\source\repos\ProjectChapueGroep1\ChapooDatabaseUI\obj\Debug\netcoreapp3.1\ChapooDatabaseUI.BarServiceForm.resources
+C:\Users\merli\source\repos\ProjectChapueGroep1\ChapooDatabaseUI\obj\Debug\netcoreapp3.1\ChapooDatabaseUI.ChefForm.resources
+C:\Users\merli\source\repos\ProjectChapueGroep1\ChapooDatabaseUI\obj\Debug\netcoreapp3.1\ChapooDatabaseUI.KassaForm.resources
+C:\Users\merli\source\repos\ProjectChapueGroep1\ChapooDatabaseUI\obj\Debug\netcoreapp3.1\ChapooDatabaseUI.ManagementForm.resources

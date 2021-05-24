@@ -1,7 +1,7 @@
 ﻿
 namespace ChapooDatabaseUI
 {
-    partial class DashboardForm
+    partial class KassaForm
     {
         /// <summary>
         /// Required designer variable.
@@ -36,14 +36,12 @@ namespace ChapooDatabaseUI
             this.ManagementButton = new System.Windows.Forms.Button();
             this.KassaButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+
+            this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "DashboardForm";
-            this.Text = "Dashboard";
-            this.ResumeLayout(false);
-
+            this.Text = "KassaForm";
+            
             initNavBar();
 
         }

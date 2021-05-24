@@ -13,7 +13,6 @@ namespace ChapooDatabaseUI
     public partial class BaseForm : Form
     {
         private Employee employee;
-        public Form loginForm;
 
         public void setUserWithEmail(string email)
         {
@@ -33,8 +32,29 @@ namespace ChapooDatabaseUI
         public void showNewForm(BaseForm FormToShow, BaseForm FormToHide, Employee emp)
         {
             FormToShow.Show();
+            FormToShow.WindowState = FormWindowState.Maximized;
             FormToShow.UpdateUser(emp);
             FormToHide.Hide();
+        }
+
+        public void BarEmployeeButton(BaseForm form) {
+            showNewForm(new BarEmployeeForm(), form, getCurrentUser());
+        }
+
+        public void BarSericeButton(BaseForm form) {
+            showNewForm(new BarServiceForm(), form, getCurrentUser());
+        }
+
+        public void ChefButton(BaseForm form) {
+            showNewForm(new ChefForm(), form, getCurrentUser());
+        }
+
+        public void ManagementButton(BaseForm form) {
+            showNewForm(new ManagementForm(), form, getCurrentUser());
+        }
+
+        public void KassaButton(BaseForm form) {
+            showNewForm(new KassaForm(), form, getCurrentUser());
         }
     }
 }
