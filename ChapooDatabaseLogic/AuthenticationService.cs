@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using ChapooDatabaseDal;
+using ChapooDatabaseModel;
 
 namespace ChapooDatabaseLogic
 {
@@ -15,6 +16,11 @@ namespace ChapooDatabaseLogic
                 return true;
             else
                 return false;
+        }
+        
+        public Employee getSingleUser(string email)
+        {
+            return dao.getSingleUser(email);
         }
     }
 }

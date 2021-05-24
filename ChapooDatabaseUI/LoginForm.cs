@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ChapooDatabaseUI;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,9 +12,9 @@ using System.Windows.Forms;
 
 namespace ChapooUI
 {
-    public partial class Form1 : Form
+    public partial class LoginForm : BaseForm
     {
-        public Form1()
+        public LoginForm()
         {
             InitializeComponent();
         }
@@ -21,20 +22,23 @@ namespace ChapooUI
         private void LoginFormSubmitButton_Click(object sender, EventArgs e)
         {
             ChapooDatabaseLogic.AuthenticationService AuthenticationService = new ChapooDatabaseLogic.AuthenticationService();
-
-            // get the email and password from textboxes
             string email = LoginFormEmailTextBox.Text;
             string password = LoginFormPasswordTextBox.Text;
 
-            // if validuser then show application and hide login and register and password forgotten
-            if (AuthenticationService.CheckUserLogin(email, password))
-            {
-                MessageBox.Show("Login succesful!");
+            if(string.IsNullOrEmpty(email)){
+                MessageBox.Show("Fill in the email field");
                 return;
             }
-            else
-            {
-                MessageBox.Show("Wrong email or password!"); // show messagebox with message, application keeps running
+            if (string.IsNullOrEmpty(password)){
+                MessageBox.Show("Fill in the password field");
+                return;
+            }
+
+            if (AuthenticationService.CheckUserLogin(email, password)){
+                setUserWithEmail(email);
+                showNewForm(new DashboardForm(), this, getCurrentUser());
+            } else {
+                MessageBox.Show("Wrong email or password!");
                 return;
             }
         }

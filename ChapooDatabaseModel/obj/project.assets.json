@@ -8,23 +8,19 @@
     ".NETStandard,Version=v2.1": []
   },
   "packageFolders": {
-    "C:\\Users\\IIwar\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\merli\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\IIwar\\Source\\Repos\\ProjectChapueGroep1\\ChapooDatabaseModel\\ChapooDatabaseModel.csproj",
+      "projectUniqueName": "C:\\Users\\merli\\Source\\Repos\\ProjectChapueGroep1\\ChapooDatabaseModel\\ChapooDatabaseModel.csproj",
       "projectName": "ChapooDatabaseModel",
-      "projectPath": "C:\\Users\\IIwar\\Source\\Repos\\ProjectChapueGroep1\\ChapooDatabaseModel\\ChapooDatabaseModel.csproj",
-      "packagesPath": "C:\\Users\\IIwar\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\IIwar\\Source\\Repos\\ProjectChapueGroep1\\ChapooDatabaseModel\\obj\\",
+      "projectPath": "C:\\Users\\merli\\Source\\Repos\\ProjectChapueGroep1\\ChapooDatabaseModel\\ChapooDatabaseModel.csproj",
+      "packagesPath": "C:\\Users\\merli\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\merli\\Source\\Repos\\ProjectChapueGroep1\\ChapooDatabaseModel\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\IIwar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\merli\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -64,7 +60,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }

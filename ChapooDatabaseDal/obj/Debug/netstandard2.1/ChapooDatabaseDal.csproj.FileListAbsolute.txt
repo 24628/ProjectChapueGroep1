@@ -11,3 +11,16 @@ C:\Users\IIwar\Source\Repos\ProjectChapueGroep1\ChapooDatabaseDal\obj\Debug\nets
 C:\Users\IIwar\Source\Repos\ProjectChapueGroep1\ChapooDatabaseDal\obj\Debug\netstandard2.1\ChapooDatabaseDal.csproj.CopyComplete
 C:\Users\IIwar\Source\Repos\ProjectChapueGroep1\ChapooDatabaseDal\obj\Debug\netstandard2.1\ChapooDatabaseDal.dll
 C:\Users\IIwar\Source\Repos\ProjectChapueGroep1\ChapooDatabaseDal\obj\Debug\netstandard2.1\ChapooDatabaseDal.pdb
+C:\Users\merli\Source\Repos\ProjectChapueGroep1\ChapooDatabaseDal\bin\Debug\netstandard2.1\ChapooDatabaseDal.dll.config
+C:\Users\merli\Source\Repos\ProjectChapueGroep1\ChapooDatabaseDal\bin\Debug\netstandard2.1\ChapooDatabaseDal.deps.json
+C:\Users\merli\Source\Repos\ProjectChapueGroep1\ChapooDatabaseDal\bin\Debug\netstandard2.1\ChapooDatabaseDal.dll
+C:\Users\merli\Source\Repos\ProjectChapueGroep1\ChapooDatabaseDal\bin\Debug\netstandard2.1\ChapooDatabaseDal.pdb
+C:\Users\merli\Source\Repos\ProjectChapueGroep1\ChapooDatabaseDal\bin\Debug\netstandard2.1\ChapooDatabaseModel.dll
+C:\Users\merli\Source\Repos\ProjectChapueGroep1\ChapooDatabaseDal\bin\Debug\netstandard2.1\ChapooDatabaseModel.pdb
+C:\Users\merli\Source\Repos\ProjectChapueGroep1\ChapooDatabaseDal\obj\Debug\netstandard2.1\ChapooDatabaseDal.csprojAssemblyReference.cache
+C:\Users\merli\Source\Repos\ProjectChapueGroep1\ChapooDatabaseDal\obj\Debug\netstandard2.1\ChapooDatabaseDal.AssemblyInfoInputs.cache
+C:\Users\merli\Source\Repos\ProjectChapueGroep1\ChapooDatabaseDal\obj\Debug\netstandard2.1\ChapooDatabaseDal.AssemblyInfo.cs
+C:\Users\merli\Source\Repos\ProjectChapueGroep1\ChapooDatabaseDal\obj\Debug\netstandard2.1\ChapooDatabaseDal.csproj.CoreCompileInputs.cache
+C:\Users\merli\Source\Repos\ProjectChapueGroep1\ChapooDatabaseDal\obj\Debug\netstandard2.1\ChapooDatabaseDal.csproj.CopyComplete
+C:\Users\merli\Source\Repos\ProjectChapueGroep1\ChapooDatabaseDal\obj\Debug\netstandard2.1\ChapooDatabaseDal.dll
+C:\Users\merli\Source\Repos\ProjectChapueGroep1\ChapooDatabaseDal\obj\Debug\netstandard2.1\ChapooDatabaseDal.pdb
