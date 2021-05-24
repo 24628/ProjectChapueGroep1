@@ -122,7 +122,7 @@ namespace ChapooDatabaseUI
         private System.Windows.Forms.Button BarMederwerkesButton;
         private System.Windows.Forms.Button BedieningButton;
         private System.Windows.Forms.Button ChefKokButton;
-        private System.Windows.Forms.Button ManagementButton;
-        private System.Windows.Forms.Button KassaButton;
+        private new System.Windows.Forms.Button ManagementButton;
+        private new System.Windows.Forms.Button KassaButton;
     }
 }
