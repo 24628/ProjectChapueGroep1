@@ -53,8 +53,7 @@ namespace ChapooDatabaseUI
             showNewForm(new AdministratorForm(), form, getCurrentUser());
         }
 
-        public void KassaButton(BaseForm form) {
-            showNewForm(new KassaForm(), form, getCurrentUser());
-        }
+        
+        
     }
 }

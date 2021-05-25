@@ -43,10 +43,6 @@ namespace ChapooDatabaseUI
         }
 
         #endregion
-        public System.Windows.Forms.Panel NavBarContainer;
-        public new System.Windows.Forms.Button AdministratorButton;
-        public new System.Windows.Forms.Button OrderButton;
-        public new System.Windows.Forms.Button KitchenButton;
-        public new System.Windows.Forms.Button PaymentButton;
+        
     }
 }

@@ -30,11 +30,11 @@ namespace ChapooDatabaseUI
         private void InitializeComponent()
         {
             this.NavBarContainer = new System.Windows.Forms.Panel();
-            this.BarMederwerkesButton = new System.Windows.Forms.Button();
-            this.BedieningButton = new System.Windows.Forms.Button();
-            this.ChefKokButton = new System.Windows.Forms.Button();
-            this.ManagementButton = new System.Windows.Forms.Button();
-            this.KassaButton = new System.Windows.Forms.Button();
+            this.AdministratorButton = new System.Windows.Forms.Button();
+            this.OrderButton = new System.Windows.Forms.Button();
+            this.KitchenButton = new System.Windows.Forms.Button();
+            this.PaymentButton = new System.Windows.Forms.Button();
+            //this.KassaButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -53,65 +53,64 @@ namespace ChapooDatabaseUI
             // 
             // panel1
             // 
-            this.NavBarContainer.Controls.Add(this.BarMederwerkesButton);
-            this.NavBarContainer.Controls.Add(this.BedieningButton);
-            this.NavBarContainer.Controls.Add(this.ChefKokButton);
-            this.NavBarContainer.Controls.Add(this.ManagementButton);
-            this.NavBarContainer.Controls.Add(this.KassaButton);
+            this.NavBarContainer.Controls.Add(this.AdministratorButton);
+            this.NavBarContainer.Controls.Add(this.OrderButton);
+            this.NavBarContainer.Controls.Add(this.KitchenButton);
+            this.NavBarContainer.Controls.Add(this.PaymentButton);
+            //this.NavBarContainer.Controls.Add(this.KassaButton);
             this.NavBarContainer.Location = new System.Drawing.Point(0, 0);
             this.NavBarContainer.Name = "NavBarContainer";
             this.NavBarContainer.Size = new System.Drawing.Size(801, 51);
             this.NavBarContainer.TabIndex = 2;
             // 
-            // BarMederwerkesButton
+            // AdministratorButton
             // 
-            this.BarMederwerkesButton.Location = new System.Drawing.Point(82, 0);
-            this.BarMederwerkesButton.Name = "BarMederwerkesButton";
-            this.BarMederwerkesButton.Size = new System.Drawing.Size(139, 51);
-            this.BarMederwerkesButton.TabIndex = 10;
-            this.BarMederwerkesButton.Text = "Bar Mederwerkes";
-            this.BarMederwerkesButton.UseVisualStyleBackColor = true;
-            this.BarMederwerkesButton.Click += (sender, e) => BarEmployeeButton(this);
+            this.AdministratorButton.Location = new System.Drawing.Point(82, 0);
+            this.AdministratorButton.Name = "AdministratorButton";
+            this.AdministratorButton.Size = new System.Drawing.Size(139, 51);
+            this.AdministratorButton.TabIndex = 10;
+            this.AdministratorButton.Text = "Administrator";
+            this.AdministratorButton.UseVisualStyleBackColor = true;
+            this.AdministratorButton.Click += (sender, e) => AdministratorButton(this);
             // 
-            // BedieningButton
+            // OrderButton
             // 
-            this.BedieningButton.Location = new System.Drawing.Point(227, 0);
-            this.BedieningButton.Name = "BedieningButton";
-            this.BedieningButton.Size = new System.Drawing.Size(139, 51);
-            this.BedieningButton.TabIndex = 9;
-            this.BedieningButton.Text = "Bediening";
-            this.BedieningButton.UseVisualStyleBackColor = true;
-            this.BedieningButton.Click += (sender, e) => BarSericeButton(this);
+            this.OrderButton.Location = new System.Drawing.Point(227, 0);
+            this.OrderButton.Name = "OrderButton";
+            this.OrderButton.Size = new System.Drawing.Size(139, 51);
+            this.OrderButton.TabIndex = 9;
+            this.OrderButton.Text = "Order";
+            this.OrderButton.UseVisualStyleBackColor = true;
+            this.OrderButton.Click += (sender, e) => OrderButton(this);
             // 
-            // ChefKokButton
+            // PaymentButton
             // 
-            this.ChefKokButton.Location = new System.Drawing.Point(372, 0);
-            this.ChefKokButton.Name = "ChefKokButton";
-            this.ChefKokButton.Size = new System.Drawing.Size(139, 51);
-            this.ChefKokButton.TabIndex = 8;
-            this.ChefKokButton.Text = "Chefkok";
-            this.ChefKokButton.UseVisualStyleBackColor = true;
-            this.ChefKokButton.Click += (sender, e) => ChefButton(this);
+            this.KitchenButton.Location = new System.Drawing.Point(372, 0);
+            this.KitchenButton.Name = "KitchenButton";
+            this.KitchenButton.Size = new System.Drawing.Size(139, 51);
+            this.KitchenButton.TabIndex = 8;
+            this.KitchenButton.Text = "Kitchen";
+            this.KitchenButton.UseVisualStyleBackColor = true;
+            this.KitchenButton.Click += (sender, e) => KitchenButton(this);
+            // KitchenButton            // ManagementButton
             // 
-            // ManagementButton
-            // 
-            this.ManagementButton.Location = new System.Drawing.Point(517, 0);
-            this.ManagementButton.Name = "ManagementButton";
-            this.ManagementButton.Size = new System.Drawing.Size(139, 51);
-            this.ManagementButton.TabIndex = 7;
-            this.ManagementButton.Text = "Managament";
-            this.ManagementButton.UseVisualStyleBackColor = true;
-            this.ManagementButton.Click += (sender, e) => ManagementButton(this);
+            this.PaymentButton.Location = new System.Drawing.Point(517, 0);
+            this.PaymentButton.Name = "PaymentButton";
+            this.PaymentButton.Size = new System.Drawing.Size(139, 51);
+            this.PaymentButton.TabIndex = 7;
+            this.PaymentButton.Text = "Payment";
+            this.PaymentButton.UseVisualStyleBackColor = true;
+            this.PaymentButton.Click += (sender, e) => PaymentButton(this);
             // 
             // KassaButton
             // 
-            this.KassaButton.Location = new System.Drawing.Point(662, 0);
-            this.KassaButton.Name = "KassaButton";
-            this.KassaButton.Size = new System.Drawing.Size(139, 51);
-            this.KassaButton.TabIndex = 6;
-            this.KassaButton.Text = "Kassa";
-            this.KassaButton.UseVisualStyleBackColor = true;
-            this.KassaButton.Click += (sender, e) => KassaButton(this);
+            //this.KassaButton.Location = new System.Drawing.Point(662, 0);
+            //this.KassaButton.Name = "KassaButton";
+            //this.KassaButton.Size = new System.Drawing.Size(139, 51);
+            //this.KassaButton.TabIndex = 6;
+            //this.KassaButton.Text = "Kassa";
+            //this.KassaButton.UseVisualStyleBackColor = true;
+            //this.KassaButton.Click += (sender, e) => KassaButton(this);
 
             this.Controls.Add(this.NavBarContainer);
         }
@@ -119,10 +118,9 @@ namespace ChapooDatabaseUI
         #endregion
 
         private System.Windows.Forms.Panel NavBarContainer;
-        private System.Windows.Forms.Button BarMederwerkesButton;
-        private System.Windows.Forms.Button BedieningButton;
-        private System.Windows.Forms.Button ChefKokButton;
-        private new System.Windows.Forms.Button ManagementButton;
-        private new System.Windows.Forms.Button KassaButton;
+        private new System.Windows.Forms.Button AdministratorButton;
+        private new System.Windows.Forms.Button OrderButton;
+        private new System.Windows.Forms.Button KitchenButton;
+        private new System.Windows.Forms.Button PaymentButton;
     }
 }
