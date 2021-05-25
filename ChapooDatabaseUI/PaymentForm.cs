@@ -8,9 +8,9 @@ using System.Windows.Forms;
 
 namespace ChapooDatabaseUI
 {
-    public partial class KassaForm : BaseForm
+    public partial class PaymentForm : BaseForm
     {
-        public KassaForm()
+        public PaymentForm()
         {
             InitializeComponent();
         }

@@ -37,20 +37,20 @@ namespace ChapooDatabaseUI
             FormToHide.Hide();
         }
 
-        public void BarEmployeeButton(BaseForm form) {
-            showNewForm(new BarEmployeeForm(), form, getCurrentUser());
+        public void OrderButton(BaseForm form) {
+            showNewForm(new OrderForm(), form, getCurrentUser());
         }
 
-        public void BarSericeButton(BaseForm form) {
-            showNewForm(new BarServiceForm(), form, getCurrentUser());
+        public void PaymentButton(BaseForm form) {
+            showNewForm(new PaymentForm(), form, getCurrentUser());
         }
 
-        public void ChefButton(BaseForm form) {
-            showNewForm(new ChefForm(), form, getCurrentUser());
+        public void KitchenButton(BaseForm form) {
+            showNewForm(new KitchenForm(), form, getCurrentUser());
         }
 
-        public void ManagementButton(BaseForm form) {
-            showNewForm(new ManagementForm(), form, getCurrentUser());
+        public void AdministratorButton(BaseForm form) {
+            showNewForm(new AdministratorForm(), form, getCurrentUser());
         }
 
         public void KassaButton(BaseForm form) {
