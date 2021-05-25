@@ -7,6 +7,9 @@
     <Compile Update="BaseForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Controls\CustomButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Update="DashboardForm.cs">
       <SubType>Form</SubType>
     </Compile>

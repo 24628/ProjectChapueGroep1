@@ -6,3 +6,4 @@ C:\Users\merli\source\repos\ProjectChapueGroep1\ChapooDatabaseModel\obj\Debug\ne
 C:\Users\merli\source\repos\ProjectChapueGroep1\ChapooDatabaseModel\obj\Debug\netstandard2.1\ChapooDatabaseModel.csproj.CoreCompileInputs.cache
 C:\Users\merli\source\repos\ProjectChapueGroep1\ChapooDatabaseModel\obj\Debug\netstandard2.1\ChapooDatabaseModel.dll
 C:\Users\merli\source\repos\ProjectChapueGroep1\ChapooDatabaseModel\obj\Debug\netstandard2.1\ChapooDatabaseModel.pdb
+C:\Users\merli\source\repos\ProjectChapueGroep1\ChapooDatabaseModel\obj\Debug\netstandard2.1\ChapooDatabaseModel.csprojAssemblyReference.cache

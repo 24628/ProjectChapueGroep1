@@ -52,8 +52,5 @@ namespace ChapooDatabaseUI
         public void AdministratorButton(BaseForm form) {
             showNewForm(new AdministratorForm(), form, getCurrentUser());
         }
-
-        
-        
     }
 }

@@ -34,19 +34,26 @@ namespace ChapooDatabaseUI
             this.OrderButton = new System.Windows.Forms.Button();
             this.KitchenButton = new System.Windows.Forms.Button();
             this.PaymentButton = new System.Windows.Forms.Button();
-            //this.KassaButton = new System.Windows.Forms.Button();
+            this.flowLayoutTableContainer = new System.Windows.Forms.FlowLayoutPanel();
             this.SuspendLayout();
+            initNavBar();
             // 
-            // BarEmployeeForm
+            // flowLayoutTableContainer
+            // 
+            this.flowLayoutTableContainer.Location = new System.Drawing.Point(2, 64);
+            this.flowLayoutTableContainer.Name = "flowLayoutPanel1";
+            this.flowLayoutTableContainer.Size = new System.Drawing.Size(798, 374);
+            this.flowLayoutTableContainer.TabIndex = 0;
+            // 
+            // OrderForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.flowLayoutTableContainer);
             this.Name = "OrderForm";
             this.Text = "Order";
             this.ResumeLayout(false);
-
-            initNavBar();
 
         }
 
@@ -101,19 +108,9 @@ namespace ChapooDatabaseUI
             this.PaymentButton.Name = "KitchenButton";
             this.PaymentButton.Size = new System.Drawing.Size(139, 51);
             this.PaymentButton.TabIndex = 7;
-            this.PaymentButton.Text = "Kitchen";
+            this.PaymentButton.Text = "Payment";
             this.PaymentButton.UseVisualStyleBackColor = true;
             this.PaymentButton.Click += (sender, e) => PaymentButton(this);
-            // 
-            // KassaButton
-            // 
-            //this.KassaButton.Location = new System.Drawing.Point(662, 0);
-            //this.KassaButton.Name = "KassaButton";
-            //this.KassaButton.Size = new System.Drawing.Size(139, 51);
-            //this.KassaButton.TabIndex = 6;
-            //this.KassaButton.Text = "Kassa";
-            //this.KassaButton.UseVisualStyleBackColor = true;
-            //this.KassaButton.Click += (sender, e) => KassaButton(this);
 
             this.Controls.Add(this.NavBarContainer);
         }
@@ -126,5 +123,6 @@ namespace ChapooDatabaseUI
         private new System.Windows.Forms.Button OrderButton;
         private new System.Windows.Forms.Button KitchenButton;
         private new System.Windows.Forms.Button PaymentButton;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutTableContainer;
     }
 }

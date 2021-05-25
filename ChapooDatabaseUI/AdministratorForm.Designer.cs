@@ -89,7 +89,7 @@ namespace ChapooDatabaseUI
             this.KitchenButton.Name = "KitchenButton";
             this.KitchenButton.Size = new System.Drawing.Size(139, 51);
             this.KitchenButton.TabIndex = 8;
-            this.KitchenButton.Text = "Chefkok";
+            this.KitchenButton.Text = "Kitchen";
             this.KitchenButton.UseVisualStyleBackColor = true;
             this.KitchenButton.Click += (sender, e) => KitchenButton(this);
             // 
@@ -99,7 +99,7 @@ namespace ChapooDatabaseUI
             this.PaymentButton.Name = "PaymentButton";
             this.PaymentButton.Size = new System.Drawing.Size(139, 51);
             this.PaymentButton.TabIndex = 7;
-            this.PaymentButton.Text = "Managament";
+            this.PaymentButton.Text = "Payment";
             this.PaymentButton.UseVisualStyleBackColor = true;
             this.PaymentButton.Click += (sender, e) => PaymentButton(this);
 
