@@ -90,11 +90,6 @@ C:\Users\merli\Source\Repos\ProjectChapueGroep1\ChapooDatabaseUI\obj\Debug\netco
 C:\Users\merli\source\repos\ProjectChapueGroep1\ChapooDatabaseUI\obj\Debug\netcoreapp3.1\ChapooDatabaseUI.BaseForm.resources
 C:\Users\merli\source\repos\ProjectChapueGroep1\ChapooDatabaseUI\obj\Debug\netcoreapp3.1\ChapooUI.LoginForm.resources
 C:\Users\merli\source\repos\ProjectChapueGroep1\ChapooDatabaseUI\obj\Debug\netcoreapp3.1\ChapooDatabaseUI.DashboardForm.resources
-C:\Users\merli\source\repos\ProjectChapueGroep1\ChapooDatabaseUI\obj\Debug\netcoreapp3.1\ChapooDatabaseUI.BarEmployeeForm.resources
-C:\Users\merli\source\repos\ProjectChapueGroep1\ChapooDatabaseUI\obj\Debug\netcoreapp3.1\ChapooDatabaseUI.BarServiceForm.resources
-C:\Users\merli\source\repos\ProjectChapueGroep1\ChapooDatabaseUI\obj\Debug\netcoreapp3.1\ChapooDatabaseUI.ChefForm.resources
-C:\Users\merli\source\repos\ProjectChapueGroep1\ChapooDatabaseUI\obj\Debug\netcoreapp3.1\ChapooDatabaseUI.KassaForm.resources
-C:\Users\merli\source\repos\ProjectChapueGroep1\ChapooDatabaseUI\obj\Debug\netcoreapp3.1\ChapooDatabaseUI.ManagementForm.resources
 C:\Users\hdmap\Source\Repos\ProjectChapueGroep1\ChapooDatabaseUI\obj\Debug\netcoreapp3.1\ChapooDatabaseUI.csprojAssemblyReference.cache
 C:\Users\hdmap\Source\Repos\ProjectChapueGroep1\ChapooDatabaseUI\obj\Debug\netcoreapp3.1\ChapooDatabaseUI.AdministratorForm.resources
 C:\Users\hdmap\Source\Repos\ProjectChapueGroep1\ChapooDatabaseUI\obj\Debug\netcoreapp3.1\ChapooDatabaseUI.BaseForm.resources
@@ -146,3 +141,7 @@ C:\Users\hdmap\Source\Repos\ProjectChapueGroep1\ChapooDatabaseUI\bin\Debug\netco
 C:\Users\hdmap\Source\Repos\ProjectChapueGroep1\ChapooDatabaseUI\bin\Debug\netcoreapp3.1\ChapooDatabaseModel.pdb
 C:\Users\hdmap\Source\Repos\ProjectChapueGroep1\ChapooDatabaseUI\obj\Debug\netcoreapp3.1\ChapooDatabaseUI.csproj.CopyComplete
 C:\Users\hdmap\Source\Repos\ProjectChapueGroep1\ChapooDatabaseUI\obj\Debug\netcoreapp3.1\ChapooDatabaseUI.genruntimeconfig.cache
+C:\Users\merli\source\repos\ProjectChapueGroep1\ChapooDatabaseUI\obj\Debug\netcoreapp3.1\ChapooDatabaseUI.AdministratorForm.resources
+C:\Users\merli\source\repos\ProjectChapueGroep1\ChapooDatabaseUI\obj\Debug\netcoreapp3.1\ChapooDatabaseUI.KitchenForm.resources
+C:\Users\merli\source\repos\ProjectChapueGroep1\ChapooDatabaseUI\obj\Debug\netcoreapp3.1\ChapooDatabaseUI.OrderForm.resources
+C:\Users\merli\source\repos\ProjectChapueGroep1\ChapooDatabaseUI\obj\Debug\netcoreapp3.1\ChapooDatabaseUI.PaymentForm.resources
