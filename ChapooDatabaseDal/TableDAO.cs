@@ -34,5 +34,30 @@ namespace ChapooDatabaseDal
             }
             return tables;
         }
+
+        public List<MenuItem> getMenuCard()
+        {
+            string query = "SELECT [MenuItemID], MenuName, Price from MenuItem;";
+            SqlParameter[] sqlParameters = new SqlParameter[0];
+
+            // return a list with drinks
+            return ReadTablesMenuCard(ExecuteSelectQuery(query, sqlParameters));
+        }
+
+        private List<MenuItem> ReadTablesMenuCard(DataTable dataTable)
+        {
+            List<MenuItem> menuItemList = new List<MenuItem>();
+
+            foreach (DataRow dr in dataTable.Rows)
+            {
+                MenuItem item = new MenuItem(
+                    Convert.ToInt32(dr["MenuItemID"]),
+                    dr["MenuName"].ToString(),
+                    decimal.Parse((string)dr["Price"])
+                );
+                menuItemList.Add(item);
+            }
+            return menuItemList;
+        }
     }
 }

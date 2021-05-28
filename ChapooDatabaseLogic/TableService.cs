@@ -14,5 +14,10 @@ namespace ChapooDatabaseLogic
         {
             return dao.getAllTables();
         }
+
+        public List<MenuItem> getMenuCard()
+        {
+            return dao.getMenuCard();
+        }
     }
 }

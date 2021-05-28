@@ -13,6 +13,7 @@ namespace ChapooDatabaseUI
     public partial class BaseForm : Form
     {
         private Employee employee;
+        private int currentTableId;
 
         public void setUserWithEmail(string email)
         {
@@ -25,14 +26,34 @@ namespace ChapooDatabaseUI
             return this.employee;
         }
 
+        public int getCurrentTableId()
+        {
+            return this.currentTableId;
+        }
+
         public void UpdateUser(Employee e)
         {
             this.employee = e;
         }
+
+        public void UpdateTableId(int e)
+        {
+            this.currentTableId = e;
+        }
+
         public void showNewForm(BaseForm FormToShow, BaseForm FormToHide, Employee emp)
         {
             FormToShow.Show();
             FormToShow.WindowState = FormWindowState.Maximized;
+            FormToShow.UpdateUser(emp);
+            FormToHide.Hide();
+        }
+
+        public void showNewForm(BaseForm FormToShow, BaseForm FormToHide, Employee emp, int TableId)
+        {
+            FormToShow.Show();
+            FormToShow.WindowState = FormWindowState.Maximized;
+            FormToShow.UpdateTableId(TableId);
             FormToShow.UpdateUser(emp);
             FormToHide.Hide();
         }

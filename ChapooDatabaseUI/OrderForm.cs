@@ -65,7 +65,7 @@ namespace ChapooDatabaseUI
             Button button = (Button)sender;
             Table table = (Table)button.Tag;
 
-            MessageBox.Show(table.TableId.ToString());
+            showNewForm(new OrderTableForm(),this,getCurrentUser(),table.TableId);
 
             //if (!table.Occupied) tableService.ChangeOccupation(table, true);
 
