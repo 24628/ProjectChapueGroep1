@@ -22,7 +22,7 @@ namespace ChapooDatabaseModel
             return new string[] {
                 m.Id.ToString(),
                 m.Name,
-                m.Price.ToString(),
+                string.Format("{0:C}", m.Price/100)
             };
         }
     }
