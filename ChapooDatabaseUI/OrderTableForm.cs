@@ -14,21 +14,41 @@ namespace ChapooDatabaseUI
     {
         private TableService tableService = new TableService();
         private List<MenuItem> menuItems;
+        private Order order;
         public OrderTableForm()
         {
             InitializeComponent();
-            InitForm();
+            HideFormItemsForCreate();
         }
 
         private void InitForm()
         {
-            HideFormItemsForCreate();
+            if (tableService.CheckIfTableExistAndHasAnOrder(getCurrentTableId())){
+                unHideFormItemsForCreate();
+                this.order = tableService.getSingleOrder(getCurrentTableId());
+                fillOrderGridWithItems();
+            } else {
+                HideFormItemsForCreate();
+            }
+            
             this.menuItems = tableService.getMenuCard();
             generateGridLayout(MenuItemsDataGridView, new string[] { "MenuItemID","MenuName","Price" });
 
             foreach (var item in this.menuItems)
             {
                 FillDataInGridView(MenuItemsDataGridView, item.dataGrid(item));
+            }
+        }
+
+        private void fillOrderGridWithItems()
+        {
+            ClearDataGridView(OrderItemsGridView);
+            generateGridLayout(OrderItemsGridView, new string[] { "id", "Naam", "Price" });
+
+            List<OrderItem> items = tableService.getMenuItemBelongingTowardsOrder(this.order.OrderID);
+            foreach (var item in items)
+            {
+                FillDataInGridView(OrderItemsGridView, item.dataGrid(item));
             }
         }
 
@@ -39,17 +59,49 @@ namespace ChapooDatabaseUI
 
         private void CreateOrderButton_Click(object sender, EventArgs e)
         {
-            unHideFormItemsForCreate();
+            if (!tableService.CheckIfTableExistAndHasAnOrder(getCurrentTableId())) {
+                tableService.createTableOrder(getCurrentTableId(), getCurrentUser().EmployeeID);
+            }
+            InitForm();
         }
 
         private void AddMenuItemToOrderButton_Click(object sender, EventArgs e)
         {
+            int tableNumber;
+            if (!Int32.TryParse(AddItemFromOrderTextBox.Text, out tableNumber))
+            {
+                MessageBox.Show("Insert a number");
+                return;
+            }
 
+            if (!tableService.ItemExist(tableNumber)){
+                MessageBox.Show("Item Doesnt Exist");
+                return;
+            }
+
+            tableNumber = Int32.Parse(AddItemFromOrderTextBox.Text);
+            tableService.AddMenuItemToOrder(tableNumber, this.order.OrderID);
+            fillOrderGridWithItems();
         }
 
         private void RemoveMenuItemToOrderButton_Click(object sender, EventArgs e)
         {
+            int orderItemID;
+            if (!Int32.TryParse(RemoveItemFromOrderTextBox.Text, out orderItemID))
+            {
+                MessageBox.Show("Insert a number");
+                return;
+            }
 
+            if (!tableService.OrderItemExist(orderItemID, this.order.OrderID))
+            {
+                MessageBox.Show("Order item is not in the current order");
+                return;
+            }
+
+            orderItemID = Int32.Parse(RemoveItemFromOrderTextBox.Text);
+            tableService.removeMenuItemToOrder(orderItemID);
+            fillOrderGridWithItems();
         }
 
         private void HideFormItemsForCreate()

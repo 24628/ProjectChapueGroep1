@@ -53,11 +53,164 @@ namespace ChapooDatabaseDal
                 MenuItem item = new MenuItem(
                     Convert.ToInt32(dr["MenuItemID"]),
                     dr["MenuName"].ToString(),
-                    decimal.Parse((string)dr["Price"])
+                    Convert.ToDecimal(dr["Price"])
                 );
                 menuItemList.Add(item);
             }
             return menuItemList;
         }
+
+        public int ItemExist(int id)
+        {
+            string query = "SELECT COUNT(*) FROM MenuItem WHERE MenuID = @id";
+
+            SqlParameter[] sqlParameters = new SqlParameter[1];
+
+            SqlParameter pid = new SqlParameter("@id", SqlDbType.VarChar) { Value = id };
+            sqlParameters[0] = pid;
+
+            return ExecuteCountInteger(query, sqlParameters);
+        }
+
+        public void createTableOrder(int TableID, int EmployeeID)
+        {
+            DateTime myDateTime = DateTime.Now;
+            float sqlFormattedDate = myDateTime.Ticks;
+            string description = "Geen notitie nog!";
+
+            string query = "INSERT INTO [Order] (TableID, EmployeeID, TimeOrder, OrderRemark) VALUES (@tableId, @employeeId, @timeStamp, @description)";
+
+            // array with 4 parameters
+            SqlParameter[] sqlParameters = new SqlParameter[4];
+
+            SqlParameter ptid = new SqlParameter("@tableId", SqlDbType.Int) { Value = TableID };
+            sqlParameters[0] = ptid;
+
+            SqlParameter peid = new SqlParameter("@EmployeeID", SqlDbType.Int) { Value = EmployeeID };
+            sqlParameters[1] = peid;
+
+            SqlParameter pts = new SqlParameter("@timeStamp", SqlDbType.VarChar) { Value = sqlFormattedDate };
+            sqlParameters[2] = pts;
+
+            SqlParameter pdes = new SqlParameter("@description", SqlDbType.VarChar) { Value = description };
+            sqlParameters[3] = pdes;
+
+            // execute query
+            ExecuteEditQuery(query, sqlParameters);
+        }
+
+        public int CheckIfTableExist(int id)
+        {
+            string query = "SELECT COUNT(*) FROM[Order] WHERE TableID = @id";
+
+            SqlParameter[] sqlParameters = new SqlParameter[1];
+
+            SqlParameter pid = new SqlParameter("@id", SqlDbType.Int) { Value = id };
+            sqlParameters[0] = pid;
+
+            return ExecuteCountInteger(query, sqlParameters);
+        }
+
+        public Order getSingleOrder(int TableId)
+        {
+            // the query for the database, selecting [type], amount, price, alcohol FROM drinks WHERE amount > 1 AND price > 1.00
+            string query = "SELECT OrderID, TableID, EmployeeID, TimeOrder, OrderRemark FROM [Order] WHERE TableID = @id";
+            SqlParameter[] sqlParameters = new SqlParameter[1];
+
+            SqlParameter pid = new SqlParameter("@id", SqlDbType.Int) { Value = TableId };
+            sqlParameters[0] = pid;
+
+            return ReadTablesForOneOrder(ExecuteSelectQuery(query, sqlParameters));
+        }
+
+        private Order ReadTablesForOneOrder(DataTable dataTable)
+        {
+            Order er = new Order(
+                Convert.ToInt32(dataTable.Rows[0]["OrderID"]),
+                Convert.ToInt32(dataTable.Rows[0]["TableID"]),
+                Convert.ToInt32(dataTable.Rows[0]["EmployeeID"]),
+                dataTable.Rows[0]["TimeOrder"].ToString(),
+                dataTable.Rows[0]["OrderRemark"].ToString()
+            );
+            return er;
+        }
+
+        public void AddMenuItemToOrder(int MenuItemId, int OrderItemId)
+        {
+            string query = "INSERT INTO [OrderItem] (MenuItemID, OrderID) VALUES (@MenuItemId, @OrderID)";
+
+            // array with 4 parameters
+            SqlParameter[] sqlParameters = new SqlParameter[2];
+
+            SqlParameter pmid = new SqlParameter("@MenuItemId", SqlDbType.Int) { Value = MenuItemId };
+            sqlParameters[0] = pmid;
+
+            SqlParameter peoid = new SqlParameter("@OrderID", SqlDbType.Int) { Value = OrderItemId };
+            sqlParameters[1] = peoid;
+            // execute query
+            ExecuteEditQuery(query, sqlParameters);
+        }
+
+        public List<OrderItem> getMenuItemBelongingTowardsOrder(int OrderID)
+        {
+            // the query for the database, selecting [type], amount, price, alcohol FROM drinks WHERE amount > 1 AND price > 1.00
+            string query = "SELECT * FROM MenuItem JOIN[OrderItem] ON MenuItem.MenuItemID =[OrderItem].MenuItemID Where OrderID = @OrderID";
+            SqlParameter[] sqlParameters = new SqlParameter[1];
+
+            SqlParameter pid = new SqlParameter("@OrderID", SqlDbType.Int) { Value = OrderID };
+            sqlParameters[0] = pid;
+
+            return ReadTablesForOneOrderItems(ExecuteSelectQuery(query, sqlParameters));
+        }
+
+        private List<OrderItem> ReadTablesForOneOrderItems(DataTable dataTable)
+        {
+
+            List<OrderItem> oList = new List<OrderItem>();
+
+            foreach (DataRow dr in dataTable.Rows)
+            {
+                OrderItem oItem = new OrderItem(
+                    Convert.ToInt32(dr["ID"]),
+                    Convert.ToInt32(dr["MenuItemID"]),
+                    Convert.ToInt32(dr["MenuID"]),
+                    Convert.ToInt32(dr["OrderID"]),
+                    dr["MenuName"].ToString(),
+                    Convert.ToDecimal(dr["Price"])
+                );
+                oList.Add(oItem);
+            }
+            return oList;
+        }
+
+        public int OrderItemExist(int id, int OrderId)
+        {
+            string query = "SELECT COUNT(*) FROM OrderItem WHERE ID = @id AND OrderID = @OrderID";
+
+            SqlParameter[] sqlParameters = new SqlParameter[2];
+
+            SqlParameter pid = new SqlParameter("@id", SqlDbType.VarChar) { Value = id };
+            sqlParameters[0] = pid;
+            
+            SqlParameter poid = new SqlParameter("@OrderID", SqlDbType.VarChar) { Value = OrderId };
+            sqlParameters[1] = poid;
+
+            return ExecuteCountInteger(query, sqlParameters);
+        }
+
+        public void RemoveMenuItemToOrder(int id)
+        {
+            string query = "DELETE FROM OrderItem WHERE ID = @id";
+
+            // array with 4 parameters
+            SqlParameter[] sqlParameters = new SqlParameter[1];
+
+            SqlParameter pid = new SqlParameter("@id", SqlDbType.Int) { Value = id };
+            sqlParameters[0] = pid;
+
+            // execute query
+            ExecuteEditQuery(query, sqlParameters);
+        }
+
     }
 }

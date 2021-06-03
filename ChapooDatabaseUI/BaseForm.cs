@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
@@ -49,12 +50,13 @@ namespace ChapooDatabaseUI
             FormToHide.Hide();
         }
 
-        public void showNewForm(BaseForm FormToShow, BaseForm FormToHide, Employee emp, int TableId)
+        public void showNewTableOrder(BaseForm FormToHide, Employee emp, int TableId)
         {
-            FormToShow.Show();
-            FormToShow.WindowState = FormWindowState.Maximized;
-            FormToShow.UpdateTableId(TableId);
-            FormToShow.UpdateUser(emp);
+            BaseForm form = new OrderTableForm();
+            form.Show();
+            form.WindowState = FormWindowState.Maximized;
+            form.UpdateTableId(TableId);
+            form.UpdateUser(emp);
             FormToHide.Hide();
         }
 

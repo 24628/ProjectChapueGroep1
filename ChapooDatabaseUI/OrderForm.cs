@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
@@ -64,8 +65,7 @@ namespace ChapooDatabaseUI
         {
             Button button = (Button)sender;
             Table table = (Table)button.Tag;
-
-            showNewForm(new OrderTableForm(),this,getCurrentUser(),table.TableId);
+            showNewTableOrder(this, getCurrentUser(), table.TableId);
 
             //if (!table.Occupied) tableService.ChangeOccupation(table, true);
 
