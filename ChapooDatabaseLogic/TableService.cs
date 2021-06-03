@@ -33,6 +33,11 @@ namespace ChapooDatabaseLogic
             dao.createTableOrder(tid, eid);
         }
 
+        public void deleteTableOrder(int tableId, int orderId)
+        {
+            dao.deleteTableOrder(tableId, orderId);
+        }
+
         public bool CheckIfTableExistAndHasAnOrder(int id)
         {
             if (dao.CheckIfTableExist(id) == 1)

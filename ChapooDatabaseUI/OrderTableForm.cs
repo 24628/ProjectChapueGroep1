@@ -54,6 +54,10 @@ namespace ChapooDatabaseUI
 
         private void DeleteOrderButton_Click(object sender, EventArgs e)
         {
+            if (tableService.CheckIfTableExistAndHasAnOrder(getCurrentTableId()))
+            {
+                tableService.deleteTableOrder(getCurrentTableId(), this.order.OrderID);
+            }
             HideFormItemsForCreate();
         }
 
@@ -136,6 +140,11 @@ namespace ChapooDatabaseUI
             AddMenuItemToOrderButton.Show();
 
             CreateOrderButton.Hide();
+        }
+
+        private void GoToTableDashboardButton_Click(object sender, EventArgs e)
+        {
+            showNewForm(new OrderForm(), this, getCurrentUser());
         }
     }
 }

@@ -97,6 +97,41 @@ namespace ChapooDatabaseDal
 
             // execute query
             ExecuteEditQuery(query, sqlParameters);
+
+            string thirdQuery = "UPDATE [Tables] SET Status = 'occupied' WHERE TableID = @TableId";
+            SqlParameter[] thirdSqlParameters = new SqlParameter[1];
+
+            SqlParameter thirdOrderId = new SqlParameter("@TableId", SqlDbType.Int) { Value = TableID };
+            thirdSqlParameters[0] = thirdOrderId;
+
+            ExecuteEditQuery(thirdQuery, thirdSqlParameters);
+        }
+
+        public void deleteTableOrder(int TableID, int OrderId)
+        {
+            string query = "DELETE FROM [OrderItem] WHERE OrderID = @OrderId";
+            SqlParameter[] sqlParameters = new SqlParameter[1];
+
+            SqlParameter orderId = new SqlParameter("@OrderId", SqlDbType.Int) { Value = OrderId };
+            sqlParameters[0] = orderId;
+
+            ExecuteEditQuery(query, sqlParameters);
+
+            string secondQuery = "DELETE FROM [Order] WHERE OrderID = @OrderId";
+            SqlParameter[] secondSqlParameters = new SqlParameter[1];
+
+            SqlParameter secondOrderId = new SqlParameter("@OrderId", SqlDbType.Int) { Value = OrderId };
+            secondSqlParameters[0] = secondOrderId;
+
+            ExecuteEditQuery(secondQuery, secondSqlParameters);
+
+            string thirdQuery = "UPDATE [Tables] SET Status = 'Free' WHERE TableID = @TableId";
+            SqlParameter[] thirdSqlParameters = new SqlParameter[1];
+
+            SqlParameter thirdOrderId = new SqlParameter("@TableId", SqlDbType.Int) { Value = TableID };
+            thirdSqlParameters[0] = thirdOrderId;
+
+            ExecuteEditQuery(thirdQuery, thirdSqlParameters);
         }
 
         public int CheckIfTableExist(int id)

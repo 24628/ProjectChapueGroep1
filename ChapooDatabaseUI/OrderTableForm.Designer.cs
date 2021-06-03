@@ -41,6 +41,7 @@ namespace ChapooDatabaseUI
             this.label4 = new System.Windows.Forms.Label();
             this.RemoveItemFromOrderTextBox = new System.Windows.Forms.TextBox();
             this.RemoveMenuItemToOrderButton = new System.Windows.Forms.Button();
+            this.GoToTableDashboardButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.OrderItemsGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MenuItemsDataGridView)).BeginInit();
             this.SuspendLayout();
@@ -157,11 +158,22 @@ namespace ChapooDatabaseUI
             this.RemoveMenuItemToOrderButton.UseVisualStyleBackColor = true;
             this.RemoveMenuItemToOrderButton.Click += new System.EventHandler(this.RemoveMenuItemToOrderButton_Click);
             // 
+            // GoToTableDashboardButton
+            // 
+            this.GoToTableDashboardButton.Location = new System.Drawing.Point(897, 17);
+            this.GoToTableDashboardButton.Name = "GoToTableDashboardButton";
+            this.GoToTableDashboardButton.Size = new System.Drawing.Size(119, 39);
+            this.GoToTableDashboardButton.TabIndex = 14;
+            this.GoToTableDashboardButton.Text = "Go Back";
+            this.GoToTableDashboardButton.UseVisualStyleBackColor = true;
+            this.GoToTableDashboardButton.Click += new System.EventHandler(this.GoToTableDashboardButton_Click);
+            // 
             // OrderTableForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1153, 654);
+            this.Controls.Add(this.GoToTableDashboardButton);
             this.Controls.Add(this.RemoveMenuItemToOrderButton);
             this.Controls.Add(this.RemoveItemFromOrderTextBox);
             this.Controls.Add(this.label4);
@@ -225,5 +237,6 @@ namespace ChapooDatabaseUI
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox RemoveItemFromOrderTextBox;
         private System.Windows.Forms.Button RemoveMenuItemToOrderButton;
+        private System.Windows.Forms.Button GoToTableDashboardButton;
     }
 }
