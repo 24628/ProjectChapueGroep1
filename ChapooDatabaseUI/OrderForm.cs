@@ -49,7 +49,7 @@ namespace ChapooDatabaseUI
                 button.Text += SetTableStatus(table);
 
                 // Display table colour based on status
-                //button.BackColor = table.Occupied ? Color.FromArgb(255, 104, 107) : Color.FromArgb(132, 220, 198);
+                button.BackColor = table.Status != "Free" ? Color.FromArgb(255, 104, 107) : Color.FromArgb(132, 220, 198);
 
                 button.Click += new EventHandler(Table_Click);
                 flowLayoutTableContainer.Controls.Add(button);

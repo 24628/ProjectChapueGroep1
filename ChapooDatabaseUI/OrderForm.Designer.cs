@@ -37,13 +37,7 @@ namespace ChapooDatabaseUI
             this.flowLayoutTableContainer = new System.Windows.Forms.FlowLayoutPanel();
             this.SuspendLayout();
             initNavBar();
-            // 
-            // flowLayoutTableContainer
-            // 
-            this.flowLayoutTableContainer.Location = new System.Drawing.Point(2, 64);
-            this.flowLayoutTableContainer.Name = "flowLayoutPanel1";
-            this.flowLayoutTableContainer.Size = new System.Drawing.Size(798, 374);
-            this.flowLayoutTableContainer.TabIndex = 0;
+            
             // 
             // OrderForm
             // 
