@@ -47,20 +47,19 @@ namespace ChapooDatabaseUI
                     Tag = table
                 };
 
-
-                button.Text += SetTableStatus(table);
+                button.Text += getTableStatus(table);
 
                 // Display table colour based on status
-                button.BackColor = table.Status != "Free" ? Color.FromArgb(255, 104, 107) : Color.FromArgb(132, 220, 198);
+                button.BackColor = table.setTableColor(table.Status);
 
-                if(table.Status != "Free")
+                if (table.Status != "Free")
                     button.Click += new EventHandler(Table_Click);
 
                 TableHolderFlowLayout.Controls.Add(button);
             }
         }
 
-        private string SetTableStatus(Table table)
+        private string getTableStatus(Table table)
         {
             return table.Status;
         }

@@ -68,6 +68,11 @@ namespace ChapooDatabaseLogic
         {
             dao.RemoveMenuItemToOrder(e);
         }
+        
+        public void updateTableStatus(int tableId, string status)
+        {
+            dao.updateTableStatus(tableId, status);
+        }
 
         public List<OrderItem> getMenuItemBelongingTowardsOrder(int e)
         {

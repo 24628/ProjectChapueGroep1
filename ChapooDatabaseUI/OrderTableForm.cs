@@ -64,6 +64,8 @@ namespace ChapooDatabaseUI
         private void CreateOrderButton_Click(object sender, EventArgs e)
         {
             if (!tableService.CheckIfTableExistAndHasAnOrder(getCurrentTableId())) {
+                MessageBox.Show(getCurrentTableId().ToString());
+                MessageBox.Show(getCurrentUser().EmployeeID.ToString());
                 tableService.createTableOrder(getCurrentTableId(), getCurrentUser().EmployeeID);
             }
             InitForm();

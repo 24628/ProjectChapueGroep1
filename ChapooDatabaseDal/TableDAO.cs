@@ -98,13 +98,7 @@ namespace ChapooDatabaseDal
             // execute query
             ExecuteEditQuery(query, sqlParameters);
 
-            string thirdQuery = "UPDATE [Tables] SET Status = 'occupied' WHERE TableID = @TableId";
-            SqlParameter[] thirdSqlParameters = new SqlParameter[1];
-
-            SqlParameter thirdOrderId = new SqlParameter("@TableId", SqlDbType.Int) { Value = TableID };
-            thirdSqlParameters[0] = thirdOrderId;
-
-            ExecuteEditQuery(thirdQuery, thirdSqlParameters);
+            updateTableStatus(TableID, "Occupied");
         }
 
         public void deleteTableOrder(int TableID, int OrderId)
@@ -125,11 +119,19 @@ namespace ChapooDatabaseDal
 
             ExecuteEditQuery(secondQuery, secondSqlParameters);
 
-            string thirdQuery = "UPDATE [Tables] SET Status = 'Free' WHERE TableID = @TableId";
-            SqlParameter[] thirdSqlParameters = new SqlParameter[1];
+            updateTableStatus(TableID, "Free");
+        }
+
+        public void updateTableStatus(int TableID, string status)
+        {
+            string thirdQuery = "UPDATE [Tables] SET Status = @status WHERE TableID = @TableId";
+            SqlParameter[] thirdSqlParameters = new SqlParameter[2];
 
             SqlParameter thirdOrderId = new SqlParameter("@TableId", SqlDbType.Int) { Value = TableID };
             thirdSqlParameters[0] = thirdOrderId;
+
+            SqlParameter tableStatus = new SqlParameter("@status", SqlDbType.VarChar) { Value = status };
+            thirdSqlParameters[1] = tableStatus;
 
             ExecuteEditQuery(thirdQuery, thirdSqlParameters);
         }
