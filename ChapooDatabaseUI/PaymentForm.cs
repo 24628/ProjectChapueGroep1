@@ -15,9 +15,12 @@ namespace ChapooDatabaseUI
     {
         private const int size = 120;
         private const int padding = 18;
+        private string pricePlaceHolder = "Total Price: ";
 
         private TableService tableService = new TableService();
         private List<Table> TableList;
+        private List<OrderItem> orderList;
+        private decimal totalPrice;
 
         public PaymentForm()
         {
@@ -67,9 +70,30 @@ namespace ChapooDatabaseUI
             Button button = (Button)sender;
             Table table = (Table)button.Tag;
 
+            this.orderList = tableService.getReceerdOrderForTableById(table.TableId);
 
-            MessageBox.Show(table.TableId.ToString());
+            ClearDataGridView(dataGridView1);
+            generateGridLayout(dataGridView1, new string[] { "id", "Naam", "Price" });
 
+            totalPrice = 0;
+            foreach (var item in orderList)
+            {
+                FillDataInGridView(dataGridView1, item.dataGrid(item));
+                totalPrice += item.Price;
+            }
+
+            priceLabelPayment.Text = pricePlaceHolder + FormatPrice(totalPrice);
+        }
+
+        private void SubmitReceedBTN_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Insert card the total price is " + FormatPrice(totalPrice));
+        }
+
+
+        public string FormatPrice(decimal price)
+        {
+            return string.Format("{0:C}", price);
         }
     }
 }

@@ -73,5 +73,10 @@ namespace ChapooDatabaseLogic
         {
             return dao.getMenuItemBelongingTowardsOrder(e);
         }
+
+        public List<OrderItem> getReceerdOrderForTableById(int tableId)
+        {
+            return dao.getReceerdOrderForTableById(tableId);
+        }
     }
 }

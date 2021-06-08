@@ -247,5 +247,16 @@ namespace ChapooDatabaseDal
             ExecuteEditQuery(query, sqlParameters);
         }
 
+
+        public List<OrderItem> getReceerdOrderForTableById(int tableId)
+        {
+            string query = "SELECT * From [Order] JOIN [OrderItem] as oi on[Order].OrderID = oi.OrderId JOIN [MenuItem] as mi on oi.MenuItemID = mi.MenuItemID Where [Order].TableID = @tableId";
+            SqlParameter[] sqlParameters = new SqlParameter[1];
+
+            SqlParameter pid = new SqlParameter("@tableId", SqlDbType.Int) { Value = tableId };
+            sqlParameters[0] = pid;
+
+            return ReadTablesForOneOrderItems(ExecuteSelectQuery(query, sqlParameters));
+        }
     }
 }

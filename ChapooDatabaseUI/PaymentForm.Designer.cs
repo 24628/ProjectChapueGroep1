@@ -76,6 +76,7 @@ namespace ChapooDatabaseUI
             this.SubmitReceedBTN.TabIndex = 2;
             this.SubmitReceedBTN.Text = "Submit receed";
             this.SubmitReceedBTN.UseVisualStyleBackColor = true;
+            this.SubmitReceedBTN.Click += new System.EventHandler(this.SubmitReceedBTN_Click);
             // 
             // PaymentForm
             // 
@@ -156,6 +157,33 @@ namespace ChapooDatabaseUI
             this.Controls.Add(this.NavBarContainer);
         }
 
+        public void generateGridLayout(System.Windows.Forms.DataGridView view, string[] columnArr)
+        {
+            view.ColumnCount = columnArr.Length;
+
+            view.ColumnHeadersDefaultCellStyle.BackColor = System.Drawing.Color.Navy;
+            view.ColumnHeadersDefaultCellStyle.ForeColor = System.Drawing.Color.White;
+
+            view.GridColor = System.Drawing.Color.Black;
+            view.RowHeadersVisible = false;
+            view.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+
+
+            for (int i = 0; i < columnArr.Length; i++)
+                view.Columns[i].Name = columnArr[i];
+
+            view.MultiSelect = false;
+        }
+
+        public void FillDataInGridView(System.Windows.Forms.DataGridView view, string[] dataString)
+        {
+            view.Rows.Add(dataString);
+        }
+
+        public void ClearDataGridView(System.Windows.Forms.DataGridView view)
+        {
+            view.Columns.Clear();
+        }
         #endregion
 
 
