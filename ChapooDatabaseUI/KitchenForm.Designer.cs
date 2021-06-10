@@ -35,16 +35,50 @@ namespace ChapooDatabaseUI
             this.KitchenButton = new System.Windows.Forms.Button();
             this.PaymentButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            initNavBar();
-
-            this.components = new System.ComponentModel.Container();
+            // 
+            // NavBarContainer
+            // 
+            this.NavBarContainer.Location = new System.Drawing.Point(0, 0);
+            this.NavBarContainer.Name = "NavBarContainer";
+            this.NavBarContainer.Size = new System.Drawing.Size(200, 100);
+            this.NavBarContainer.TabIndex = 0;
+            // 
+            // AdministratorButton
+            // 
+            this.AdministratorButton.Location = new System.Drawing.Point(0, 0);
+            this.AdministratorButton.Name = "AdministratorButton";
+            this.AdministratorButton.Size = new System.Drawing.Size(75, 23);
+            this.AdministratorButton.TabIndex = 0;
+            // 
+            // OrderButton
+            // 
+            this.OrderButton.Location = new System.Drawing.Point(0, 0);
+            this.OrderButton.Name = "OrderButton";
+            this.OrderButton.Size = new System.Drawing.Size(75, 23);
+            this.OrderButton.TabIndex = 0;
+            // 
+            // KitchenButton
+            // 
+            this.KitchenButton.Location = new System.Drawing.Point(0, 0);
+            this.KitchenButton.Name = "KitchenButton";
+            this.KitchenButton.Size = new System.Drawing.Size(75, 23);
+            this.KitchenButton.TabIndex = 0;
+            // 
+            // PaymentButton
+            // 
+            this.PaymentButton.Location = new System.Drawing.Point(0, 0);
+            this.PaymentButton.Name = "PaymentButton";
+            this.PaymentButton.Size = new System.Drawing.Size(75, 23);
+            this.PaymentButton.TabIndex = 0;
+            // 
+            // KitchenForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Kitchen";
+            this.ClientSize = new System.Drawing.Size(1271, 686);
             this.Name = "KitchenForm";
+            this.Text = "Kitchen";
             this.ResumeLayout(false);
-
-            initNavBar();
 
         }
 
