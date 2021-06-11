@@ -34,19 +34,64 @@ namespace ChapooDatabaseUI
             this.OrderButton = new System.Windows.Forms.Button();
             this.KitchenButton = new System.Windows.Forms.Button();
             this.PaymentButton = new System.Windows.Forms.Button();
-            //this.KassaButton = new System.Windows.Forms.Button();
+            this.TableHolderFlowLayout = new System.Windows.Forms.FlowLayoutPanel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.priceLabelPayment = new System.Windows.Forms.Label();
+            this.SubmitReceedBTN = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
+            this.initNavBar();
             // 
-            // BarServiceForm
+            // TableHolderFlowLayout
+            // 
+            this.TableHolderFlowLayout.Location = new System.Drawing.Point(12, 188);
+            this.TableHolderFlowLayout.Name = "TableHolderFlowLayout";
+            this.TableHolderFlowLayout.Size = new System.Drawing.Size(718, 460);
+            this.TableHolderFlowLayout.TabIndex = 0;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(736, 188);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowTemplate.Height = 25;
+            this.dataGridView1.Size = new System.Drawing.Size(490, 460);
+            this.dataGridView1.TabIndex = 0;
+            // 
+            // priceLabelPayment
+            // 
+            this.priceLabelPayment.AutoSize = true;
+            this.priceLabelPayment.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.priceLabelPayment.Location = new System.Drawing.Point(736, 651);
+            this.priceLabelPayment.Name = "priceLabelPayment";
+            this.priceLabelPayment.Size = new System.Drawing.Size(105, 28);
+            this.priceLabelPayment.TabIndex = 1;
+            this.priceLabelPayment.Text = "Total Price:";
+            // 
+            // SubmitReceedBTN
+            // 
+            this.SubmitReceedBTN.Location = new System.Drawing.Point(1064, 658);
+            this.SubmitReceedBTN.Name = "SubmitReceedBTN";
+            this.SubmitReceedBTN.Size = new System.Drawing.Size(162, 21);
+            this.SubmitReceedBTN.TabIndex = 2;
+            this.SubmitReceedBTN.Text = "Submit receed";
+            this.SubmitReceedBTN.UseVisualStyleBackColor = true;
+            this.SubmitReceedBTN.Click += new System.EventHandler(this.SubmitReceedBTN_Click);
+            // 
+            // PaymentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1238, 819);
+            this.Controls.Add(this.SubmitReceedBTN);
+            this.Controls.Add(this.priceLabelPayment);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.TableHolderFlowLayout);
             this.Name = "PaymentForm";
             this.Text = "Payment";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
-
-            initNavBar();
+            this.PerformLayout();
 
         }
 
@@ -107,17 +152,38 @@ namespace ChapooDatabaseUI
             // 
             // KassaButton
             // 
-            //this.KassaButton.Location = new System.Drawing.Point(662, 0);
-            //this.KassaButton.Name = "KassaButton";
-            //this.KassaButton.Size = new System.Drawing.Size(139, 51);
-            //this.KassaButton.TabIndex = 6;
-            //this.KassaButton.Text = "Kassa";
-            //this.KassaButton.UseVisualStyleBackColor = true;
-            //this.KassaButton.Click += (sender, e) => KassaButton(this);
+
 
             this.Controls.Add(this.NavBarContainer);
         }
 
+        public void generateGridLayout(System.Windows.Forms.DataGridView view, string[] columnArr)
+        {
+            view.ColumnCount = columnArr.Length;
+
+            view.ColumnHeadersDefaultCellStyle.BackColor = System.Drawing.Color.Navy;
+            view.ColumnHeadersDefaultCellStyle.ForeColor = System.Drawing.Color.White;
+
+            view.GridColor = System.Drawing.Color.Black;
+            view.RowHeadersVisible = false;
+            view.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+
+
+            for (int i = 0; i < columnArr.Length; i++)
+                view.Columns[i].Name = columnArr[i];
+
+            view.MultiSelect = false;
+        }
+
+        public void FillDataInGridView(System.Windows.Forms.DataGridView view, string[] dataString)
+        {
+            view.Rows.Add(dataString);
+        }
+
+        public void ClearDataGridView(System.Windows.Forms.DataGridView view)
+        {
+            view.Columns.Clear();
+        }
         #endregion
 
 
@@ -126,6 +192,9 @@ namespace ChapooDatabaseUI
         private new System.Windows.Forms.Button OrderButton;
         private new System.Windows.Forms.Button KitchenButton;
         private new System.Windows.Forms.Button PaymentButton;
-
+        private System.Windows.Forms.FlowLayoutPanel TableHolderFlowLayout;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label priceLabelPayment;
+        private System.Windows.Forms.Button SubmitReceedBTN;
     }
 }

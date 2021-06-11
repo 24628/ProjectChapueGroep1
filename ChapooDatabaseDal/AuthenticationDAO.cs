@@ -34,7 +34,6 @@ namespace ChapooDatabaseDal
             SqlParameter paraemail = new SqlParameter("@email", SqlDbType.VarChar){ Value = email };
             sqlParameters[0] = paraemail;
 
-            // return a list with drinks
             return ReadTables(ExecuteSelectQuery(query, sqlParameters));
         }
 

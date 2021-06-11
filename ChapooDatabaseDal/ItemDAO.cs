@@ -52,7 +52,7 @@ namespace ChapooDatabaseDal
             foreach (DataRow dr in dataTable.Rows)
             {
                 MenuItem menu = new MenuItem(
-                Convert.ToInt32(dr["MenuItemID"]),
+                //Convert.ToInt32(dr["MenuItemID"]),
                 Convert.ToInt32(dr["MenuID"]),
                 dr["MenuName"].ToString(),
                 Convert.ToInt32(dr["Price"])

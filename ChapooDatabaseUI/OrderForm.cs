@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
@@ -45,17 +46,17 @@ namespace ChapooDatabaseUI
                 };
 
 
-                button.Text += SetTableStatus(table);
+                button.Text += getTableStatus(table);
 
                 // Display table colour based on status
-                //button.BackColor = table.Occupied ? Color.FromArgb(255, 104, 107) : Color.FromArgb(132, 220, 198);
+                button.BackColor = table.setTableColor(table.Status);
 
                 button.Click += new EventHandler(Table_Click);
                 flowLayoutTableContainer.Controls.Add(button);
             }
         }
 
-        private string SetTableStatus(Table table)
+        private string getTableStatus(Table table)
         {
             return table.Status;
         }
@@ -64,8 +65,7 @@ namespace ChapooDatabaseUI
         {
             Button button = (Button)sender;
             Table table = (Table)button.Tag;
-
-            MessageBox.Show(table.TableId.ToString());
+            showNewTableOrder(this, getCurrentUser(), table.TableId);
 
             //if (!table.Occupied) tableService.ChangeOccupation(table, true);
 

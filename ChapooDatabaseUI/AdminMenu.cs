@@ -21,13 +21,13 @@ namespace ChapooDatabaseUI
         }
         private void AdminMenuGrid_CellContentClick(object sender, EventArgs e)
         {
-            AdminMenuGrid.Columns.Add("MenuItemID", "MenuItemID");
+            //AdminMenuGrid.Columns.Add("MenuItemID", "MenuItemID");
             AdminMenuGrid.Columns.Add("MenuID", "MenuID");
             AdminMenuGrid.Columns.Add("MenuName", "MenuName");
             AdminMenuGrid.Columns.Add("Price", "Price");
             foreach (MenuItem menuitem in menuItemService.GetAllItems())
             {
-                string[] row = { menuitem.MenuItemID.ToString(), menuitem.MenuID.ToString(), menuitem.MenuName, menuitem.Price.ToString() };
+                string[] row = { menuitem.Id.ToString(), menuitem.Id.ToString(), menuitem.Name, menuitem.Price.ToString() };
                 AdminMenuGrid.Rows.Add(row);
             }
         }
@@ -47,7 +47,7 @@ namespace ChapooDatabaseUI
         {
             foreach (MenuItem menuItem in menuItemService.GetAllItems())
             {
-                if (MenuName == menuItem.MenuName) { return true; }
+                if (MenuName == menuItem.Name) { return true; }
             }
             return false;
         }

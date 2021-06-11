@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\hdmap\\Documents\\zzzproject\\Lip 2\\ChapooDatabaseLogic\\ChapooDatabaseLogic.csproj": {}
+    "C:\\Users\\hdmap\\source\\repos\\ProjectChapueGroep1\\ChapooDatabaseLogic\\ChapooDatabaseLogic.csproj": {}
   },
   "projects": {
-    "C:\\Users\\hdmap\\Documents\\zzzproject\\Lip 2\\ChapooDatabaseDal\\ChapooDatabaseDal.csproj": {
+    "C:\\Users\\hdmap\\source\\repos\\ProjectChapueGroep1\\ChapooDatabaseDal\\ChapooDatabaseDal.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hdmap\\Documents\\zzzproject\\Lip 2\\ChapooDatabaseDal\\ChapooDatabaseDal.csproj",
+        "projectUniqueName": "C:\\Users\\hdmap\\source\\repos\\ProjectChapueGroep1\\ChapooDatabaseDal\\ChapooDatabaseDal.csproj",
         "projectName": "ChapooDatabaseDal",
-        "projectPath": "C:\\Users\\hdmap\\Documents\\zzzproject\\Lip 2\\ChapooDatabaseDal\\ChapooDatabaseDal.csproj",
+        "projectPath": "C:\\Users\\hdmap\\source\\repos\\ProjectChapueGroep1\\ChapooDatabaseDal\\ChapooDatabaseDal.csproj",
         "packagesPath": "C:\\Users\\hdmap\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hdmap\\Documents\\zzzproject\\Lip 2\\ChapooDatabaseDal\\obj\\",
+        "outputPath": "C:\\Users\\hdmap\\source\\repos\\ProjectChapueGroep1\\ChapooDatabaseDal\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -34,8 +34,8 @@
           "netstandard2.1": {
             "targetAlias": "netstandard2.1",
             "projectReferences": {
-              "C:\\Users\\hdmap\\Documents\\zzzproject\\Lip 2\\ChapooDatabaseModel\\ChapooDatabaseModel.csproj": {
-                "projectPath": "C:\\Users\\hdmap\\Documents\\zzzproject\\Lip 2\\ChapooDatabaseModel\\ChapooDatabaseModel.csproj"
+              "C:\\Users\\hdmap\\source\\repos\\ProjectChapueGroep1\\ChapooDatabaseModel\\ChapooDatabaseModel.csproj": {
+                "projectPath": "C:\\Users\\hdmap\\source\\repos\\ProjectChapueGroep1\\ChapooDatabaseModel\\ChapooDatabaseModel.csproj"
               }
             }
           }
@@ -78,14 +78,14 @@
         }
       }
     },
-    "C:\\Users\\hdmap\\Documents\\zzzproject\\Lip 2\\ChapooDatabaseLogic\\ChapooDatabaseLogic.csproj": {
+    "C:\\Users\\hdmap\\source\\repos\\ProjectChapueGroep1\\ChapooDatabaseLogic\\ChapooDatabaseLogic.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hdmap\\Documents\\zzzproject\\Lip 2\\ChapooDatabaseLogic\\ChapooDatabaseLogic.csproj",
+        "projectUniqueName": "C:\\Users\\hdmap\\source\\repos\\ProjectChapueGroep1\\ChapooDatabaseLogic\\ChapooDatabaseLogic.csproj",
         "projectName": "ChapooDatabaseLogic",
-        "projectPath": "C:\\Users\\hdmap\\Documents\\zzzproject\\Lip 2\\ChapooDatabaseLogic\\ChapooDatabaseLogic.csproj",
+        "projectPath": "C:\\Users\\hdmap\\source\\repos\\ProjectChapueGroep1\\ChapooDatabaseLogic\\ChapooDatabaseLogic.csproj",
         "packagesPath": "C:\\Users\\hdmap\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hdmap\\Documents\\zzzproject\\Lip 2\\ChapooDatabaseLogic\\obj\\",
+        "outputPath": "C:\\Users\\hdmap\\source\\repos\\ProjectChapueGroep1\\ChapooDatabaseLogic\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -108,11 +108,11 @@
           "netstandard2.1": {
             "targetAlias": "netstandard2.1",
             "projectReferences": {
-              "C:\\Users\\hdmap\\Documents\\zzzproject\\Lip 2\\ChapooDatabaseDal\\ChapooDatabaseDal.csproj": {
-                "projectPath": "C:\\Users\\hdmap\\Documents\\zzzproject\\Lip 2\\ChapooDatabaseDal\\ChapooDatabaseDal.csproj"
+              "C:\\Users\\hdmap\\source\\repos\\ProjectChapueGroep1\\ChapooDatabaseDal\\ChapooDatabaseDal.csproj": {
+                "projectPath": "C:\\Users\\hdmap\\source\\repos\\ProjectChapueGroep1\\ChapooDatabaseDal\\ChapooDatabaseDal.csproj"
               },
-              "C:\\Users\\hdmap\\Documents\\zzzproject\\Lip 2\\ChapooDatabaseModel\\ChapooDatabaseModel.csproj": {
-                "projectPath": "C:\\Users\\hdmap\\Documents\\zzzproject\\Lip 2\\ChapooDatabaseModel\\ChapooDatabaseModel.csproj"
+              "C:\\Users\\hdmap\\source\\repos\\ProjectChapueGroep1\\ChapooDatabaseModel\\ChapooDatabaseModel.csproj": {
+                "projectPath": "C:\\Users\\hdmap\\source\\repos\\ProjectChapueGroep1\\ChapooDatabaseModel\\ChapooDatabaseModel.csproj"
               }
             }
           }
@@ -151,14 +151,14 @@
         }
       }
     },
-    "C:\\Users\\hdmap\\Documents\\zzzproject\\Lip 2\\ChapooDatabaseModel\\ChapooDatabaseModel.csproj": {
+    "C:\\Users\\hdmap\\source\\repos\\ProjectChapueGroep1\\ChapooDatabaseModel\\ChapooDatabaseModel.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hdmap\\Documents\\zzzproject\\Lip 2\\ChapooDatabaseModel\\ChapooDatabaseModel.csproj",
+        "projectUniqueName": "C:\\Users\\hdmap\\source\\repos\\ProjectChapueGroep1\\ChapooDatabaseModel\\ChapooDatabaseModel.csproj",
         "projectName": "ChapooDatabaseModel",
-        "projectPath": "C:\\Users\\hdmap\\Documents\\zzzproject\\Lip 2\\ChapooDatabaseModel\\ChapooDatabaseModel.csproj",
+        "projectPath": "C:\\Users\\hdmap\\source\\repos\\ProjectChapueGroep1\\ChapooDatabaseModel\\ChapooDatabaseModel.csproj",
         "packagesPath": "C:\\Users\\hdmap\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hdmap\\Documents\\zzzproject\\Lip 2\\ChapooDatabaseModel\\obj\\",
+        "outputPath": "C:\\Users\\hdmap\\source\\repos\\ProjectChapueGroep1\\ChapooDatabaseModel\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

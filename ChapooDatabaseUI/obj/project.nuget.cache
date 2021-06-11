@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "6AfNp4qH2kspsrB9z/sd2W4xWZHkmXqtxFuqY8y5RYm7loVVnyYaTD/ZIUUq2RfYJrDlQVNefgWILrHKjgioJg==",
+  "dgSpecHash": "yBQ4i6xPLN+VdVJQ0t8nBzg/sXlWPLegXN+J54khsPI7/S2vNYrrEByvkIBVpIXDp8ZpDlM5abHwYZklCMZp2g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\hdmap\\Documents\\zzzproject\\Lip 2\\ChapooDatabaseUI\\ChapooDatabaseUI.csproj",
+  "projectFilePath": "C:\\Users\\hdmap\\source\\repos\\ProjectChapueGroep1\\ChapooDatabaseUI\\ChapooDatabaseUI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\hdmap\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
     "C:\\Users\\hdmap\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",

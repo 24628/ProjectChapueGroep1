@@ -36,20 +36,20 @@ namespace ChapooDatabaseUI
             this.PaymentButton = new System.Windows.Forms.Button();
             this.flowLayoutTableContainer = new System.Windows.Forms.FlowLayoutPanel();
             this.SuspendLayout();
-            initNavBar();
+            this.initNavBar();
             // 
             // flowLayoutTableContainer
             // 
-            this.flowLayoutTableContainer.Location = new System.Drawing.Point(2, 64);
-            this.flowLayoutTableContainer.Name = "flowLayoutPanel1";
-            this.flowLayoutTableContainer.Size = new System.Drawing.Size(798, 374);
+            this.flowLayoutTableContainer.Location = new System.Drawing.Point(1, 47);
+            this.flowLayoutTableContainer.Name = "flowLayoutTableContainer";
+            this.flowLayoutTableContainer.Size = new System.Drawing.Size(1023, 363);
             this.flowLayoutTableContainer.TabIndex = 0;
             // 
             // OrderForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1254, 638);
             this.Controls.Add(this.flowLayoutTableContainer);
             this.Name = "OrderForm";
             this.Text = "Order";

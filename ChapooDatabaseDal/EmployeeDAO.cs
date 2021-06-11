@@ -48,15 +48,15 @@ namespace ChapooDatabaseDal
 
             foreach (DataRow dr in dataTable.Rows)
             {
-                Employee emplist = new Employee(
-                Convert.ToInt32(dr["EmployeeID"]),
-                dr["Firstname"].ToString(),
-                dr["Lastname"].ToString(),
-                dr["Email"].ToString(),
-                (int)(123),
-                dr["Position"].ToString()
+                Employee menu = new Employee(
+                    Convert.ToInt32(dr["EmployeeID"]),
+                    dr["Firstname"].ToString(),
+                    dr["Lastname"].ToString(),
+                    dr["Email"].ToString(),
+                    Convert.ToInt32(dr["Telephone"]),// Werkt niet in admin
+                    dr["Position"].ToString()
                 );
-                employeeList.Add(emplist);
+                employeeList.Add(menu);
             }
             return employeeList;
         }
