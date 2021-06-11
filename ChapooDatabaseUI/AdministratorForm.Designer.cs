@@ -29,17 +29,52 @@ namespace ChapooDatabaseUI
         /// </summary>
         private void InitializeComponent()
         {
-            initNavBar();
-
-            this.components = new System.ComponentModel.Container();
+            this.BTN_Werknemers = new System.Windows.Forms.Button();
+            this.BTN_MenuItem = new System.Windows.Forms.Button();
+            this.BTN_Voorraad = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // BTN_Werknemers
+            // 
+            this.BTN_Werknemers.Location = new System.Drawing.Point(341, 333);
+            this.BTN_Werknemers.Name = "BTN_Werknemers";
+            this.BTN_Werknemers.Size = new System.Drawing.Size(252, 152);
+            this.BTN_Werknemers.TabIndex = 29;
+            this.BTN_Werknemers.Text = "Werknemers";
+            this.BTN_Werknemers.UseVisualStyleBackColor = true;
+            this.BTN_Werknemers.Click += new System.EventHandler(this.BTN_Werknemers_Click);
+            // 
+            // BTN_MenuItem
+            // 
+            this.BTN_MenuItem.Location = new System.Drawing.Point(341, 142);
+            this.BTN_MenuItem.Name = "BTN_MenuItem";
+            this.BTN_MenuItem.Size = new System.Drawing.Size(252, 152);
+            this.BTN_MenuItem.TabIndex = 30;
+            this.BTN_MenuItem.Text = "Menu Items";
+            this.BTN_MenuItem.UseVisualStyleBackColor = true;
+            this.BTN_MenuItem.Click += new System.EventHandler(this.BTN_MenuItem_Click);
+            // 
+            // BTN_Voorraad
+            // 
+            this.BTN_Voorraad.Location = new System.Drawing.Point(775, 142);
+            this.BTN_Voorraad.Name = "BTN_Voorraad";
+            this.BTN_Voorraad.Size = new System.Drawing.Size(252, 152);
+            this.BTN_Voorraad.TabIndex = 31;
+            this.BTN_Voorraad.Text = "Voorraad";
+            this.BTN_Voorraad.UseVisualStyleBackColor = true;
+            this.BTN_Voorraad.Click += new System.EventHandler(this.BTN_Voorraad_Click);
+            // 
+            // AdministratorForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1500, 618);
+            this.Controls.Add(this.BTN_Voorraad);
+            this.Controls.Add(this.BTN_MenuItem);
+            this.Controls.Add(this.BTN_Werknemers);
             this.Name = "AdministratorForm";
             this.Text = "Administrator";
             this.ResumeLayout(false);
-
-
-            
 
         }
 
@@ -112,6 +147,8 @@ namespace ChapooDatabaseUI
         private new System.Windows.Forms.Button OrderButton;
         private new System.Windows.Forms.Button KitchenButton;
         private new System.Windows.Forms.Button PaymentButton;
-
+        private System.Windows.Forms.Button BTN_Werknemers;
+        private System.Windows.Forms.Button BTN_MenuItem;
+        private System.Windows.Forms.Button BTN_Voorraad;
     }
 }

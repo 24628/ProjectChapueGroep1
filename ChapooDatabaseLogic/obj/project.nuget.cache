@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "V9oYbMvQH50Aa9c7huoJDfouz/Xf3QYDsQ4bnkxcaFezR7BqLRRMFk7XXDHA/LjjcZuR1wuI1rafeOPNNuA6vA==",
+  "dgSpecHash": "MiBan88dVDd5GUuWkXWvoOLl7GURWBGtHeO4+ey7M/YXka4wdIj9f9wSYH03pLjgELS/OQwnEImAHdIp3sjsHQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\hdmap\\source\\repos\\ProjectChapueGroep1\\ChapooDatabaseLogic\\ChapooDatabaseLogic.csproj",
+  "projectFilePath": "C:\\Users\\hdmap\\Documents\\zzzproject\\Lip 2\\ChapooDatabaseLogic\\ChapooDatabaseLogic.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\hdmap\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\hdmap\\.nuget\\packages\\runtime.native.system.data.sqlclient.sni\\4.7.0\\runtime.native.system.data.sqlclient.sni.4.7.0.nupkg.sha512",

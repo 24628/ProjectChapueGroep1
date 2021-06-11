@@ -6,48 +6,49 @@ using ChapooDatabaseModel;
 
 namespace ChapooDatabaseLogic
 {
-    public class MenuItemService
+    public class StockService
     {
-        readonly ChapooDatabaseDal.ItemDAO dao = new ItemDAO();
+        readonly ChapooDatabaseDal.StockDAO dao = new StockDAO();
 
-        public List<MenuItem> GetAllItems() 
+        public List<Stock> GetAllStock()
         {
             try
             {
-                return dao.CheckItems();
+                return dao.CheckStock();
             }
             catch (Exception e)
             {
-                throw new Exception(e.Message);
-            };
-        }
-        public void UpdateMenuItem(int MenuID, string MenuName, decimal Price)
-        {
-            try
-            {
-                dao.UpdateMenuItem(MenuID, MenuName, Price);
-            }
-            catch (Exception e)
-            {
+
                 throw new Exception(e.Message);
             }
         }
-        public void AddMenuItem(int MenuID, string MenuName, decimal Price)
+        public void UpdateStock(int MenuID, int Amount)
         {
             try
             {
-                dao.AddMenuItem(MenuID, MenuName, Price);
+                dao.UpdateStock(MenuID, Amount);
             }
             catch (Exception e)
             {
                 throw new Exception(e.Message);
             }
         }
-        public void DeleteMenuItem(int MenuItemID)
+        public void AddStock(int MenuID, int Amount)
         {
             try
             {
-                dao.VerwijderMenuItem(MenuItemID);
+                dao.AddStock(MenuID, Amount);
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+        }
+        public void DeleteStock(int StockID)
+        {
+            try
+            {
+                dao.DeleteStock(StockID);
             }
             catch (Exception e)
             {

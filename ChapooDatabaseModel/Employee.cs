@@ -9,8 +9,8 @@ namespace ChapooDatabaseModel
         public readonly int EmployeeID;
         public readonly string Firstname;
         public readonly string Lastname;
-        public readonly string Email;
-        public readonly int Telephone;
+        public string Email;
+        public int Telephone;
         public readonly string Position; 
 
         public Employee(int v1, string v2, string v3, string v4, int v6, string v7)

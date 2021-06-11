@@ -17,7 +17,6 @@ namespace ChapooDatabaseModel
             this.MenuID = v2;
             this.MenuName = v3;
             this.Price = v4;
-
         }
     }
 }
