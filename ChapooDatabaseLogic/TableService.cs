@@ -83,5 +83,10 @@ namespace ChapooDatabaseLogic
         {
             return dao.getReceerdOrderForTableById(tableId);
         }
+
+        public List<Table> getAllTablesForKitchen()
+        {
+            return dao.getAllTablesForKitchen();
+        }
     }
 }

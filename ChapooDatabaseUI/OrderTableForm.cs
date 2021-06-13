@@ -54,18 +54,18 @@ namespace ChapooDatabaseUI
 
         private void DeleteOrderButton_Click(object sender, EventArgs e)
         {
-            if (tableService.CheckIfTableExistAndHasAnOrder(getCurrentTableId()))
-            {
-                tableService.deleteTableOrder(getCurrentTableId(), this.order.OrderID);
+            DialogResult dialogResult = MessageBox.Show("Want to delete the order?", "Delete Order?", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes) {
+                if (tableService.CheckIfTableExistAndHasAnOrder(getCurrentTableId())) {
+                    tableService.deleteTableOrder(getCurrentTableId(), this.order.OrderID);
+                }
+                HideFormItemsForCreate();
             }
-            HideFormItemsForCreate();
         }
 
         private void CreateOrderButton_Click(object sender, EventArgs e)
         {
             if (!tableService.CheckIfTableExistAndHasAnOrder(getCurrentTableId())) {
-                MessageBox.Show(getCurrentTableId().ToString());
-                MessageBox.Show(getCurrentUser().EmployeeID.ToString());
                 tableService.createTableOrder(getCurrentTableId(), getCurrentUser().EmployeeID);
             }
             InitForm();

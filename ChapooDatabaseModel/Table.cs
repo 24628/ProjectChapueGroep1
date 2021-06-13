@@ -31,9 +31,6 @@ namespace ChapooDatabaseModel
                 case "reservation":
                     x = 104; y = 255; z = 107;
                     break;
-                case "occupied":
-                    x = 107; y = 20; z = 107;
-                    break;
                 case "order":
                     x = 104; y = 255; z = 107;
                     break;

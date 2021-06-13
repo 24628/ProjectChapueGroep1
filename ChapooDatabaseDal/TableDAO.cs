@@ -98,7 +98,7 @@ namespace ChapooDatabaseDal
             // execute query
             ExecuteEditQuery(query, sqlParameters);
 
-            updateTableStatus(TableID, "Occupied");
+            updateTableStatus(TableID, "Order");
         }
 
         public void deleteTableOrder(int TableID, int OrderId)
@@ -260,5 +260,13 @@ namespace ChapooDatabaseDal
 
             return ReadTablesForOneOrderItems(ExecuteSelectQuery(query, sqlParameters));
         }
+        public List<Table> getAllTablesForKitchen ()
+        {
+            string query = "SELECT * From [Tables]  JOIN[Order] as oi on[Tables].TableID = oi.TableID ORDER BY oi.TimeOrder";
+            SqlParameter[] sqlParameters = new SqlParameter[0];
+
+            return ReadTables(ExecuteSelectQuery(query, sqlParameters));
+        }
     }
 }
+ 

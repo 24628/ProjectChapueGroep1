@@ -21,11 +21,25 @@ namespace ChapooDatabaseUI
         private List<Table> TableList;
         private List<OrderItem> orderList;
         private decimal totalPrice;
+        private Table table = null;
 
         public PaymentForm()
         {
             InitializeComponent();
             dispayTables();
+            displayComboBox();
+        }
+
+        private void displayComboBox()
+        {
+            List<PaymentMethod> pMed = new List<PaymentMethod>();
+            pMed.Add(new PaymentMethod() { Text = "CreditCard", Value = "CreditCard" });
+            pMed.Add(new PaymentMethod() { Text = "Cash", Value = "Cash" });
+            pMed.Add(new PaymentMethod() { Text = "Visa", Value = "Visa" });
+
+            comboBox1.DataSource = pMed;
+            comboBox1.DisplayMember = "Text";
+            comboBox1.ValueMember = "Value";
         }
 
         private void setTableList()
@@ -35,6 +49,7 @@ namespace ChapooDatabaseUI
 
         private void dispayTables()
         {
+            TableHolderFlowLayout.Controls.Clear();
             setTableList();
 
             foreach (Table table in this.TableList)
@@ -67,7 +82,7 @@ namespace ChapooDatabaseUI
         private void Table_Click(object sender, EventArgs e)
         {
             Button button = (Button)sender;
-            Table table = (Table)button.Tag;
+            table = (Table)button.Tag;
 
             this.orderList = tableService.getReceerdOrderForTableById(table.TableId);
 
@@ -80,13 +95,26 @@ namespace ChapooDatabaseUI
                 FillDataInGridView(dataGridView1, item.dataGrid(item));
                 totalPrice += item.Price;
             }
-
-            priceLabelPayment.Text = pricePlaceHolder + FormatPrice(totalPrice);
         }
 
         private void SubmitReceedBTN_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Insert card the total price is " + FormatPrice(totalPrice));
+            string status = (string)comboBox1.SelectedValue;
+            decimal tip = 0.00m;
+            if (textBox1.Text != string.Empty)
+                tip = Convert.ToDecimal(textBox1.Text);
+            priceLabelPayment.Text = pricePlaceHolder + FormatPrice(totalPrice + tip);
+
+            if (status == "CreditCard")
+                MessageBox.Show("Insert CreditCard, the total price is " + FormatPrice(totalPrice + tip));
+            if (status == "Cash")
+                MessageBox.Show("Hand over the cash, the total price is " + FormatPrice(totalPrice + tip));
+            if (status == "Visa")
+                MessageBox.Show("Insert Visa, the total price is " + FormatPrice(totalPrice + tip));
+
+            int orderId = tableService.getSingleOrder(table.TableId).OrderID;
+            tableService.deleteTableOrder(table.TableId, orderId);
+            dispayTables();
         }
 
 
@@ -94,5 +122,6 @@ namespace ChapooDatabaseUI
         {
             return string.Format("{0:C}", price);
         }
+
     }
 }

@@ -38,9 +38,13 @@ namespace ChapooDatabaseUI
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.priceLabelPayment = new System.Windows.Forms.Label();
             this.SubmitReceedBTN = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-            this.initNavBar();
+            initNavBar();
+
             // 
             // TableHolderFlowLayout
             // 
@@ -62,7 +66,7 @@ namespace ChapooDatabaseUI
             // 
             this.priceLabelPayment.AutoSize = true;
             this.priceLabelPayment.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.priceLabelPayment.Location = new System.Drawing.Point(736, 651);
+            this.priceLabelPayment.Location = new System.Drawing.Point(736, 714);
             this.priceLabelPayment.Name = "priceLabelPayment";
             this.priceLabelPayment.Size = new System.Drawing.Size(105, 28);
             this.priceLabelPayment.TabIndex = 1;
@@ -70,7 +74,7 @@ namespace ChapooDatabaseUI
             // 
             // SubmitReceedBTN
             // 
-            this.SubmitReceedBTN.Location = new System.Drawing.Point(1064, 658);
+            this.SubmitReceedBTN.Location = new System.Drawing.Point(1064, 714);
             this.SubmitReceedBTN.Name = "SubmitReceedBTN";
             this.SubmitReceedBTN.Size = new System.Drawing.Size(162, 21);
             this.SubmitReceedBTN.TabIndex = 2;
@@ -78,11 +82,39 @@ namespace ChapooDatabaseUI
             this.SubmitReceedBTN.UseVisualStyleBackColor = true;
             this.SubmitReceedBTN.Click += new System.EventHandler(this.SubmitReceedBTN_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(736, 651);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(43, 28);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Tip:";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(1064, 685);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(162, 23);
+            this.comboBox1.TabIndex = 4;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(785, 656);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(441, 23);
+            this.textBox1.TabIndex = 5;
+            // 
             // PaymentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1238, 819);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.SubmitReceedBTN);
             this.Controls.Add(this.priceLabelPayment);
             this.Controls.Add(this.dataGridView1);
@@ -196,5 +228,8 @@ namespace ChapooDatabaseUI
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label priceLabelPayment;
         private System.Windows.Forms.Button SubmitReceedBTN;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

@@ -66,10 +66,6 @@ namespace ChapooDatabaseUI
             Button button = (Button)sender;
             Table table = (Table)button.Tag;
             showNewTableOrder(this, getCurrentUser(), table.TableId);
-
-            //if (!table.Occupied) tableService.ChangeOccupation(table, true);
-
-            //DisplayMenuPanel(table);
         }
     }
 }
