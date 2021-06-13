@@ -75,5 +75,9 @@ namespace ChapooDatabaseUI
         public void AdministratorButton(BaseForm form) {
             showNewForm(new AdministratorForm(), form, getCurrentUser());
         }
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            new LoginForm().Show();
+        }
     }
 }

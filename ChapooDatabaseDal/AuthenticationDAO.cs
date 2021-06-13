@@ -44,7 +44,7 @@ namespace ChapooDatabaseDal
                 dataTable.Rows[0]["Firstname"].ToString(),
                 dataTable.Rows[0]["Lastname"].ToString(),
                 dataTable.Rows[0]["Email"].ToString(),
-                0643434343,
+                (float)(double)dataTable.Rows[0]["Telephone"],
                 dataTable.Rows[0]["Position"].ToString()
             );
             return emp;

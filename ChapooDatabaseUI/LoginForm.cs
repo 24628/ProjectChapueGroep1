@@ -47,5 +47,9 @@ namespace ChapooUI
             }
             */
         }
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            Application.ExitThread();
+        }
     }
 }

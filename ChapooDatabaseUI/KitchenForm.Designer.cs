@@ -82,11 +82,11 @@ namespace ChapooDatabaseUI
             this.UpdateTableStatusForm.Text = "Update Table Status";
             this.UpdateTableStatusForm.UseVisualStyleBackColor = true;
             this.UpdateTableStatusForm.Click += new System.EventHandler(this.UpdateTableStatusForm_Click);
-            // 
             // KitchenForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+
             this.ClientSize = new System.Drawing.Size(1484, 826);
             this.Controls.Add(this.UpdateTableStatusForm);
             this.Controls.Add(this.comboBox1);
@@ -208,7 +208,6 @@ namespace ChapooDatabaseUI
         private System.Windows.Forms.FlowLayoutPanel KitchenFormPickUpFlowLayout;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.FlowLayoutPanel KitchenFormFlowLayout;
         private System.Windows.Forms.Button UpdateTableStatusForm;
     }
 }
