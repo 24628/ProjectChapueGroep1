@@ -94,7 +94,7 @@ namespace ChapooDatabaseDal
                     dr["Firstname"].ToString(),
                     dr["Lastname"].ToString(),
                     dr["Email"].ToString(),
-                    (float)(double)dr["Telephone"],
+                    (float)(double)dataTable.Rows[0]["Telephone"],
                     dr["Position"].ToString()
                 );
                 employeeList.Add(menu);

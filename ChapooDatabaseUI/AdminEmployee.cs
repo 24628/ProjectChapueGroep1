@@ -91,8 +91,13 @@ namespace ChapooDatabaseUI
         {
             int EmployeeID = Int32.Parse(TXTB_ADEmployeeID.Text);
             employeeService.DeleteEmployee(EmployeeID);
-
+            MessageBox.Show("Employee Gedelete", "Employee!", MessageBoxButtons.OK);
             displayGrid();
+        }
+
+        private void BTN_ADTerug_Click(object sender, EventArgs e)
+        {
+            showNewForm(new AdministratorForm(), this, getCurrentUser());
         }
     }
 }

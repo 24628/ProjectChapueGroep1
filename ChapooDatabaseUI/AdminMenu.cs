@@ -78,5 +78,10 @@ namespace ChapooDatabaseUI
             menuItemService.DeleteMenuItem(int.Parse(TXTB_MIMenuItemID.Text));
             displayGrid();
         }
+
+        private void BTN_MITerug_Click(object sender, EventArgs e)
+        {
+            showNewForm(new AdministratorForm(), this, getCurrentUser());
+        }
     }
 }

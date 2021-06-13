@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Text;
 
 namespace ChapooDatabaseModel
@@ -30,7 +31,7 @@ namespace ChapooDatabaseModel
                 m.Firstname,
                 m.Lastname,
                 m.Email,
-                m.Telephone.ToString(),
+                m.Telephone.ToString("F1", new CultureInfo("en-US").NumberFormat),
                 m.Position
             };
         }

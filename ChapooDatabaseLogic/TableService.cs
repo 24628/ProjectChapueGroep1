@@ -22,7 +22,7 @@ namespace ChapooDatabaseLogic
 
         public bool ItemExist(int e)
         {
-            if (dao.ItemExist(e) == 1)
+            if (dao.ItemExist(e) != 0)
                 return true;
             else
                 return false;

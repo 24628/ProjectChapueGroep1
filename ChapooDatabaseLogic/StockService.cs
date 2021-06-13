@@ -22,11 +22,11 @@ namespace ChapooDatabaseLogic
                 throw new Exception(e.Message);
             }
         }
-        public void UpdateStock(int MenuID, int Amount)
+        public void UpdateStock(int StockID, int MenuItemID, int Amount)
         {
             try
             {
-                dao.UpdateStock(MenuID, Amount);
+                dao.UpdateStock(StockID, MenuItemID, Amount);
             }
             catch (Exception e)
             {

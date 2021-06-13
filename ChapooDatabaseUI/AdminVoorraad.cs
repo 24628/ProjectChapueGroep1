@@ -18,15 +18,16 @@ namespace ChapooDatabaseUI
         public AdminVoorraad()
         {
             InitializeComponent();
+            displayGrid();
         }
         
         private void displayGrid()
         {
 
             ClearDataGridView(AdminVoorraadGrid);
-            generateGridLayout(AdminVoorraadGrid, new string[] { "EmployeeID", "Firstname", "Lastname", "Email", "Telephone", "Position" });
+            generateGridLayout(AdminVoorraadGrid, new string[] { "StockID", "MenuItemID", "MenuName", "Amount" });
 
-            List<Employee> emp = stockService.GetAllStock();
+            List<Stock> emp = stockService.GetAllStock();
             foreach (var e in emp)
             {
                 FillDataInGridView(AdminVoorraadGrid, e.dataGrid(e));
@@ -35,28 +36,16 @@ namespace ChapooDatabaseUI
 
         private void BTN_STUpdate_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i < AdminVoorraadGrid.Rows.Count - 1; i++)
-            {
-                //int StockID = int.Parse(AdminVoorraadGrid.Rows[i].Cells[0].Value.ToString());
-                int MenuID = int.Parse(AdminVoorraadGrid.Rows[i].Cells[0].Value.ToString());
-                int Amount = int.Parse(AdminVoorraadGrid.Rows[i].Cells[1].Value.ToString());
-                stockService.UpdateStock(MenuID, Amount);
-            }
-            MessageBox.Show("De Voorraad wijzigingen zijn doorgevoerd", "Employee Wijzigingen!", MessageBoxButtons.OK);
-        }
-        public bool StockCheck(int StockID) // check of de Employee al bestaat
-        {
-            foreach (Stock stock in stockService.GetAllStock())
-            {
-                if (StockID == stock.StockID)
-                {
-                    return true;
-                }
-            }
-            return false;
+            int StockID = Int32.Parse(TXTB_STStockIDs.Text);
+            int MenuItemID = Int32.Parse(TXTB_STMenuIDs.Text);
+           
+            int Amount = Int32.Parse(TXTB_STAmounts.Text);
+            stockService.UpdateStock(StockID, MenuItemID, Amount);
+            MessageBox.Show("De Stock wijzigingen zijn doorgevoerd", "Item Wijzigingen!", MessageBoxButtons.OK);
+            displayGrid();
         }
 
-        public void EmtyTextbox() // maak de textbox leeg naar gebruik
+        public void EmtyTextboxStock() // maak de textbox leeg naar gebruik
         {
             TXTB_STStockIDs.Text = string.Empty;
             TXTB_STMenuIDs.Text = string.Empty;
@@ -65,26 +54,27 @@ namespace ChapooDatabaseUI
 
         private void BTN_STAdd_Click(object sender, EventArgs e)
         {
-            //int StockID = int.Parse(TXTB_STStockID.Text.ToString());
-            int MenuID = int.Parse(TXTB_STMenuIDs.Text.ToString());
-            int Amount = int.Parse(TXTB_STAmounts.Text.ToString());
-           
-            stockService.AddStock(MenuID, Amount);
-            MessageBox.Show("Item in Stock toegevoegd", "Employee!", MessageBoxButtons.OK);
-            EmtyTextbox();
+            int MenuItemID = Int32.Parse(TXTB_STMenuIDs.Text);
+            int Amount = Int32.Parse(TXTB_STAmounts.Text);
+            stockService.AddStock(MenuItemID, Amount);
+            MessageBox.Show("Stock toegevoegd", "Menu Item!", MessageBoxButtons.OK);
+            EmtyTextboxStock();
+            displayGrid();
         }
 
 
         private void BTN_STDelete_Click(object sender, EventArgs e)
         {
             int StockID = int.Parse(TXTB_STStockIDs.Text.ToString());
-
-            //int Index = AdminVoorraadGrid.CurrentCell.RowIndex;
-
-            //AdminVoorraadGrid.Rows.RemoveAt(Index);
             stockService.DeleteStock(StockID);
 
             MessageBox.Show("Item in Stock Gedelete", "Voorraad!", MessageBoxButtons.OK);
+            displayGrid();
+        }
+
+        private void BTN_STTerug_Click(object sender, EventArgs e)
+        {
+            showNewForm(new AdministratorForm(), this, getCurrentUser());
         }
     }
 }

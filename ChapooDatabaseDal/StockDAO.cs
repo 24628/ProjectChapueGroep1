@@ -13,35 +13,33 @@ namespace ChapooDatabaseDal
     {
         public List<Stock> CheckStock()
         {
-            string query = "SELECT StockID, MenuID, Amount FROM Stock";
+            string query = "SELECT StockID, M.MenuItemID, MenuName, Amount FROM Stock AS S JOIN MenuItem AS M ON S.MenuItemID = M.MenuItemID";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadTables(ExecuteSelectQuery(query, sqlParameters));
         }
-        public void UpdateStock(int MenuID, int Amount)
+        public void UpdateStock(int StockID, int MenuItemID, int Amount)
         {
-            string query = $"Update [Stock] = Stock.MenuID = {MenuID}, Stock.Amount = '{Amount}', WHERE Stock";
-            SqlParameter[] sqlParameter = new SqlParameter[2];
-            
-            sqlParameter[0] = new SqlParameter("Stock", MenuID);
-            sqlParameter[1] = new SqlParameter("Stock", Amount);
+            string query = $"UPDATE [Stock] SET MenuItemID = '{MenuItemID}', Amount = '{Amount}' WHERE StockID = '{StockID}'";
+            SqlParameter[] sqlParameter = new SqlParameter[3];
+            sqlParameter[0] = new SqlParameter("StockID", StockID); 
+            sqlParameter[1] = new SqlParameter("MenuItemID", MenuItemID);
+            sqlParameter[2] = new SqlParameter("Amount", Amount);
+
             ExecuteEditQuery(query, sqlParameter);
         }
         public void AddStock(int MenuID, int Amount)
         {
-            string query = $"insert into [Stock] (MenuID, Amount) VALUES ('{MenuID}','{Amount}')";
+            string query = $"insert into [Stock] (M.MenuItemID, Amount) VALUES ('{MenuID}','{Amount}')";
             SqlParameter[] sqlParameter = new SqlParameter[2];
-            //sqlParameter[0] = new SqlParameter("MenuItemID", StockID);
             sqlParameter[0] = new SqlParameter("MenuID", MenuID);
-            sqlParameter[1] = new SqlParameter("MenuName", Amount);
+            sqlParameter[1] = new SqlParameter("Amount", Amount);
             ExecuteEditQuery(query, sqlParameter);
         }
         public void DeleteStock(int StockID)
         {
-            string query = $"Delete FROM [Stock] WHERE StockID = '{StockID}'";
-            SqlParameter[] sqlParameter = new SqlParameter[0];
-            sqlParameter[0] = new SqlParameter("StockID", StockID);
-            //sqlParameter[1] = new SqlParameter("MenuID", MenuID);
-            //sqlParameter[2] = new SqlParameter("MenuName", Amount);
+            string query = $" DELETE FROM [Stock] Where StockID = '{StockID}'";
+            SqlParameter[] sqlParameter = new SqlParameter[1];
+            sqlParameter[0] = new SqlParameter("StockID ", StockID);
             ExecuteEditQuery(query, sqlParameter);
         }
         private List<Stock> ReadTables(DataTable dataTable)
@@ -53,6 +51,7 @@ namespace ChapooDatabaseDal
                 Stock stclist = new Stock(
                 Convert.ToInt32(dr["StockID"]),
                 Convert.ToInt32(dr["MenuItemID"]),
+                dr["MenuName"].ToString(),
                 Convert.ToInt32(dr["Amount"])
                 );
                 stockList.Add(stclist);

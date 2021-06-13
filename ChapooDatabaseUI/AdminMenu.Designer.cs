@@ -69,6 +69,7 @@ namespace ChapooDatabaseUI
             this.BTN_MIMenuUpdate = new System.Windows.Forms.Button();
             this.BTN_MIDelete = new System.Windows.Forms.Button();
             this.MenuTypesGrid = new System.Windows.Forms.DataGridView();
+            this.BTN_MITerug = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.AdminMenuGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MenuTypesGrid)).BeginInit();
             this.SuspendLayout();
@@ -76,7 +77,7 @@ namespace ChapooDatabaseUI
             // AdminMenuGrid
             // 
             this.AdminMenuGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.AdminMenuGrid.Location = new System.Drawing.Point(12, 12);
+            this.AdminMenuGrid.Location = new System.Drawing.Point(85, 12);
             this.AdminMenuGrid.Name = "AdminMenuGrid";
             this.AdminMenuGrid.RowTemplate.Height = 25;
             this.AdminMenuGrid.Size = new System.Drawing.Size(514, 262);
@@ -179,17 +180,28 @@ namespace ChapooDatabaseUI
             // MenuTypesGrid
             // 
             this.MenuTypesGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.MenuTypesGrid.Location = new System.Drawing.Point(536, 12);
+            this.MenuTypesGrid.Location = new System.Drawing.Point(605, 12);
             this.MenuTypesGrid.Name = "MenuTypesGrid";
             this.MenuTypesGrid.RowTemplate.Height = 25;
             this.MenuTypesGrid.Size = new System.Drawing.Size(354, 262);
             this.MenuTypesGrid.TabIndex = 12;
+            // 
+            // BTN_MITerug
+            // 
+            this.BTN_MITerug.Location = new System.Drawing.Point(12, 12);
+            this.BTN_MITerug.Name = "BTN_MITerug";
+            this.BTN_MITerug.Size = new System.Drawing.Size(57, 37);
+            this.BTN_MITerug.TabIndex = 19;
+            this.BTN_MITerug.Text = "Terug";
+            this.BTN_MITerug.UseVisualStyleBackColor = true;
+            this.BTN_MITerug.Click += new System.EventHandler(this.BTN_MITerug_Click);
             // 
             // AdminMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1379, 535);
+            this.Controls.Add(this.BTN_MITerug);
             this.Controls.Add(this.MenuTypesGrid);
             this.Controls.Add(this.BTN_MIDelete);
             this.Controls.Add(this.BTN_MIMenuUpdate);
@@ -227,5 +239,6 @@ namespace ChapooDatabaseUI
         private System.Windows.Forms.Button BTN_MIMenuUpdate;
         private System.Windows.Forms.Button BTN_MIDelete;
         private System.Windows.Forms.DataGridView MenuTypesGrid;
+        private System.Windows.Forms.Button BTN_MITerug;
     }
 }

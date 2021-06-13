@@ -62,7 +62,7 @@ namespace ChapooDatabaseDal
 
         public int ItemExist(int id)
         {
-            string query = "SELECT COUNT(*) FROM MenuItem WHERE MenuID = @id";
+            string query = "SELECT COUNT(*) FROM MenuItem WHERE MenuItemID = @id";
 
             SqlParameter[] sqlParameters = new SqlParameter[1];
 

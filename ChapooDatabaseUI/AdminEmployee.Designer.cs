@@ -47,13 +47,14 @@ namespace ChapooDatabaseUI
             this.BTN_ADDelete = new System.Windows.Forms.Button();
             this.LBL_ADTelephone = new System.Windows.Forms.Label();
             this.TXTB_ADTelephone = new System.Windows.Forms.TextBox();
+            this.BTN_ADTerug = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.AdminEmployGrid)).BeginInit();
             this.SuspendLayout();
             // 
             // AdminEmployGrid
             // 
             this.AdminEmployGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.AdminEmployGrid.Location = new System.Drawing.Point(26, 12);
+            this.AdminEmployGrid.Location = new System.Drawing.Point(76, 12);
             this.AdminEmployGrid.Name = "AdminEmployGrid";
             this.AdminEmployGrid.RowTemplate.Height = 25;
             this.AdminEmployGrid.Size = new System.Drawing.Size(555, 157);
@@ -201,11 +202,22 @@ namespace ChapooDatabaseUI
             this.TXTB_ADTelephone.Size = new System.Drawing.Size(100, 23);
             this.TXTB_ADTelephone.TabIndex = 17;
             // 
+            // BTN_ADTerug
+            // 
+            this.BTN_ADTerug.Location = new System.Drawing.Point(13, 13);
+            this.BTN_ADTerug.Name = "BTN_ADTerug";
+            this.BTN_ADTerug.Size = new System.Drawing.Size(57, 37);
+            this.BTN_ADTerug.TabIndex = 18;
+            this.BTN_ADTerug.Text = "Terug";
+            this.BTN_ADTerug.UseVisualStyleBackColor = true;
+            this.BTN_ADTerug.Click += new System.EventHandler(this.BTN_ADTerug_Click);
+            // 
             // AdminEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(721, 450);
+            this.Controls.Add(this.BTN_ADTerug);
             this.Controls.Add(this.TXTB_ADTelephone);
             this.Controls.Add(this.LBL_ADTelephone);
             this.Controls.Add(this.BTN_ADDelete);
@@ -280,5 +292,6 @@ namespace ChapooDatabaseUI
         private System.Windows.Forms.Button BTN_ADDelete;
         private System.Windows.Forms.Label LBL_ADTelephone;
         private System.Windows.Forms.TextBox TXTB_ADTelephone;
+        private System.Windows.Forms.Button BTN_ADTerug;
     }
 }
