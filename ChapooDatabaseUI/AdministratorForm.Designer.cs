@@ -33,12 +33,14 @@ namespace ChapooDatabaseUI
             this.BTN_MenuItem = new System.Windows.Forms.Button();
             this.BTN_Voorraad = new System.Windows.Forms.Button();
             this.SuspendLayout();
+            initNavBar();
             // 
             // BTN_Werknemers
             // 
-            this.BTN_Werknemers.Location = new System.Drawing.Point(341, 333);
+            this.BTN_Werknemers.Location = new System.Drawing.Point(817, 435);
+            this.BTN_Werknemers.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BTN_Werknemers.Name = "BTN_Werknemers";
-            this.BTN_Werknemers.Size = new System.Drawing.Size(252, 152);
+            this.BTN_Werknemers.Size = new System.Drawing.Size(288, 203);
             this.BTN_Werknemers.TabIndex = 29;
             this.BTN_Werknemers.Text = "Werknemers";
             this.BTN_Werknemers.UseVisualStyleBackColor = true;
@@ -46,9 +48,10 @@ namespace ChapooDatabaseUI
             // 
             // BTN_MenuItem
             // 
-            this.BTN_MenuItem.Location = new System.Drawing.Point(341, 142);
+            this.BTN_MenuItem.Location = new System.Drawing.Point(413, 435);
+            this.BTN_MenuItem.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BTN_MenuItem.Name = "BTN_MenuItem";
-            this.BTN_MenuItem.Size = new System.Drawing.Size(252, 152);
+            this.BTN_MenuItem.Size = new System.Drawing.Size(288, 203);
             this.BTN_MenuItem.TabIndex = 30;
             this.BTN_MenuItem.Text = "Menu Items";
             this.BTN_MenuItem.UseVisualStyleBackColor = true;
@@ -56,9 +59,10 @@ namespace ChapooDatabaseUI
             // 
             // BTN_Voorraad
             // 
-            this.BTN_Voorraad.Location = new System.Drawing.Point(775, 142);
+            this.BTN_Voorraad.Location = new System.Drawing.Point(1216, 435);
+            this.BTN_Voorraad.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BTN_Voorraad.Name = "BTN_Voorraad";
-            this.BTN_Voorraad.Size = new System.Drawing.Size(252, 152);
+            this.BTN_Voorraad.Size = new System.Drawing.Size(288, 203);
             this.BTN_Voorraad.TabIndex = 31;
             this.BTN_Voorraad.Text = "Voorraad";
             this.BTN_Voorraad.UseVisualStyleBackColor = true;
@@ -66,12 +70,13 @@ namespace ChapooDatabaseUI
             // 
             // AdministratorForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1500, 618);
+            this.ClientSize = new System.Drawing.Size(1714, 824);
             this.Controls.Add(this.BTN_Voorraad);
             this.Controls.Add(this.BTN_MenuItem);
             this.Controls.Add(this.BTN_Werknemers);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "AdministratorForm";
             this.Text = "Administrator";
             this.ResumeLayout(false);

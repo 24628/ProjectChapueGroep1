@@ -44,39 +44,43 @@ namespace ChapooDatabaseUI
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             initNavBar();
-
+            
             // 
             // TableHolderFlowLayout
             // 
-            this.TableHolderFlowLayout.Location = new System.Drawing.Point(12, 188);
+            this.TableHolderFlowLayout.Location = new System.Drawing.Point(14, 251);
+            this.TableHolderFlowLayout.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TableHolderFlowLayout.Name = "TableHolderFlowLayout";
-            this.TableHolderFlowLayout.Size = new System.Drawing.Size(718, 460);
+            this.TableHolderFlowLayout.Size = new System.Drawing.Size(821, 613);
             this.TableHolderFlowLayout.TabIndex = 0;
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(736, 188);
+            this.dataGridView1.Location = new System.Drawing.Point(841, 251);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(490, 460);
+            this.dataGridView1.Size = new System.Drawing.Size(560, 613);
             this.dataGridView1.TabIndex = 0;
             // 
             // priceLabelPayment
             // 
             this.priceLabelPayment.AutoSize = true;
             this.priceLabelPayment.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.priceLabelPayment.Location = new System.Drawing.Point(736, 714);
+            this.priceLabelPayment.Location = new System.Drawing.Point(841, 952);
             this.priceLabelPayment.Name = "priceLabelPayment";
-            this.priceLabelPayment.Size = new System.Drawing.Size(105, 28);
+            this.priceLabelPayment.Size = new System.Drawing.Size(134, 35);
             this.priceLabelPayment.TabIndex = 1;
             this.priceLabelPayment.Text = "Total Price:";
             // 
             // SubmitReceedBTN
             // 
-            this.SubmitReceedBTN.Location = new System.Drawing.Point(1064, 714);
+            this.SubmitReceedBTN.Location = new System.Drawing.Point(1215, 997);
+            this.SubmitReceedBTN.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.SubmitReceedBTN.Name = "SubmitReceedBTN";
-            this.SubmitReceedBTN.Size = new System.Drawing.Size(162, 21);
+            this.SubmitReceedBTN.Size = new System.Drawing.Size(185, 28);
             this.SubmitReceedBTN.TabIndex = 2;
             this.SubmitReceedBTN.Text = "Submit receed";
             this.SubmitReceedBTN.UseVisualStyleBackColor = true;
@@ -86,32 +90,34 @@ namespace ChapooDatabaseUI
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(736, 651);
+            this.label1.Location = new System.Drawing.Point(841, 868);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(43, 28);
+            this.label1.Size = new System.Drawing.Size(54, 35);
             this.label1.TabIndex = 3;
             this.label1.Text = "Tip:";
             // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(1064, 685);
+            this.comboBox1.Location = new System.Drawing.Point(1215, 958);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(162, 23);
+            this.comboBox1.Size = new System.Drawing.Size(185, 28);
             this.comboBox1.TabIndex = 4;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(785, 656);
+            this.textBox1.Location = new System.Drawing.Point(897, 875);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(441, 23);
+            this.textBox1.Size = new System.Drawing.Size(503, 27);
             this.textBox1.TabIndex = 5;
             // 
             // PaymentForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1238, 819);
+            this.ClientSize = new System.Drawing.Size(1415, 1055);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label1);
@@ -119,6 +125,7 @@ namespace ChapooDatabaseUI
             this.Controls.Add(this.priceLabelPayment);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.TableHolderFlowLayout);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "PaymentForm";
             this.Text = "Payment";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

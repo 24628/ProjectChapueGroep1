@@ -26,16 +26,16 @@ namespace ChapooDatabaseModel
             switch (status.ToLower())
             {
                 case "free":
-                    x = 255; y = 104; z = 107;
+                    x = 0; y = 255; z = 42;
                     break;
                 case "reservation":
-                    x = 104; y = 255; z = 107;
+                    x = 255; y = 0; z = 0;
                     break;
                 case "order":
-                    x = 104; y = 255; z = 107;
+                    x = 255; y = 255; z = 25;
                     break;
                 case "pickup":
-                    x = 107; y = 104; z = 107;
+                    x = 255; y = 140; z = 25;
                     break;
             }
 
