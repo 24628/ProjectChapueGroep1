@@ -101,7 +101,5 @@ namespace ChapooDatabaseDal
             }
             return employeeList;
         }
-
-
     }
 }

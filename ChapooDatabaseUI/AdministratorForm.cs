@@ -13,28 +13,21 @@ namespace ChapooDatabaseUI
 {
     public partial class AdministratorForm : BaseForm
     {
-        EmployeeService employeeService;
-        MenuItemService menuItemService;
         public AdministratorForm()
         {
-            employeeService = new EmployeeService();
-            menuItemService = new MenuItemService();
             InitializeComponent();
         }
         private void BTN_Werknemers_Click(object sender, EventArgs e)
         {
-            AdminEmployee adminEmployee = new AdminEmployee();
-            adminEmployee.ShowDialog();
+            showNewForm(new AdminEmployee(), this, getCurrentUser());
         }
         private void BTN_MenuItem_Click(object sender, EventArgs e)
         {
-            AdminMenu adminMenu = new AdminMenu();
-            adminMenu.ShowDialog();
+            showNewForm(new AdminMenu(), this, getCurrentUser());
         }
         private void BTN_Voorraad_Click(object sender, EventArgs e)
         {
-            AdminVoorraad adminVoorraad = new AdminVoorraad();
-            adminVoorraad.ShowDialog();
+            showNewForm(new AdminVoorraad(), this, getCurrentUser());
         }
     }
 }
