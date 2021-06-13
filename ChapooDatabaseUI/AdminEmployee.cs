@@ -35,17 +35,16 @@ namespace ChapooDatabaseUI
         }
         private void BTN_ADUpdate_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i < AdminEmployGrid.Rows.Count - 1; i++)
-            {
-                int EmployeeID = Int32.Parse(TXTB_ADEmployeeID.Text);
-                string Firstname = TXTB_ADFirstname.Text;
-                string Lastname = TXTB_ADLastname.Text;
-                string Email = TXTB_ADGebruikersnaam.Text;
-                string password = TXTB_ADPassword.Text;
-                float Telephone = float.Parse(TXTB_ADTelephone.Text);
-                string Position = TXTB_ADPosition.Text;
-                employeeService.UpdateEmployee(EmployeeID, Firstname, Lastname, Email, password, Telephone, Position);
-            }
+            
+            int EmployeeID = Int32.Parse(TXTB_ADEmployeeID.Text);
+            string Firstname = TXTB_ADFirstname.Text;
+            string Lastname = TXTB_ADLastname.Text;
+            string Email = TXTB_ADGebruikersnaam.Text;
+            string password = TXTB_ADPassword.Text;
+            float Telephone = float.Parse(TXTB_ADTelephone.Text);
+            string Position = TXTB_ADPosition.Text;
+            employeeService.UpdateEmployee(EmployeeID, Firstname, Lastname, Email, password, Telephone, Position);
+            
             MessageBox.Show("De Employee wijzigingen zijn doorgevoerd", "Employee Wijzigingen!", MessageBoxButtons.OK);
 
             displayGrid();

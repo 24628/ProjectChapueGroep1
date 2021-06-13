@@ -10,7 +10,7 @@ namespace ChapooDatabaseLogic
     {
         readonly ChapooDatabaseDal.ItemDAO dao = new ItemDAO();
 
-        public List<MenuItem> GetAllItems() 
+        public List<AdminMenuItem> GetAllItems() 
         {
             try
             {
@@ -21,11 +21,23 @@ namespace ChapooDatabaseLogic
                 throw new Exception(e.Message);
             };
         }
-        public void UpdateMenuItem(int MenuID, string MenuName, decimal Price)
+        
+        public List<Menu> getMenuTypes() 
         {
             try
             {
-                dao.UpdateMenuItem(MenuID, MenuName, Price);
+                return dao.getMenuTypes();
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            };
+        }
+        public void UpdateMenuItem(int MenuItemID, string MenuName, decimal Price)
+        {
+            try
+            {
+                dao.UpdateMenuItem(MenuItemID, MenuName, Price);
             }
             catch (Exception e)
             {

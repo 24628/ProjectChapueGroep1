@@ -52,7 +52,7 @@ namespace ChapooDatabaseDal
             {
                 Stock stclist = new Stock(
                 Convert.ToInt32(dr["StockID"]),
-                Convert.ToInt32(dr["MenuID"]),
+                Convert.ToInt32(dr["MenuItemID"]),
                 Convert.ToInt32(dr["Amount"])
                 );
                 stockList.Add(stclist);

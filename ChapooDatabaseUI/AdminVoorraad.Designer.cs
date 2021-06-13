@@ -21,6 +21,7 @@ namespace ChapooDatabaseUI
             base.Dispose(disposing);
         }
 
+        
         #region Windows Form Designer generated code
 
         /// <summary>
@@ -155,6 +156,34 @@ namespace ChapooDatabaseUI
         }
 
         #endregion
+
+        public void generateGridLayout(System.Windows.Forms.DataGridView view, string[] columnArr)
+        {
+            view.ColumnCount = columnArr.Length;
+
+            view.ColumnHeadersDefaultCellStyle.BackColor = System.Drawing.Color.Navy;
+            view.ColumnHeadersDefaultCellStyle.ForeColor = System.Drawing.Color.White;
+
+            view.GridColor = System.Drawing.Color.Black;
+            view.RowHeadersVisible = false;
+            view.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+
+
+            for (int i = 0; i < columnArr.Length; i++)
+                view.Columns[i].Name = columnArr[i];
+
+            view.MultiSelect = false;
+        }
+
+        public void FillDataInGridView(System.Windows.Forms.DataGridView view, string[] dataString)
+        {
+            view.Rows.Add(dataString);
+        }
+
+        public void ClearDataGridView(System.Windows.Forms.DataGridView view)
+        {
+            view.Columns.Clear();
+        }
 
         private System.Windows.Forms.DataGridView AdminVoorraadGrid;
         private System.Windows.Forms.Label LBL_STStockID;

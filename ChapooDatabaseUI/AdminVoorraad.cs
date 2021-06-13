@@ -14,30 +14,25 @@ namespace ChapooDatabaseUI
 {
     public partial class AdminVoorraad : BaseForm
     {
-        StockService stockService;
-        //List<string> variable;
+        private StockService stockService = new StockService();
         public AdminVoorraad()
         {
-            stockService = new StockService();
-          //  variable = new List<string>();
             InitializeComponent();
         }
-       
-        private void AdminVoorraadGrid_CellContentClick(object sender, EventArgs e)
+        
+        private void displayGrid()
         {
-            AdminVoorraadGrid.Columns.Add("StockID", "StockID");
-            AdminVoorraadGrid.Columns.Add("MenuID", "MenuID");
-            AdminVoorraadGrid.Columns.Add("Amount", "Amount");
-            foreach (Stock stock in stockService.GetAllStock())
-            {
-            //    variable = new List<string> { stock.StockID.ToString(), stock.MenuID.ToString(), stock.Amount.ToString() };
-                
 
-               string[] row = { stock.StockID.ToString(), stock.MenuID.ToString(), stock.Amount.ToString()};
-                AdminVoorraadGrid.Rows.Add(row);
-                
+            ClearDataGridView(AdminVoorraadGrid);
+            generateGridLayout(AdminVoorraadGrid, new string[] { "EmployeeID", "Firstname", "Lastname", "Email", "Telephone", "Position" });
+
+            List<Employee> emp = stockService.GetAllStock();
+            foreach (var e in emp)
+            {
+                FillDataInGridView(AdminVoorraadGrid, e.dataGrid(e));
             }
         }
+
         private void BTN_STUpdate_Click(object sender, EventArgs e)
         {
             for (int i = 0; i < AdminVoorraadGrid.Rows.Count - 1; i++)

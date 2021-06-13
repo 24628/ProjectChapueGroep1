@@ -10,18 +10,24 @@ namespace ChapooDatabaseDal
 {
     public class ItemDAO : Base
     {
-        public List<MenuItem> CheckItems()
+        public List<AdminMenuItem> CheckItems()
         {
             string query = "SELECT MenuItemID, MenuID, MenuName, Price FROM MenuItem";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadTables(ExecuteSelectQuery(query, sqlParameters));
         }
-        public void UpdateMenuItem(int MenuID, string MenuName, decimal Price)
+        
+        public List<Menu> getMenuTypes()
         {
-            string query = $"Update [MenuItem] set  MenuItem.MenuID = {MenuID}, MenuItem.MenuName = '{MenuName}', MenuItem.Price = '{Price}' WHERE MenuItem.MenuName = '{MenuName}'";
-            SqlParameter[] sqlParameter = new SqlParameter[4];
-            //sqlParameter[0] = new SqlParameter("MenuItemID", MenuItemID);
-            sqlParameter[0] = new SqlParameter("MenuID", MenuID);
+            string query = "SELECT * FROM [Menu]";
+            SqlParameter[] sqlParameters = new SqlParameter[0];
+            return ReadMenuTypes(ExecuteSelectQuery(query, sqlParameters));
+        }
+        public void UpdateMenuItem(int MenuItemID, string MenuName, decimal Price)
+        {
+            string query = $"UPDATE [MenuItem] SET MenuName = '{MenuName}', Price = '{Price}' WHERE MenuItemID = '{MenuItemID}'";
+            SqlParameter[] sqlParameter = new SqlParameter[3];
+            sqlParameter[0] = new SqlParameter("MenuItemID", MenuItemID);
             sqlParameter[1] = new SqlParameter("MenuName", MenuName);
             sqlParameter[2] = new SqlParameter("Price", Price);
             ExecuteEditQuery(query, sqlParameter);
@@ -37,29 +43,41 @@ namespace ChapooDatabaseDal
         }
         public void VerwijderMenuItem(int MenuItemID)
         {
-            string query = $" DELETE MenuItemID FROM MenuItem Where MenuItemID = '{MenuItemID}'";
-            SqlParameter[] sqlParameter = new SqlParameter[0];
+            string query = $" DELETE FROM [MenuItem] Where MenuItemID = '{MenuItemID}'";
+            SqlParameter[] sqlParameter = new SqlParameter[1];
             sqlParameter[0] = new SqlParameter("MenuItemID", MenuItemID);
-            //sqlParameter[1] = new SqlParameter("MenuID", MenuID);
-            //sqlParameter[2] = new SqlParameter("MenuName", MenuName);
-            //sqlParameter[3] = new SqlParameter("Price", Price);
             ExecuteEditQuery(query, sqlParameter);
         }
-        private List<MenuItem> ReadTables(DataTable dataTable)
+        private List<AdminMenuItem> ReadTables(DataTable dataTable)
         {
-            List<MenuItem> menuItems = new List<MenuItem>();
+            List<AdminMenuItem> menuItems = new List<AdminMenuItem>();
 
             foreach (DataRow dr in dataTable.Rows)
             {
-                MenuItem menu = new MenuItem(
-                //Convert.ToInt32(dr["MenuItemID"]),
-                Convert.ToInt32(dr["MenuID"]),
-                dr["MenuName"].ToString(),
-                Convert.ToInt32(dr["Price"])
+                AdminMenuItem menu = new AdminMenuItem(
+                    Convert.ToInt32(dr["MenuItemID"]),
+                    dr["MenuName"].ToString(),
+                    Convert.ToDecimal(dr["Price"]),
+                    Convert.ToInt32(dr["MenuID"])
                 );
                 menuItems.Add(menu);
             }
             return menuItems;
+        }
+
+        private List<Menu> ReadMenuTypes(DataTable dataTable)
+        {
+            List<Menu> ls = new List<Menu>();
+
+            foreach (DataRow dr in dataTable.Rows)
+            {
+                Menu a = new Menu(
+                    Convert.ToInt32(dr["MenuID"]),
+                    dr["Type"].ToString()
+                );
+                ls.Add(a);
+            }
+            return ls;
         }
     }
 }

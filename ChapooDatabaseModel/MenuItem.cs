@@ -17,7 +17,7 @@ namespace ChapooDatabaseModel
             this.Price = v3;
         }
 
-        public string[] dataGrid(MenuItem m)
+        public virtual string[] dataGrid(MenuItem m)
         {
             return new string[] {
                 m.Id.ToString(),
