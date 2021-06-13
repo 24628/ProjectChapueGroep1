@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\IIwar\\Documents\\C#\\ProjectChapueGroep1\\ChapooDatabaseModel\\ChapooDatabaseModel.csproj": {}
+    "C:\\Users\\sedva\\OneDrive\\Documenten\\GitHub\\ProjectChapueGroep1\\ChapooDatabaseModel\\ChapooDatabaseModel.csproj": {}
   },
   "projects": {
-    "C:\\Users\\IIwar\\Documents\\C#\\ProjectChapueGroep1\\ChapooDatabaseModel\\ChapooDatabaseModel.csproj": {
+    "C:\\Users\\sedva\\OneDrive\\Documenten\\GitHub\\ProjectChapueGroep1\\ChapooDatabaseModel\\ChapooDatabaseModel.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\IIwar\\Documents\\C#\\ProjectChapueGroep1\\ChapooDatabaseModel\\ChapooDatabaseModel.csproj",
+        "projectUniqueName": "C:\\Users\\sedva\\OneDrive\\Documenten\\GitHub\\ProjectChapueGroep1\\ChapooDatabaseModel\\ChapooDatabaseModel.csproj",
         "projectName": "ChapooDatabaseModel",
-        "projectPath": "C:\\Users\\IIwar\\Documents\\C#\\ProjectChapueGroep1\\ChapooDatabaseModel\\ChapooDatabaseModel.csproj",
-        "packagesPath": "C:\\Users\\IIwar\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\IIwar\\Documents\\C#\\ProjectChapueGroep1\\ChapooDatabaseModel\\obj\\",
+        "projectPath": "C:\\Users\\sedva\\OneDrive\\Documenten\\GitHub\\ProjectChapueGroep1\\ChapooDatabaseModel\\ChapooDatabaseModel.csproj",
+        "packagesPath": "C:\\Users\\sedva\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\sedva\\OneDrive\\Documenten\\GitHub\\ProjectChapueGroep1\\ChapooDatabaseModel\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\IIwar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\sedva\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -54,7 +54,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }
