@@ -871,28 +871,20 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\hdmap\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
-    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\IIwar\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\hdmap\\source\\repos\\ProjectChapueGroep1\\ChapooDatabaseLogic\\ChapooDatabaseLogic.csproj",
+      "projectUniqueName": "C:\\Users\\IIwar\\Documents\\C#\\ProjectChapueGroep1\\ChapooDatabaseLogic\\ChapooDatabaseLogic.csproj",
       "projectName": "ChapooDatabaseLogic",
-      "projectPath": "C:\\Users\\hdmap\\source\\repos\\ProjectChapueGroep1\\ChapooDatabaseLogic\\ChapooDatabaseLogic.csproj",
-      "packagesPath": "C:\\Users\\hdmap\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\hdmap\\source\\repos\\ProjectChapueGroep1\\ChapooDatabaseLogic\\obj\\",
+      "projectPath": "C:\\Users\\IIwar\\Documents\\C#\\ProjectChapueGroep1\\ChapooDatabaseLogic\\ChapooDatabaseLogic.csproj",
+      "packagesPath": "C:\\Users\\IIwar\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\IIwar\\Documents\\C#\\ProjectChapueGroep1\\ChapooDatabaseLogic\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
-      ],
       "configFilePaths": [
-        "C:\\Users\\hdmap\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\IIwar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netstandard2.1"
@@ -905,11 +897,11 @@
         "netstandard2.1": {
           "targetAlias": "netstandard2.1",
           "projectReferences": {
-            "C:\\Users\\hdmap\\source\\repos\\ProjectChapueGroep1\\ChapooDatabaseDal\\ChapooDatabaseDal.csproj": {
-              "projectPath": "C:\\Users\\hdmap\\source\\repos\\ProjectChapueGroep1\\ChapooDatabaseDal\\ChapooDatabaseDal.csproj"
+            "C:\\Users\\IIwar\\Documents\\C#\\ProjectChapueGroep1\\ChapooDatabaseDal\\ChapooDatabaseDal.csproj": {
+              "projectPath": "C:\\Users\\IIwar\\Documents\\C#\\ProjectChapueGroep1\\ChapooDatabaseDal\\ChapooDatabaseDal.csproj"
             },
-            "C:\\Users\\hdmap\\source\\repos\\ProjectChapueGroep1\\ChapooDatabaseModel\\ChapooDatabaseModel.csproj": {
-              "projectPath": "C:\\Users\\hdmap\\source\\repos\\ProjectChapueGroep1\\ChapooDatabaseModel\\ChapooDatabaseModel.csproj"
+            "C:\\Users\\IIwar\\Documents\\C#\\ProjectChapueGroep1\\ChapooDatabaseModel\\ChapooDatabaseModel.csproj": {
+              "projectPath": "C:\\Users\\IIwar\\Documents\\C#\\ProjectChapueGroep1\\ChapooDatabaseModel\\ChapooDatabaseModel.csproj"
             }
           }
         }
@@ -944,7 +936,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
       }
     }
   }
