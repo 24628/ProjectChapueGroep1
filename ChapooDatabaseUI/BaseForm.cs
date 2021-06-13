@@ -61,7 +61,10 @@ namespace ChapooDatabaseUI
         }
 
         public void OrderButton(BaseForm form) {
-            showNewForm(new OrderForm(), form, getCurrentUser());
+             if (getCurrentUser().Position == "Bediende" || getCurrentUser().Position == "Eigenaar")
+            {
+                showNewForm(new KitchenForm(), form, getCurrentUser());
+            }
         }
 
         public void PaymentButton(BaseForm form) {
@@ -69,10 +72,15 @@ namespace ChapooDatabaseUI
         }
 
         public void KitchenButton(BaseForm form) {
-            showNewForm(new KitchenForm(), form, getCurrentUser());
+            if (getCurrentUser().Position == "Kok" || getCurrentUser().Position == "Barman" || getCurrentUser().Position == "Eigenaar")
+            {
+                showNewForm(new KitchenForm(), form, getCurrentUser());
+            }
+            
         }
 
         public void AdministratorButton(BaseForm form) {
+            if (getCurrentUser().Position != "Eigenaar") return;
             showNewForm(new AdministratorForm(), form, getCurrentUser());
         }
         protected override void OnFormClosing(FormClosingEventArgs e)
