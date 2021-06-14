@@ -43,6 +43,41 @@ namespace ChapooDatabaseDal
             // return a list with drinks
             return ReadTablesMenuCard(ExecuteSelectQuery(query, sqlParameters));
         }
+        public List<MenuItem> getMenuCardLunch()
+        {
+            string query = "SELECT [MenuItemID], MenuName, Price from MenuItem Where MenuID = 1 OR MenuID = 2 OR MenuID = 3;";
+            SqlParameter[] sqlParameters = new SqlParameter[0];
+
+            // return a list with drinks
+            return ReadTablesMenuCard(ExecuteSelectQuery(query, sqlParameters));
+        }
+
+        public List<MenuItem> getMenuCardDiner()
+        {
+            string query = "SELECT [MenuItemID], MenuName, Price from MenuItem Where MenuID = 4 OR MenuID = 5 OR MenuID = 6;";
+            SqlParameter[] sqlParameters = new SqlParameter[0];
+
+            // return a list with drinks
+            return ReadTablesMenuCard(ExecuteSelectQuery(query, sqlParameters));
+        }
+
+        public List<MenuItem> getMenuCardDrankAlchol()
+        {
+            string query = "SELECT [MenuItemID], MenuName, Price from MenuItem Where MenuID = 9 OR MenuID = 10;";
+            SqlParameter[] sqlParameters = new SqlParameter[0];
+
+            // return a list with drinks
+            return ReadTablesMenuCard(ExecuteSelectQuery(query, sqlParameters));
+        }
+
+        public List<MenuItem> getMenuCardDrank()
+        {
+            string query = "SELECT [MenuItemID], MenuName, Price from MenuItem Where MenuID = 8 OR MenuID = 11 OR MenuID = 12 OR MenuID = 13;";
+            SqlParameter[] sqlParameters = new SqlParameter[0];
+
+            // return a list with drinks
+            return ReadTablesMenuCard(ExecuteSelectQuery(query, sqlParameters));
+        }
 
         private List<MenuItem> ReadTablesMenuCard(DataTable dataTable)
         {
@@ -269,4 +304,3 @@ namespace ChapooDatabaseDal
         }
     }
 }
- 

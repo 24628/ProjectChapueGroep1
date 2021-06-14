@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
@@ -30,26 +31,57 @@ namespace ChapooDatabaseUI
             } else {
                 HideFormItemsForCreate();
             }
-            
-            this.menuItems = tableService.getMenuCard();
-            generateGridLayout(MenuItemsDataGridView, new string[] { "MenuItemID","MenuName","Price" });
-
-            foreach (var item in this.menuItems)
-            {
-                FillDataInGridView(MenuItemsDataGridView, item.dataGrid(item));
-            }
         }
 
         private void fillOrderGridWithItems()
         {
             ClearDataGridView(OrderItemsGridView);
-            generateGridLayout(OrderItemsGridView, new string[] { "id", "Naam", "Price" });
+            generateGridLayout(OrderItemsGridView, new string[] { "id", "Naam", "Price", "amount" });
 
             List<OrderItem> items = tableService.getMenuItemBelongingTowardsOrder(this.order.OrderID);
-            foreach (var item in items)
+            for (int i = 0; i < items.Count; i++)
             {
-                FillDataInGridView(OrderItemsGridView, item.dataGrid(item));
+                int count = 0;
+                for (int j = 0; j < OrderItemsGridView.RowCount; j++)
+                {
+
+                    if (OrderItemsGridView.Rows[j].Cells[0].Value != null)
+                        if (OrderItemsGridView.Rows[j].Cells[1].Value.ToString() == items[i].MenuName)
+                            count++;
+                }
+
+                if(count == 0)
+                    FillDataInGridView(OrderItemsGridView, dataGrid(items[i]));
+
+                for (int j = 0; j < OrderItemsGridView.RowCount; j++)
+                {
+                    if (OrderItemsGridView.Rows[j].Cells[0].Value != null)
+                    {
+                        if (OrderItemsGridView.Rows[j].Cells[1].Value.ToString() == items[i].MenuName)
+                        {
+                            int amount = Int32.Parse(OrderItemsGridView.Rows[j].Cells[3].Value.ToString());
+                            amount += 1;
+
+                            string priceString = "€" + string.Format("{0:C2}", ((items[i].Price * amount)).ToString());
+                            OrderItemsGridView.Rows[j].Cells[3].Value = (amount).ToString();
+                            OrderItemsGridView.Rows[j].Cells[2].Value = string.Concat(priceString.Reverse().Skip(2).Reverse());
+                        }
+                    }
+                }
+
+
+
             }
+        }
+
+        public string[] dataGrid(OrderItem m)
+        {
+            return new string[] {
+                m.ID.ToString(),
+                m.MenuName,
+                string.Format("{0:C}", m.Price),
+                "0"
+            };
         }
 
         private void DeleteOrderButton_Click(object sender, EventArgs e)
@@ -147,6 +179,53 @@ namespace ChapooDatabaseUI
         private void GoToTableDashboardButton_Click(object sender, EventArgs e)
         {
             showNewForm(new OrderForm(), this, getCurrentUser());
+        }
+
+        private void LunchButton_Click(object sender, EventArgs e)
+        {
+            ClearDataGridView(MenuItemsDataGridView);
+            this.menuItems = tableService.getMenuCardLunch();
+            generateGridLayout(MenuItemsDataGridView, new string[] { "MenuItemID", "MenuName", "Price" });
+
+            foreach (var item in this.menuItems) {
+                FillDataInGridView(MenuItemsDataGridView, item.dataGrid(item));
+            }
+        }
+
+        private void DinerButton_Click(object sender, EventArgs e)
+        {
+            ClearDataGridView(MenuItemsDataGridView);
+            this.menuItems = tableService.getMenuCardDiner();
+            generateGridLayout(MenuItemsDataGridView, new string[] { "MenuItemID", "MenuName", "Price" });
+
+            foreach (var item in this.menuItems)
+            {
+                FillDataInGridView(MenuItemsDataGridView, item.dataGrid(item));
+            }
+        }
+
+        private void DrankAlcholButton_Click(object sender, EventArgs e)
+        {
+            ClearDataGridView(MenuItemsDataGridView);
+            this.menuItems = tableService.getMenuCardDrankAlchol();
+            generateGridLayout(MenuItemsDataGridView, new string[] { "MenuItemID", "MenuName", "Price" });
+
+            foreach (var item in this.menuItems)
+            {
+                FillDataInGridView(MenuItemsDataGridView, item.dataGrid(item));
+            }
+        }
+
+        private void DrankButton_Click(object sender, EventArgs e)
+        {
+            ClearDataGridView(MenuItemsDataGridView);
+            this.menuItems = tableService.getMenuCardDrank();
+            generateGridLayout(MenuItemsDataGridView, new string[] { "MenuItemID", "MenuName", "Price" });
+
+            foreach (var item in this.menuItems)
+            {
+                FillDataInGridView(MenuItemsDataGridView, item.dataGrid(item));
+            }
         }
     }
 }

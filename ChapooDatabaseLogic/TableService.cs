@@ -19,6 +19,26 @@ namespace ChapooDatabaseLogic
         {
             return dao.getMenuCard();
         }
+        
+        public List<MenuItem> getMenuCardLunch()
+        {
+            return dao.getMenuCardLunch();
+        }
+        
+        public List<MenuItem> getMenuCardDiner()
+        {
+            return dao.getMenuCardDiner();
+        }
+        
+        public List<MenuItem> getMenuCardDrankAlchol()
+        {
+            return dao.getMenuCardDrankAlchol();
+        }
+        
+        public List<MenuItem> getMenuCardDrank()
+        {
+            return dao.getMenuCardDrank();
+        }
 
         public bool ItemExist(int e)
         {
