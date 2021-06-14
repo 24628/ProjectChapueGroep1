@@ -21,7 +21,9 @@ namespace ChapooDatabaseUI
         private List<Table> TableList;
         private List<OrderItem> orderList;
         private decimal totalPrice;
+        private decimal totalPriceBtwAdd;
         private Table table = null;
+        public decimal Btw;
 
         public PaymentForm()
         {
@@ -101,20 +103,43 @@ namespace ChapooDatabaseUI
         {
             string status = (string)comboBox1.SelectedValue;
             decimal tip = 0.00m;
+            decimal TotaalBTW = 0;
+            decimal totaalprijs = 0;
+            decimal FinalTotaal = 0;
             if (textBox1.Text != string.Empty)
                 tip = Convert.ToDecimal(textBox1.Text);
-            priceLabelPayment.Text = pricePlaceHolder + FormatPrice(totalPrice + tip);
+            foreach (var x in orderList)
+            {
+                if (x.MenuItemID >= 29 && x.MenuItemID <= 43)
+                {
+                    Btw = x.Price * Convert.ToDecimal(0.21);
+                    totalPriceBtwAdd = totalPrice * Convert.ToDecimal(1.21);
+                    totaalprijs = x.Price * Convert.ToDecimal(1.21);
+                }
+                else
+                {
+                    Btw = x.Price * Convert.ToDecimal(0.06);
+                    totalPriceBtwAdd = totalPrice * Convert.ToDecimal(1.06);
+                    totaalprijs = x.Price * Convert.ToDecimal(1.06);
+                }
+                FinalTotaal += totaalprijs;
+                TotaalBTW += Btw;
+            }
+            priceLabelPayment.Text = pricePlaceHolder + FormatPrice(FinalTotaal + tip);
 
+            LBL_ShwBtw.Text = TotaalBTW.ToString("€ 0.00");
             if (status == "CreditCard")
-                MessageBox.Show("Insert CreditCard, the total price is " + FormatPrice(totalPrice + tip));
+                MessageBox.Show("Insert CreditCard, the btw is " + TotaalBTW.ToString("€ 0.00") + " and the total price is " + FormatPrice(FinalTotaal + tip));
             if (status == "Cash")
-                MessageBox.Show("Hand over the cash, the total price is " + FormatPrice(totalPrice + tip));
+                MessageBox.Show("Hand over the cash, the btw is " + TotaalBTW.ToString("€ 0.00") + " and the total price is " + FormatPrice(FinalTotaal + tip));
             if (status == "Visa")
-                MessageBox.Show("Insert Visa, the total price is " + FormatPrice(totalPrice + tip));
+                MessageBox.Show("Insert Visa, the btw is " + TotaalBTW.ToString("€ 0.00") + " and the total price is " + FormatPrice(FinalTotaal + tip));
 
             int orderId = tableService.getSingleOrder(table.TableId).OrderID;
             tableService.deleteTableOrder(table.TableId, orderId);
             dispayTables();
+            ClearDataGridView(dataGridView1);
+            LBL_ShwBtw.Text = string.Empty;
         }
 
 
