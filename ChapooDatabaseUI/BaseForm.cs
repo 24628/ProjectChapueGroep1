@@ -63,7 +63,7 @@ namespace ChapooDatabaseUI
         public void OrderButton(BaseForm form) {
              if (getCurrentUser().Position == "Bediende" || getCurrentUser().Position == "Eigenaar")
             {
-                showNewForm(new KitchenForm(), form, getCurrentUser());
+                showNewForm(new OrderForm(), form, getCurrentUser());
             }
         }
 

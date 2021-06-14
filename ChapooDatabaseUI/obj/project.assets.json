@@ -805,19 +805,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\sedva\\.nuget\\packages\\": {}
+    "C:\\Users\\merli\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\sedva\\OneDrive\\Documenten\\GitHub\\ProjectChapueGroep1\\ChapooDatabaseUI\\ChapooDatabaseUI.csproj",
+      "projectUniqueName": "C:\\Users\\merli\\source\\repos\\ProjectChapueGroep1\\ChapooDatabaseUI\\ChapooDatabaseUI.csproj",
       "projectName": "ChapooDatabaseUI",
-      "projectPath": "C:\\Users\\sedva\\OneDrive\\Documenten\\GitHub\\ProjectChapueGroep1\\ChapooDatabaseUI\\ChapooDatabaseUI.csproj",
-      "packagesPath": "C:\\Users\\sedva\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\sedva\\OneDrive\\Documenten\\GitHub\\ProjectChapueGroep1\\ChapooDatabaseUI\\obj\\",
+      "projectPath": "C:\\Users\\merli\\source\\repos\\ProjectChapueGroep1\\ChapooDatabaseUI\\ChapooDatabaseUI.csproj",
+      "packagesPath": "C:\\Users\\merli\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\merli\\source\\repos\\ProjectChapueGroep1\\ChapooDatabaseUI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\sedva\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\merli\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -831,8 +831,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\sedva\\OneDrive\\Documenten\\GitHub\\ProjectChapueGroep1\\ChapooDatabaseLogic\\ChapooDatabaseLogic.csproj": {
-              "projectPath": "C:\\Users\\sedva\\OneDrive\\Documenten\\GitHub\\ProjectChapueGroep1\\ChapooDatabaseLogic\\ChapooDatabaseLogic.csproj"
+            "C:\\Users\\merli\\source\\repos\\ProjectChapueGroep1\\ChapooDatabaseLogic\\ChapooDatabaseLogic.csproj": {
+              "projectPath": "C:\\Users\\merli\\source\\repos\\ProjectChapueGroep1\\ChapooDatabaseLogic\\ChapooDatabaseLogic.csproj"
             }
           }
         }
@@ -864,7 +864,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }

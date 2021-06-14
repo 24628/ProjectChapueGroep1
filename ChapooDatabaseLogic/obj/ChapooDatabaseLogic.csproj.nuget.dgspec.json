@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\sedva\\OneDrive\\Documenten\\GitHub\\ProjectChapueGroep1\\ChapooDatabaseLogic\\ChapooDatabaseLogic.csproj": {}
+    "C:\\Users\\merli\\source\\repos\\ProjectChapueGroep1\\ChapooDatabaseLogic\\ChapooDatabaseLogic.csproj": {}
   },
   "projects": {
-    "C:\\Users\\sedva\\OneDrive\\Documenten\\GitHub\\ProjectChapueGroep1\\ChapooDatabaseDal\\ChapooDatabaseDal.csproj": {
+    "C:\\Users\\merli\\source\\repos\\ProjectChapueGroep1\\ChapooDatabaseDal\\ChapooDatabaseDal.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sedva\\OneDrive\\Documenten\\GitHub\\ProjectChapueGroep1\\ChapooDatabaseDal\\ChapooDatabaseDal.csproj",
+        "projectUniqueName": "C:\\Users\\merli\\source\\repos\\ProjectChapueGroep1\\ChapooDatabaseDal\\ChapooDatabaseDal.csproj",
         "projectName": "ChapooDatabaseDal",
-        "projectPath": "C:\\Users\\sedva\\OneDrive\\Documenten\\GitHub\\ProjectChapueGroep1\\ChapooDatabaseDal\\ChapooDatabaseDal.csproj",
-        "packagesPath": "C:\\Users\\sedva\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sedva\\OneDrive\\Documenten\\GitHub\\ProjectChapueGroep1\\ChapooDatabaseDal\\obj\\",
+        "projectPath": "C:\\Users\\merli\\source\\repos\\ProjectChapueGroep1\\ChapooDatabaseDal\\ChapooDatabaseDal.csproj",
+        "packagesPath": "C:\\Users\\merli\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\merli\\source\\repos\\ProjectChapueGroep1\\ChapooDatabaseDal\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\sedva\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\merli\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,8 +28,8 @@
           "netstandard2.1": {
             "targetAlias": "netstandard2.1",
             "projectReferences": {
-              "C:\\Users\\sedva\\OneDrive\\Documenten\\GitHub\\ProjectChapueGroep1\\ChapooDatabaseModel\\ChapooDatabaseModel.csproj": {
-                "projectPath": "C:\\Users\\sedva\\OneDrive\\Documenten\\GitHub\\ProjectChapueGroep1\\ChapooDatabaseModel\\ChapooDatabaseModel.csproj"
+              "C:\\Users\\merli\\source\\repos\\ProjectChapueGroep1\\ChapooDatabaseModel\\ChapooDatabaseModel.csproj": {
+                "projectPath": "C:\\Users\\merli\\source\\repos\\ProjectChapueGroep1\\ChapooDatabaseModel\\ChapooDatabaseModel.csproj"
               }
             }
           }
@@ -68,21 +68,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\sedva\\OneDrive\\Documenten\\GitHub\\ProjectChapueGroep1\\ChapooDatabaseLogic\\ChapooDatabaseLogic.csproj": {
+    "C:\\Users\\merli\\source\\repos\\ProjectChapueGroep1\\ChapooDatabaseLogic\\ChapooDatabaseLogic.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sedva\\OneDrive\\Documenten\\GitHub\\ProjectChapueGroep1\\ChapooDatabaseLogic\\ChapooDatabaseLogic.csproj",
+        "projectUniqueName": "C:\\Users\\merli\\source\\repos\\ProjectChapueGroep1\\ChapooDatabaseLogic\\ChapooDatabaseLogic.csproj",
         "projectName": "ChapooDatabaseLogic",
-        "projectPath": "C:\\Users\\sedva\\OneDrive\\Documenten\\GitHub\\ProjectChapueGroep1\\ChapooDatabaseLogic\\ChapooDatabaseLogic.csproj",
-        "packagesPath": "C:\\Users\\sedva\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sedva\\OneDrive\\Documenten\\GitHub\\ProjectChapueGroep1\\ChapooDatabaseLogic\\obj\\",
+        "projectPath": "C:\\Users\\merli\\source\\repos\\ProjectChapueGroep1\\ChapooDatabaseLogic\\ChapooDatabaseLogic.csproj",
+        "packagesPath": "C:\\Users\\merli\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\merli\\source\\repos\\ProjectChapueGroep1\\ChapooDatabaseLogic\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\sedva\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\merli\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -96,11 +96,11 @@
           "netstandard2.1": {
             "targetAlias": "netstandard2.1",
             "projectReferences": {
-              "C:\\Users\\sedva\\OneDrive\\Documenten\\GitHub\\ProjectChapueGroep1\\ChapooDatabaseDal\\ChapooDatabaseDal.csproj": {
-                "projectPath": "C:\\Users\\sedva\\OneDrive\\Documenten\\GitHub\\ProjectChapueGroep1\\ChapooDatabaseDal\\ChapooDatabaseDal.csproj"
+              "C:\\Users\\merli\\source\\repos\\ProjectChapueGroep1\\ChapooDatabaseDal\\ChapooDatabaseDal.csproj": {
+                "projectPath": "C:\\Users\\merli\\source\\repos\\ProjectChapueGroep1\\ChapooDatabaseDal\\ChapooDatabaseDal.csproj"
               },
-              "C:\\Users\\sedva\\OneDrive\\Documenten\\GitHub\\ProjectChapueGroep1\\ChapooDatabaseModel\\ChapooDatabaseModel.csproj": {
-                "projectPath": "C:\\Users\\sedva\\OneDrive\\Documenten\\GitHub\\ProjectChapueGroep1\\ChapooDatabaseModel\\ChapooDatabaseModel.csproj"
+              "C:\\Users\\merli\\source\\repos\\ProjectChapueGroep1\\ChapooDatabaseModel\\ChapooDatabaseModel.csproj": {
+                "projectPath": "C:\\Users\\merli\\source\\repos\\ProjectChapueGroep1\\ChapooDatabaseModel\\ChapooDatabaseModel.csproj"
               }
             }
           }
@@ -135,21 +135,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\sedva\\OneDrive\\Documenten\\GitHub\\ProjectChapueGroep1\\ChapooDatabaseModel\\ChapooDatabaseModel.csproj": {
+    "C:\\Users\\merli\\source\\repos\\ProjectChapueGroep1\\ChapooDatabaseModel\\ChapooDatabaseModel.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sedva\\OneDrive\\Documenten\\GitHub\\ProjectChapueGroep1\\ChapooDatabaseModel\\ChapooDatabaseModel.csproj",
+        "projectUniqueName": "C:\\Users\\merli\\source\\repos\\ProjectChapueGroep1\\ChapooDatabaseModel\\ChapooDatabaseModel.csproj",
         "projectName": "ChapooDatabaseModel",
-        "projectPath": "C:\\Users\\sedva\\OneDrive\\Documenten\\GitHub\\ProjectChapueGroep1\\ChapooDatabaseModel\\ChapooDatabaseModel.csproj",
-        "packagesPath": "C:\\Users\\sedva\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sedva\\OneDrive\\Documenten\\GitHub\\ProjectChapueGroep1\\ChapooDatabaseModel\\obj\\",
+        "projectPath": "C:\\Users\\merli\\source\\repos\\ProjectChapueGroep1\\ChapooDatabaseModel\\ChapooDatabaseModel.csproj",
+        "packagesPath": "C:\\Users\\merli\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\merli\\source\\repos\\ProjectChapueGroep1\\ChapooDatabaseModel\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\sedva\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\merli\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -189,7 +189,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }
