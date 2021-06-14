@@ -73,6 +73,13 @@ namespace ChapooDatabaseLogic
             else
                 return false;
         }
+        public bool ThereIsStockOfTheItem(int MenuItemID)
+        {
+            if (dao.ThereIsStockOfTheItem(MenuItemID) == 1)
+                return true;
+            else
+                return false;
+        }
 
         public Order getSingleOrder(int TableId)
         {
@@ -82,6 +89,10 @@ namespace ChapooDatabaseLogic
         public void AddMenuItemToOrder(int e, int b)
         {
             dao.AddMenuItemToOrder(e, b);
+        }
+        public void updateDecreaseStock(int MenuItemId)
+        {
+            dao.updateDecreaseStock(MenuItemId);
         }
         
         public void removeMenuItemToOrder(int e)

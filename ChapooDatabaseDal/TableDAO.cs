@@ -270,6 +270,18 @@ namespace ChapooDatabaseDal
             return ExecuteCountInteger(query, sqlParameters);
         }
 
+        public int ThereIsStockOfTheItem(int MenuItemID)
+        {
+            string query = "SELECT COUNT(*) FROM Stock WHERE MenuItemID = @MenuItemID AND Amount = 0";
+
+            SqlParameter[] sqlParameters = new SqlParameter[1];
+
+            SqlParameter pid = new SqlParameter("@MenuItemID", SqlDbType.Int) { Value = MenuItemID };
+            sqlParameters[0] = pid;
+
+            return ExecuteCountInteger(query, sqlParameters);
+        }
+
         public void RemoveMenuItemToOrder(int id)
         {
             string query = "DELETE FROM OrderItem WHERE ID = @id";
@@ -301,6 +313,17 @@ namespace ChapooDatabaseDal
             SqlParameter[] sqlParameters = new SqlParameter[0];
 
             return ReadTables(ExecuteSelectQuery(query, sqlParameters));
+        }
+
+        public void updateDecreaseStock(int MenuItemID)
+        {
+            string thirdQuery = "UPDATE Stock SET Amount = Amount - 1 WHERE MenuItemID = @MenuItemID";
+            SqlParameter[] thirdSqlParameters = new SqlParameter[1];
+
+            SqlParameter thirdOrderId = new SqlParameter("@MenuItemID", SqlDbType.Int) { Value = MenuItemID };
+            thirdSqlParameters[0] = thirdOrderId;
+
+            ExecuteEditQuery(thirdQuery, thirdSqlParameters);
         }
     }
 }

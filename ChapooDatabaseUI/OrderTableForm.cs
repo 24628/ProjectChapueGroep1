@@ -68,9 +68,6 @@ namespace ChapooDatabaseUI
                         }
                     }
                 }
-
-
-
             }
         }
 
@@ -105,20 +102,27 @@ namespace ChapooDatabaseUI
 
         private void AddMenuItemToOrderButton_Click(object sender, EventArgs e)
         {
-            int tableNumber;
-            if (!Int32.TryParse(AddItemFromOrderTextBox.Text, out tableNumber))
+            int MenuItemID;
+            if (!Int32.TryParse(AddItemFromOrderTextBox.Text, out MenuItemID))
             {
                 MessageBox.Show("Insert a number");
                 return;
             }
 
-            if (!tableService.ItemExist(tableNumber)){
+            if (!tableService.ItemExist(MenuItemID)){
                 MessageBox.Show("Item Doesnt Exist");
                 return;
             }
 
-            tableNumber = Int32.Parse(AddItemFromOrderTextBox.Text);
-            tableService.AddMenuItemToOrder(tableNumber, this.order.OrderID);
+            if (tableService.ThereIsStockOfTheItem(MenuItemID))
+            {
+                MessageBox.Show("There is no stock of this item!");
+                return;
+            }
+
+            MenuItemID = Int32.Parse(AddItemFromOrderTextBox.Text);
+            tableService.AddMenuItemToOrder(MenuItemID, this.order.OrderID);
+            tableService.updateDecreaseStock(MenuItemID);
             fillOrderGridWithItems();
         }
 
