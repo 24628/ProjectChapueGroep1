@@ -62,10 +62,10 @@ namespace ChapooDatabaseUI
 
         public void OrderButton(BaseForm form) {
              if (getCurrentUser().Position == "Bediende" || getCurrentUser().Position == "Eigenaar")
-            {
+             {
                 showNewForm(new OrderForm(), form, getCurrentUser());
-            }
-        }
+             }
+        }                       
 
         public void PaymentButton(BaseForm form) {
             showNewForm(new PaymentForm(), form, getCurrentUser());
@@ -78,8 +78,8 @@ namespace ChapooDatabaseUI
             }
             
         }
-
-        public void AdministratorButton(BaseForm form) {
+         
+        public void AdministratorButton(BaseForm form) {           
             if (getCurrentUser().Position != "Eigenaar") return;
             showNewForm(new AdministratorForm(), form, getCurrentUser());
         }
