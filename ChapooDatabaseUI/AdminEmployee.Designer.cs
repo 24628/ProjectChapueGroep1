@@ -112,7 +112,7 @@ namespace ChapooDatabaseUI
             // 
             // BTN_ADToevoegen
             // 
-            this.BTN_ADToevoegen.Location = new System.Drawing.Point(379, 484);
+            this.BTN_ADToevoegen.Location = new System.Drawing.Point(379, 280);
             this.BTN_ADToevoegen.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BTN_ADToevoegen.Name = "BTN_ADToevoegen";
             this.BTN_ADToevoegen.Size = new System.Drawing.Size(136, 56);
@@ -123,7 +123,7 @@ namespace ChapooDatabaseUI
             // 
             // BTN_ADUpdate
             // 
-            this.BTN_ADUpdate.Location = new System.Drawing.Point(379, 280);
+            this.BTN_ADUpdate.Location = new System.Drawing.Point(379, 386);
             this.BTN_ADUpdate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BTN_ADUpdate.Name = "BTN_ADUpdate";
             this.BTN_ADUpdate.Size = new System.Drawing.Size(136, 56);
@@ -134,7 +134,7 @@ namespace ChapooDatabaseUI
             // 
             // BTN_ADDelete
             // 
-            this.BTN_ADDelete.Location = new System.Drawing.Point(379, 386);
+            this.BTN_ADDelete.Location = new System.Drawing.Point(379, 484);
             this.BTN_ADDelete.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BTN_ADDelete.Name = "BTN_ADDelete";
             this.BTN_ADDelete.Size = new System.Drawing.Size(136, 56);
@@ -148,7 +148,7 @@ namespace ChapooDatabaseUI
             this.TXTB_ADTelephone.Location = new System.Drawing.Point(101, 415);
             this.TXTB_ADTelephone.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TXTB_ADTelephone.Name = "TXTB_ADTelephone";
-            this.TXTB_ADTelephone.PlaceholderText = "Telephone number";
+            this.TXTB_ADTelephone.PlaceholderText = "Telephone*";
             this.TXTB_ADTelephone.Size = new System.Drawing.Size(245, 27);
             this.TXTB_ADTelephone.TabIndex = 17;
             // 

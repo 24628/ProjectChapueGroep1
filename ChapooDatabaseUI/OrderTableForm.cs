@@ -91,6 +91,14 @@ namespace ChapooDatabaseUI
                 HideFormItemsForCreate();
             }
         }
+        private void BTTNFinishOrder_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Want to finish the order?", "Finish Order?", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                showNewForm(new OrderForm(), this, getCurrentUser());
+            }
+        }
 
         private void CreateOrderButton_Click(object sender, EventArgs e)
         {
@@ -149,7 +157,12 @@ namespace ChapooDatabaseUI
         private void HideFormItemsForCreate()
         {
             DeleteOrderButton.Hide();
+            BTTNFinishOrder.Hide();
+            LunchButton.Hide();
+            DinerButton.Hide();
+            DrankAlcholButton.Hide();
             OrderItemsGridView.Hide();
+            DrankButton.Hide();
             label1.Hide();
             label2.Hide();
             label3.Hide();
@@ -161,12 +174,19 @@ namespace ChapooDatabaseUI
             AddMenuItemToOrderButton.Hide();
 
             CreateOrderButton.Show();
+            GoToTableDashboardButton.Show();
         }
 
         private void unHideFormItemsForCreate()
         {
             DeleteOrderButton.Show();
+            BTTNFinishOrder.Show();
             OrderItemsGridView.Show();
+            LunchButton.Show();
+            DinerButton.Show();
+            DrankAlcholButton.Show();
+            OrderItemsGridView.Show();
+            DrankButton.Show();
             label1.Show();
             label2.Show();
             label3.Show();
@@ -178,6 +198,7 @@ namespace ChapooDatabaseUI
             AddMenuItemToOrderButton.Show();
 
             CreateOrderButton.Hide();
+            GoToTableDashboardButton.Hide();
         }
 
         private void GoToTableDashboardButton_Click(object sender, EventArgs e)
@@ -231,5 +252,7 @@ namespace ChapooDatabaseUI
                 FillDataInGridView(MenuItemsDataGridView, item.dataGrid(item));
             }
         }
+
+
     }
 }

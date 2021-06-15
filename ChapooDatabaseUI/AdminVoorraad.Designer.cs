@@ -63,7 +63,7 @@ namespace ChapooDatabaseUI
             // 
             // BTN_STUpdate
             // 
-            this.BTN_STUpdate.Location = new System.Drawing.Point(341, 323);
+            this.BTN_STUpdate.Location = new System.Drawing.Point(469, 323);
             this.BTN_STUpdate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BTN_STUpdate.Name = "BTN_STUpdate";
             this.BTN_STUpdate.Size = new System.Drawing.Size(107, 68);
@@ -74,7 +74,7 @@ namespace ChapooDatabaseUI
             // 
             // BTN_STAdd
             // 
-            this.BTN_STAdd.Location = new System.Drawing.Point(466, 324);
+            this.BTN_STAdd.Location = new System.Drawing.Point(341, 323);
             this.BTN_STAdd.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BTN_STAdd.Name = "BTN_STAdd";
             this.BTN_STAdd.Size = new System.Drawing.Size(107, 68);

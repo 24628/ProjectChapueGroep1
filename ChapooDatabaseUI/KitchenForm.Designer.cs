@@ -1,7 +1,7 @@
 ﻿
 namespace ChapooDatabaseUI
 {
-    partial class KitchenForm
+    partial class KitchenForm : BaseForm
     {
         /// <summary>
         /// Required designer variable.
@@ -39,65 +39,133 @@ namespace ChapooDatabaseUI
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.UpdateTableStatusForm = new System.Windows.Forms.Button();
+            this.LBL_OpenOrder = new System.Windows.Forms.Label();
+            this.LBL_ReadyforPickup = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             initNavBar();
+            // 
+            // NavBarContainer
+            // 
+            this.NavBarContainer.Location = new System.Drawing.Point(0, 0);
+            this.NavBarContainer.Name = "NavBarContainer";
+            this.NavBarContainer.Size = new System.Drawing.Size(200, 100);
+            this.NavBarContainer.TabIndex = 0;
+            // 
+            // AdministratorButton
+            // 
+            this.AdministratorButton.Location = new System.Drawing.Point(0, 0);
+            this.AdministratorButton.Name = "AdministratorButton";
+            this.AdministratorButton.Size = new System.Drawing.Size(75, 23);
+            this.AdministratorButton.TabIndex = 0;
+            // 
+            // OrderButton
+            // 
+            this.OrderButton.Location = new System.Drawing.Point(0, 0);
+            this.OrderButton.Name = "OrderButton";
+            this.OrderButton.Size = new System.Drawing.Size(75, 23);
+            this.OrderButton.TabIndex = 0;
+            // 
+            // KitchenButton
+            // 
+            this.KitchenButton.Location = new System.Drawing.Point(0, 0);
+            this.KitchenButton.Name = "KitchenButton";
+            this.KitchenButton.Size = new System.Drawing.Size(75, 23);
+            this.KitchenButton.TabIndex = 0;
+            // 
+            // PaymentButton
+            // 
+            this.PaymentButton.Location = new System.Drawing.Point(0, 0);
+            this.PaymentButton.Name = "PaymentButton";
+            this.PaymentButton.Size = new System.Drawing.Size(75, 23);
+            this.PaymentButton.TabIndex = 0;
+            // 
             // KitchenFormOrderFlowLayout
             // 
-            this.KitchenFormOrderFlowLayout.Location = new System.Drawing.Point(12, 89);
+            this.KitchenFormOrderFlowLayout.Location = new System.Drawing.Point(14, 186);
+            this.KitchenFormOrderFlowLayout.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.KitchenFormOrderFlowLayout.Name = "KitchenFormOrderFlowLayout";
-            this.KitchenFormOrderFlowLayout.Size = new System.Drawing.Size(983, 154);
+            this.KitchenFormOrderFlowLayout.Size = new System.Drawing.Size(1123, 205);
             this.KitchenFormOrderFlowLayout.TabIndex = 1;
             // 
             // KitchenFormPickUpFlowLayout
             // 
-            this.KitchenFormPickUpFlowLayout.Location = new System.Drawing.Point(12, 249);
+            this.KitchenFormPickUpFlowLayout.Location = new System.Drawing.Point(14, 477);
+            this.KitchenFormPickUpFlowLayout.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.KitchenFormPickUpFlowLayout.Name = "KitchenFormPickUpFlowLayout";
-            this.KitchenFormPickUpFlowLayout.Size = new System.Drawing.Size(983, 154);
+            this.KitchenFormPickUpFlowLayout.Size = new System.Drawing.Size(1123, 205);
             this.KitchenFormPickUpFlowLayout.TabIndex = 2;
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(1001, 89);
+            this.dataGridView1.Location = new System.Drawing.Point(1144, 119);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(471, 474);
+            this.dataGridView1.Size = new System.Drawing.Size(538, 632);
             this.dataGridView1.TabIndex = 0;
             // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(1184, 569);
+            this.comboBox1.Location = new System.Drawing.Point(1353, 759);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 23);
+            this.comboBox1.Size = new System.Drawing.Size(138, 28);
             this.comboBox1.TabIndex = 3;
             // 
             // UpdateTableStatusForm
             // 
-            this.UpdateTableStatusForm.Location = new System.Drawing.Point(1311, 569);
+            this.UpdateTableStatusForm.Location = new System.Drawing.Point(1498, 759);
+            this.UpdateTableStatusForm.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.UpdateTableStatusForm.Name = "UpdateTableStatusForm";
-            this.UpdateTableStatusForm.Size = new System.Drawing.Size(161, 23);
+            this.UpdateTableStatusForm.Size = new System.Drawing.Size(184, 31);
             this.UpdateTableStatusForm.TabIndex = 4;
             this.UpdateTableStatusForm.Text = "Update Table Status";
             this.UpdateTableStatusForm.UseVisualStyleBackColor = true;
             this.UpdateTableStatusForm.Click += new System.EventHandler(this.UpdateTableStatusForm_Click);
+            // 
+            // LBL_OpenOrder
+            // 
+            this.LBL_OpenOrder.AutoSize = true;
+            this.LBL_OpenOrder.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.LBL_OpenOrder.Location = new System.Drawing.Point(14, 147);
+            this.LBL_OpenOrder.Name = "LBL_OpenOrder";
+            this.LBL_OpenOrder.Size = new System.Drawing.Size(180, 35);
+            this.LBL_OpenOrder.TabIndex = 9;
+            this.LBL_OpenOrder.Text = "Open Order(s):";
+            // 
+            // LBL_ReadyforPickup
+            // 
+            this.LBL_ReadyforPickup.AutoSize = true;
+            this.LBL_ReadyforPickup.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.LBL_ReadyforPickup.Location = new System.Drawing.Point(12, 438);
+            this.LBL_ReadyforPickup.Name = "LBL_ReadyforPickup";
+            this.LBL_ReadyforPickup.Size = new System.Drawing.Size(206, 35);
+            this.LBL_ReadyforPickup.TabIndex = 10;
+            this.LBL_ReadyforPickup.Text = "Ready for Pickup:";
+            // 
             // KitchenForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-
-            this.ClientSize = new System.Drawing.Size(1484, 826);
+            this.ClientSize = new System.Drawing.Size(1696, 1055);
+            this.Controls.Add(this.LBL_ReadyforPickup);
+            this.Controls.Add(this.LBL_OpenOrder);
             this.Controls.Add(this.UpdateTableStatusForm);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.KitchenFormPickUpFlowLayout);
             this.Controls.Add(this.KitchenFormOrderFlowLayout);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "KitchenForm";
             this.Text = "Kitchen";
             this.Load += new System.EventHandler(this.KitchenForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -142,7 +210,7 @@ namespace ChapooDatabaseUI
             this.KitchenButton.Name = "KitchenButton";
             this.KitchenButton.Size = new System.Drawing.Size(139, 51);
             this.KitchenButton.TabIndex = 8;
-            this.KitchenButton.Text = "Kitchen";
+            this.KitchenButton.Text = "Kitchen and Bar";
             this.KitchenButton.UseVisualStyleBackColor = true;
             this.KitchenButton.Click += (sender, e) => KitchenButton(this);
             // 
@@ -152,7 +220,7 @@ namespace ChapooDatabaseUI
             this.PaymentButton.Name = "PaymentButton";
             this.PaymentButton.Size = new System.Drawing.Size(139, 51);
             this.PaymentButton.TabIndex = 7;
-            this.PaymentButton.Text = "Payment";
+            this.PaymentButton.Text = "Register";
             this.PaymentButton.UseVisualStyleBackColor = true;
             this.PaymentButton.Click += (sender, e) => PaymentButton(this);
             // 
@@ -209,5 +277,7 @@ namespace ChapooDatabaseUI
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button UpdateTableStatusForm;
+        private System.Windows.Forms.Label LBL_OpenOrder;
+        private System.Windows.Forms.Label LBL_ReadyforPickup;
     }
 }

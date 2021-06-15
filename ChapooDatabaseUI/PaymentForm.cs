@@ -142,7 +142,6 @@ namespace ChapooDatabaseUI
             LBL_ShwBtw.Text = string.Empty;
         }
 
-
         public string FormatPrice(decimal price)
         {
             return string.Format("{0:C}", price);
