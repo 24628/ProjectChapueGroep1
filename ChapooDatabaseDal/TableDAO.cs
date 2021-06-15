@@ -110,7 +110,6 @@ namespace ChapooDatabaseDal
         public void createTableOrder(int TableID, int EmployeeID)
         {
             DateTime myDateTime = DateTime.Now;
-            float sqlFormattedDate = myDateTime.Ticks;
             string description = "Geen notitie nog!";
 
             string query = "INSERT INTO [Order] (TableID, EmployeeID, TimeOrder, OrderRemark) VALUES (@tableId, @employeeId, @timeStamp, @description)";
@@ -124,7 +123,7 @@ namespace ChapooDatabaseDal
             SqlParameter peid = new SqlParameter("@EmployeeID", SqlDbType.Int) { Value = EmployeeID };
             sqlParameters[1] = peid;
 
-            SqlParameter pts = new SqlParameter("@timeStamp", SqlDbType.VarChar) { Value = sqlFormattedDate };
+            SqlParameter pts = new SqlParameter("@timeStamp", SqlDbType.VarChar) { Value = myDateTime };
             sqlParameters[2] = pts;
 
             SqlParameter pdes = new SqlParameter("@description", SqlDbType.VarChar) { Value = description };

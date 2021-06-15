@@ -243,7 +243,7 @@ namespace ChapooDatabaseUI
             this.KitchenButton.Name = "KitchenButton";
             this.KitchenButton.Size = new System.Drawing.Size(139, 51);
             this.KitchenButton.TabIndex = 8;
-            this.KitchenButton.Text = "Kitchen en Bar";
+            this.KitchenButton.Text = "Kitchen and Bar";
             this.KitchenButton.UseVisualStyleBackColor = true;
             this.KitchenButton.Click += (sender, e) => KitchenButton(this);
             // 

@@ -104,10 +104,12 @@ namespace ChapooDatabaseUI
             this.orderList = tableService.getReceerdOrderForTableById(this.SelectedTable.TableId);
 
             ClearDataGridView(dataGridView1);
-            generateGridLayout(dataGridView1, new string[] { "id", "Naam", "Price" });
+            generateGridLayout(dataGridView1, new string[] { "id", "Naam", "Price", "Order date" });
 
             foreach (var item in orderList)
             {
+                Order order = tableService.getSingleOrder(this.SelectedTable.TableId);
+                item.date = order.TimeOrder;
                 FillDataInGridView(dataGridView1, item.dataGrid(item));
             }
         }
