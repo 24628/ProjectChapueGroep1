@@ -346,6 +346,26 @@ namespace ChapooDatabaseDal
             );
             return m;
         }
+        public Menu findMenuType(string type)
+        {
+            // the query for the database, selecting [type], amount, price, alcohol FROM drinks WHERE amount > 1 AND price > 1.00
+            string query = "SELECT * from Menu Where Type = @type";
+            SqlParameter[] sqlParameters = new SqlParameter[1];
+
+            SqlParameter paraName = new SqlParameter("@type", SqlDbType.VarChar) { Value = type };
+            sqlParameters[0] = paraName;
+
+            return getSignelMenuType(ExecuteSelectQuery(query, sqlParameters));
+        }
+
+        private Menu getSignelMenuType(DataTable dataTable)
+        {
+            Menu m = new Menu(
+                Convert.ToInt32(dataTable.Rows[0]["MenuID"]),
+                dataTable.Rows[0]["Type"].ToString()
+            );
+            return m;
+        }
 
         public int findOrderItem(int menuItemId, int orderId)
         {

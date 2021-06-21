@@ -13,15 +13,5 @@ namespace ChapooDatabaseModel
         {
             this.menuId = v2;
         }
-
-        public string[] dataGrid(AdminMenuItem m)
-        {
-            return new string[] {
-                m.menuId.ToString(),
-                m.Id.ToString(),
-                m.Name,
-                string.Format("{0:C}", m.Price)
-            };
-        }
     }
 }

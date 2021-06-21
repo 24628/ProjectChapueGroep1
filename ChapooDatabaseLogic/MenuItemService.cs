@@ -44,6 +44,18 @@ namespace ChapooDatabaseLogic
                 throw new Exception(e.Message);
             }
         }
+
+        public void UpdateMenuItemType(int MenuItemID, int MenuId)
+        {
+            try
+            {
+                dao.UpdateMenuItemType(MenuItemID, MenuId);
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+        }
         public void AddMenuItem(int MenuID, string MenuName, decimal Price)
         {
             try

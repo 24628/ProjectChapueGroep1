@@ -21,7 +21,7 @@ namespace ChapooUI
 
         private void LoginFormSubmitButton_Click(object sender, EventArgs e)
         {
-            setUserWithEmail("BartSchutte@gmail.com");
+            setUserWithEmail("HenkChapoo@gmail.com");
             showNewForm(new DashboardForm(), this, getCurrentUser());
 
             /*

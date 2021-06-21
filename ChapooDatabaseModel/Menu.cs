@@ -15,13 +15,5 @@ namespace ChapooDatabaseModel
             this.Id = v1;
             this.Type = v2;
         }
-
-        public virtual string[] dataGrid(Menu m)
-        {
-            return new string[] {
-                m.Id.ToString(),
-                m.Type,
-            };
-        }
     }
 }
