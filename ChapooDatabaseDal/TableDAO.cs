@@ -324,5 +324,47 @@ namespace ChapooDatabaseDal
 
             ExecuteEditQuery(thirdQuery, thirdSqlParameters);
         }
+
+        public MenuItem findMenuItem(string name)
+        {
+            // the query for the database, selecting [type], amount, price, alcohol FROM drinks WHERE amount > 1 AND price > 1.00
+            string query = "SELECT [MenuItemID], MenuName, Price from MenuItem Where MenuName = @name";
+            SqlParameter[] sqlParameters = new SqlParameter[1];
+
+            SqlParameter paraName = new SqlParameter("@name", SqlDbType.VarChar) { Value = name };
+            sqlParameters[0] = paraName;
+
+            return getSignelMenuItem(ExecuteSelectQuery(query, sqlParameters));
+        }
+
+        private MenuItem getSignelMenuItem(DataTable dataTable)
+        {
+            MenuItem m = new MenuItem(
+                Convert.ToInt32(dataTable.Rows[0]["MenuItemID"]),
+                dataTable.Rows[0]["MenuName"].ToString(),
+                Convert.ToDecimal(dataTable.Rows[0]["Price"])
+            );
+            return m;
+        }
+
+        public int findOrderItem(int menuItemId, int orderId)
+        {
+            // the query for the database, selecting [type], amount, price, alcohol FROM drinks WHERE amount > 1 AND price > 1.00
+            string query = "SELECT ID FROM [OrderItem] Where OrderID = 9 and MenuItemID = 6";
+            SqlParameter[] sqlParameters = new SqlParameter[2];
+
+            SqlParameter paraMenuItemId = new SqlParameter("@menuItemId", SqlDbType.Int) { Value = menuItemId };
+            sqlParameters[0] = paraMenuItemId;
+
+            SqlParameter paraOrderId = new SqlParameter("@OrderID", SqlDbType.Int) { Value = orderId };
+            sqlParameters[1] = paraOrderId;
+
+            return getSingleOrderItem(ExecuteSelectQuery(query, sqlParameters));
+        }
+
+        private int getSingleOrderItem(DataTable dataTable)
+        {
+            return (int)dataTable.Rows[0]["ID"];
+        }
     }
 }

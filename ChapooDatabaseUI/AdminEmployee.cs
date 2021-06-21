@@ -35,18 +35,57 @@ namespace ChapooDatabaseUI
         }
         private void BTN_ADUpdate_Click(object sender, EventArgs e)
         {
-            
-            int EmployeeID = Int32.Parse(TXTB_ADEmployeeID.Text);
+
+            int EmployeeID;
+            float Telephone;
+            if (!float.TryParse(TXTB_ADTelephone.Text, out Telephone))
+            {
+                MessageBox.Show("Incorrect phone number");
+                return;
+            }
+
+            if (!Int32.TryParse(TXTB_ADEmployeeID.Text, out EmployeeID))
+            {
+                MessageBox.Show("Insert an id at Employee id");
+                return;
+            }
+
+            IDictionary<System.Windows.Forms.TextBox, string> textFields = new Dictionary<System.Windows.Forms.TextBox, string>();
+            textFields.Add(TXTB_ADFirstname, "Firstname");
+            textFields.Add(TXTB_ADLastname, "Lastname");
+            textFields.Add(TXTB_ADGebruikersnaam, "Email");
+            textFields.Add(TXTB_ADPassword, "password");
+            textFields.Add(TXTB_ADPosition, "Position");
+
+            foreach (var fields in textFields)
+            {
+                if (fields.Key.Text == string.Empty)
+                {
+                    MessageBox.Show("fill in " + fields.Value);
+                    return;
+                }
+            }
+
             string Firstname = TXTB_ADFirstname.Text;
             string Lastname = TXTB_ADLastname.Text;
             string Email = TXTB_ADGebruikersnaam.Text;
             string password = TXTB_ADPassword.Text;
-            float Telephone = float.Parse(TXTB_ADTelephone.Text);
             string Position = TXTB_ADPosition.Text;
+
+            Telephone = float.Parse(TXTB_ADTelephone.Text);
+            EmployeeID = Int32.Parse(TXTB_ADEmployeeID.Text);
+
+            if (!employeeService.EmployeeExist(EmployeeID))
+            {
+                MessageBox.Show("Employee doesnt exist check the id again!");
+                return;
+            }
+
             employeeService.UpdateEmployee(EmployeeID, Firstname, Lastname, Email, password, Telephone, Position);
             
             MessageBox.Show("De Employee wijzigingen zijn doorgevoerd", "Employee Wijzigingen!", MessageBoxButtons.OK);
 
+            EmtyTextbox();
             displayGrid();
         }
         public bool EmployeeCheck(String Email) // check of de Employee al bestaat
@@ -76,7 +115,7 @@ namespace ChapooDatabaseUI
             string Firstname = TXTB_ADFirstname.Text;
             string Lastname = TXTB_ADLastname.Text;
             string Email = TXTB_ADGebruikersnaam.Text;
-            float Telephone = float.Parse(TXTB_ADTelephone.Text.ToString());
+            float Telephone = float.Parse(TXTB_ADTelephone.Text);
             string Position = TXTB_ADPosition.Text;
             string Password = TXTB_ADPassword.Text;
             if (!EmployeeCheck(Email)) {
@@ -89,7 +128,20 @@ namespace ChapooDatabaseUI
 
         private void BTN_ADDelete_Click(object sender, EventArgs e)
         {
-            int EmployeeID = Int32.Parse(TXTB_ADEmployeeID.Text);
+            int EmployeeID;
+            if (!Int32.TryParse(TXTB_ADEmployeeID.Text, out EmployeeID))
+            {
+                MessageBox.Show("Insert an id at Employee id");
+                return;
+            }
+
+            if (!employeeService.EmployeeExist(EmployeeID))
+            {
+                MessageBox.Show("Employee doesnt exist check the id again!");
+                return;
+            }
+
+            EmployeeID = Int32.Parse(TXTB_ADEmployeeID.Text);
             employeeService.DeleteEmployee(EmployeeID);
             MessageBox.Show("Employee Gedelete", "Employee!", MessageBoxButtons.OK);
             displayGrid();

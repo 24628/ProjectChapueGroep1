@@ -36,7 +36,7 @@ namespace ChapooDatabaseUI
         private void fillOrderGridWithItems()
         {
             ClearDataGridView(OrderItemsGridView);
-            generateGridLayout(OrderItemsGridView, new string[] { "id", "Naam", "Price", "amount" });
+            generateGridLayout(OrderItemsGridView, new string[] {"Naam", "Price", "amount" });
 
             List<OrderItem> items = tableService.getMenuItemBelongingTowardsOrder(this.order.OrderID);
             for (int i = 0; i < items.Count; i++)
@@ -46,35 +46,34 @@ namespace ChapooDatabaseUI
                 {
 
                     if (OrderItemsGridView.Rows[j].Cells[0].Value != null)
-                        if (OrderItemsGridView.Rows[j].Cells[1].Value.ToString() == items[i].MenuName)
+                        if (OrderItemsGridView.Rows[j].Cells[0].Value.ToString() == items[i].MenuName)
                             count++;
                 }
 
                 if(count == 0)
-                    FillDataInGridView(OrderItemsGridView, dataGrid(items[i]));
+                    FillDataInGridView(OrderItemsGridView, dataGrindOrder(items[i]));
 
                 for (int j = 0; j < OrderItemsGridView.RowCount; j++)
                 {
                     if (OrderItemsGridView.Rows[j].Cells[0].Value != null)
                     {
-                        if (OrderItemsGridView.Rows[j].Cells[1].Value.ToString() == items[i].MenuName)
+                        if (OrderItemsGridView.Rows[j].Cells[0].Value.ToString() == items[i].MenuName)
                         {
-                            int amount = Int32.Parse(OrderItemsGridView.Rows[j].Cells[3].Value.ToString());
+                            int amount = Int32.Parse(OrderItemsGridView.Rows[j].Cells[2].Value.ToString());
                             amount += 1;
 
                             string priceString = "€" + string.Format("{0:C2}", ((items[i].Price * amount)).ToString());
-                            OrderItemsGridView.Rows[j].Cells[3].Value = (amount).ToString();
-                            OrderItemsGridView.Rows[j].Cells[2].Value = string.Concat(priceString.Reverse().Skip(2).Reverse());
+                            OrderItemsGridView.Rows[j].Cells[2].Value = (amount).ToString();
+                            OrderItemsGridView.Rows[j].Cells[1].Value = string.Concat(priceString.Reverse().Skip(2).Reverse());
                         }
                     }
                 }
             }
         }
 
-        public string[] dataGrid(OrderItem m)
+        public string[] dataGrindOrder(OrderItem m)
         {
             return new string[] {
-                m.ID.ToString(),
                 m.MenuName,
                 string.Format("{0:C}", m.Price),
                 "0"
@@ -110,15 +109,22 @@ namespace ChapooDatabaseUI
 
         private void AddMenuItemToOrderButton_Click(object sender, EventArgs e)
         {
-            int MenuItemID;
-            if (!Int32.TryParse(AddItemFromOrderTextBox.Text, out MenuItemID))
+            int MenuItemID = -1;
+
+            for (int row = 0; row < MenuItemsDataGridView.RowCount; row++)
             {
-                MessageBox.Show("Insert a number");
-                return;
+                if (MenuItemsDataGridView.SelectedRows.Count == 1)
+                {
+                    if (MenuItemsDataGridView.Rows[row].Cells[0] == MenuItemsDataGridView.SelectedRows[0].Cells[0])
+                    {
+                        string selectedItemName = (string)MenuItemsDataGridView.SelectedRows[0].Cells[0].Value;
+                        MenuItemID = tableService.findMenuItem(selectedItemName).Id;
+                    }
+                }
             }
 
-            if (!tableService.ItemExist(MenuItemID)){
-                MessageBox.Show("Item Doesnt Exist");
+            if(MenuItemID == -1){
+                MessageBox.Show("error occurd try it again!");
                 return;
             }
 
@@ -128,7 +134,6 @@ namespace ChapooDatabaseUI
                 return;
             }
 
-            MenuItemID = Int32.Parse(AddItemFromOrderTextBox.Text);
             tableService.AddMenuItemToOrder(MenuItemID, this.order.OrderID);
             tableService.updateDecreaseStock(MenuItemID);
             fillOrderGridWithItems();
@@ -136,20 +141,19 @@ namespace ChapooDatabaseUI
 
         private void RemoveMenuItemToOrderButton_Click(object sender, EventArgs e)
         {
-            int orderItemID;
-            if (!Int32.TryParse(RemoveItemFromOrderTextBox.Text, out orderItemID))
+            int orderItemID = -1;
+            for (int row = 0; row < OrderItemsGridView.RowCount; row++)
             {
-                MessageBox.Show("Insert a number");
-                return;
+                if (OrderItemsGridView.SelectedRows.Count == 1)
+                {
+                    if (OrderItemsGridView.Rows[row].Cells[0] == OrderItemsGridView.SelectedRows[0].Cells[0])
+                    {
+                        string selectedItemName = (string)OrderItemsGridView.SelectedRows[0].Cells[0].Value;
+                        orderItemID = tableService.findOrderItem(tableService.findMenuItem(selectedItemName).Id, this.order.OrderID);
+                    }
+                }
             }
 
-            if (!tableService.OrderItemExist(orderItemID, this.order.OrderID))
-            {
-                MessageBox.Show("Order item is not in the current order");
-                return;
-            }
-
-            orderItemID = Int32.Parse(RemoveItemFromOrderTextBox.Text);
             tableService.removeMenuItemToOrder(orderItemID);
             fillOrderGridWithItems();
         }
@@ -168,8 +172,6 @@ namespace ChapooDatabaseUI
             label3.Hide();
             label4.Hide();
             MenuItemsDataGridView.Hide();
-            AddItemFromOrderTextBox.Hide();
-            RemoveItemFromOrderTextBox.Hide();
             RemoveMenuItemToOrderButton.Hide();
             AddMenuItemToOrderButton.Hide();
 
@@ -192,8 +194,6 @@ namespace ChapooDatabaseUI
             label3.Show();
             label4.Show();
             MenuItemsDataGridView.Show();
-            AddItemFromOrderTextBox.Show();
-            RemoveItemFromOrderTextBox.Show();
             RemoveMenuItemToOrderButton.Show();
             AddMenuItemToOrderButton.Show();
 
@@ -210,10 +210,10 @@ namespace ChapooDatabaseUI
         {
             ClearDataGridView(MenuItemsDataGridView);
             this.menuItems = tableService.getMenuCardLunch();
-            generateGridLayout(MenuItemsDataGridView, new string[] { "MenuItemID", "MenuName", "Price" });
+            generateGridLayout(MenuItemsDataGridView, new string[] {"MenuName", "Price" });
 
             foreach (var item in this.menuItems) {
-                FillDataInGridView(MenuItemsDataGridView, item.dataGrid(item));
+                FillDataInGridView(MenuItemsDataGridView, dataGrid(item));
             }
         }
 
@@ -221,11 +221,11 @@ namespace ChapooDatabaseUI
         {
             ClearDataGridView(MenuItemsDataGridView);
             this.menuItems = tableService.getMenuCardDiner();
-            generateGridLayout(MenuItemsDataGridView, new string[] { "MenuItemID", "MenuName", "Price" });
+            generateGridLayout(MenuItemsDataGridView, new string[] { "MenuName", "Price" });
 
             foreach (var item in this.menuItems)
             {
-                FillDataInGridView(MenuItemsDataGridView, item.dataGrid(item));
+                FillDataInGridView(MenuItemsDataGridView, dataGrid(item));
             }
         }
 
@@ -233,11 +233,11 @@ namespace ChapooDatabaseUI
         {
             ClearDataGridView(MenuItemsDataGridView);
             this.menuItems = tableService.getMenuCardDrankAlchol();
-            generateGridLayout(MenuItemsDataGridView, new string[] { "MenuItemID", "MenuName", "Price" });
+            generateGridLayout(MenuItemsDataGridView, new string[] { "MenuName", "Price" });
 
             foreach (var item in this.menuItems)
             {
-                FillDataInGridView(MenuItemsDataGridView, item.dataGrid(item));
+                FillDataInGridView(MenuItemsDataGridView, dataGrid(item));
             }
         }
 
@@ -245,14 +245,20 @@ namespace ChapooDatabaseUI
         {
             ClearDataGridView(MenuItemsDataGridView);
             this.menuItems = tableService.getMenuCardDrank();
-            generateGridLayout(MenuItemsDataGridView, new string[] { "MenuItemID", "MenuName", "Price" });
+            generateGridLayout(MenuItemsDataGridView, new string[] {"MenuName", "Price" });
 
             foreach (var item in this.menuItems)
             {
-                FillDataInGridView(MenuItemsDataGridView, item.dataGrid(item));
+                FillDataInGridView(MenuItemsDataGridView, dataGrid(item));
             }
         }
 
-
+        public virtual string[] dataGrid(MenuItem m)
+        {
+            return new string[] {
+                m.Name,
+                string.Format("{0:C}", m.Price)
+            };
+        }
     }
 }

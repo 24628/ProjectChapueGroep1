@@ -119,5 +119,14 @@ namespace ChapooDatabaseLogic
         {
             return dao.getAllTablesForKitchen();
         }
+
+        public MenuItem findMenuItem(string name)
+        {
+            return dao.findMenuItem(name);
+        }
+        public int findOrderItem(int menuid, int orderid)
+        {
+            return dao.findOrderItem(menuid, orderid);
+        }
     }
 }

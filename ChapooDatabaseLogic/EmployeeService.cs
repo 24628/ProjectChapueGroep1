@@ -50,5 +50,13 @@ namespace ChapooDatabaseLogic
         {
             dao.DeleteEmployee(id);
         }
+
+        public bool EmployeeExist(int id)
+        {
+            if (dao.EmployeeExist(id) == 1)
+                return true;
+            else
+                return false;
+        }
     }
 }

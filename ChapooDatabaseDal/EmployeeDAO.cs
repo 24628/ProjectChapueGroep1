@@ -101,5 +101,17 @@ namespace ChapooDatabaseDal
             }
             return employeeList;
         }
+
+        public int EmployeeExist(int id)
+        {
+            string query = "SELECT COUNT(*) FROM Employee WHERE EmployeeID = @EmployeeID";
+
+            SqlParameter[] sqlParameters = new SqlParameter[1];
+
+            SqlParameter pid = new SqlParameter("@EmployeeID", SqlDbType.Int) { Value = id };
+            sqlParameters[0] = pid;
+
+            return ExecuteCountInteger(query, sqlParameters);
+        }
     }
 }
