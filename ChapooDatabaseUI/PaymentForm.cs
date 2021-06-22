@@ -24,24 +24,12 @@ namespace ChapooDatabaseUI
         private decimal totalPriceBtwAdd;
         private Table table = null;
         public decimal Btw;
+        private string Status;
 
         public PaymentForm()
         {
             InitializeComponent();
             dispayTables();
-            displayComboBox();
-        }
-
-        private void displayComboBox()
-        {
-            List<PaymentMethod> pMed = new List<PaymentMethod>();
-            pMed.Add(new PaymentMethod() { Text = "CreditCard", Value = "CreditCard" });
-            pMed.Add(new PaymentMethod() { Text = "Cash", Value = "Cash" });
-            pMed.Add(new PaymentMethod() { Text = "Visa", Value = "Visa" });
-
-            comboBox1.DataSource = pMed;
-            comboBox1.DisplayMember = "Text";
-            comboBox1.ValueMember = "Value";
         }
 
         private void setTableList()
@@ -97,11 +85,12 @@ namespace ChapooDatabaseUI
                 FillDataInGridView(dataGridView1, item.dataGrid(item));
                 totalPrice += item.Price;
             }
+
+            (string FinalTotaal, string TotaalBTW) = calcPrice();
         }
 
-        private void SubmitReceedBTN_Click(object sender, EventArgs e)
+        private (string totaalPrice, string totaalBtw) calcPrice()
         {
-            string status = (string)comboBox1.SelectedValue;
             decimal tip = 0.00m;
             decimal TotaalBTW = 0;
             decimal totaalprijs = 0;
@@ -126,14 +115,21 @@ namespace ChapooDatabaseUI
                 TotaalBTW += Btw;
             }
             priceLabelPayment.Text = pricePlaceHolder + FormatPrice(FinalTotaal + tip);
-
             LBL_ShwBtw.Text = TotaalBTW.ToString("€ 0.00");
-            if (status == "CreditCard")
-                MessageBox.Show("Insert CreditCard, the btw is " + TotaalBTW.ToString("€ 0.00") + " and the total price is " + FormatPrice(FinalTotaal + tip));
-            if (status == "Cash")
-                MessageBox.Show("Hand over the cash, the btw is " + TotaalBTW.ToString("€ 0.00") + " and the total price is " + FormatPrice(FinalTotaal + tip));
-            if (status == "Visa")
-                MessageBox.Show("Insert Visa, the btw is " + TotaalBTW.ToString("€ 0.00") + " and the total price is " + FormatPrice(FinalTotaal + tip));
+
+            return (FormatPrice(FinalTotaal + tip), TotaalBTW.ToString("€ 0.00"));
+        }
+
+        private void SubmitReceedBTN_Click(object sender, EventArgs e)
+        {
+            (string FinalTotaal, string TotaalBTW) = calcPrice();
+
+            if (Status == "CreditCard")
+                MessageBox.Show("Insert CreditCard, the btw is " + TotaalBTW + " and the total price is " + FinalTotaal);
+            if (Status == "Cash")
+                MessageBox.Show("Hand over the cash, the btw is " + TotaalBTW + " and the total price is " + FinalTotaal);
+            if (Status == "Visa")
+                MessageBox.Show("Insert Visa, the btw is " + TotaalBTW + " and the total price is " + FinalTotaal);
 
             int orderId = tableService.getSingleOrder(table.TableId).OrderID;
             tableService.deleteTableOrder(table.TableId, orderId);
@@ -147,5 +143,19 @@ namespace ChapooDatabaseUI
             return string.Format("{0:C}", price);
         }
 
+        private void PaymentCashBtn_Click(object sender, EventArgs e)
+        {
+            Status = "Cash";
+        }
+
+        private void PaymentCardBtn_Click(object sender, EventArgs e)
+        {
+            Status = "Card";
+        }
+
+        private void PaymentVisaBtn_Click(object sender, EventArgs e)
+        {
+            Status = "Visa";
+        }
     }
 }
