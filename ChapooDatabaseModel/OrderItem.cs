@@ -23,15 +23,5 @@ namespace ChapooDatabaseModel
             this.MenuName = v5;
             this.Price = v6;
         }
-
-        public string[] dataGrid(OrderItem m)
-        {
-            return new string[] {
-                m.ID.ToString(),
-                m.MenuName,
-                string.Format("{0:C}", m.Price),
-                m.date
-            };
-        }
     }
 }

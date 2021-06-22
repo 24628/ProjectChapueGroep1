@@ -110,8 +110,18 @@ namespace ChapooDatabaseUI
             {
                 Order order = tableService.getSingleOrder(this.SelectedTable.TableId);
                 item.date = order.TimeOrder;
-                FillDataInGridView(dataGridView1, item.dataGrid(item));
+                FillDataInGridView(dataGridView1, dataGrid(item));
             }
+        }
+
+        public string[] dataGrid(OrderItem m)
+        {
+            return new string[] {
+                m.ID.ToString(),
+                m.MenuName,
+                string.Format("{0:C}", m.Price),
+                m.date
+            };
         }
     }
 }

@@ -82,11 +82,21 @@ namespace ChapooDatabaseUI
             totalPrice = 0;
             foreach (var item in orderList)
             {
-                FillDataInGridView(dataGridView1, item.dataGrid(item));
+                FillDataInGridView(dataGridView1, dataGrid(item));
                 totalPrice += item.Price;
             }
 
             (string FinalTotaal, string TotaalBTW) = calcPrice();
+        }
+
+        public string[] dataGrid(OrderItem m)
+        {
+            return new string[] {
+                m.ID.ToString(),
+                m.MenuName,
+                string.Format("{0:C}", m.Price),
+                m.date
+            };
         }
 
         private (string totaalPrice, string totaalBtw) calcPrice()
