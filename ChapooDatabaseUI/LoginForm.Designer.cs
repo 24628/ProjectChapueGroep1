@@ -109,7 +109,7 @@ namespace ChapooUI
             this.Controls.Add(this.LoginFormEmailTextBox);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "LoginForm";
-            this.Text = "Form1";
+            this.Text = "Login Form";
             ((System.ComponentModel.ISupportInitialize)(this.pBX_ChapeauLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

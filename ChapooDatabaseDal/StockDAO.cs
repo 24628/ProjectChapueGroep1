@@ -49,14 +49,35 @@ namespace ChapooDatabaseDal
             foreach (DataRow dr in dataTable.Rows)
             {
                 Stock stclist = new Stock(
-                Convert.ToInt32(dr["StockID"]),
-                Convert.ToInt32(dr["MenuItemID"]),
-                dr["MenuName"].ToString(),
-                Convert.ToInt32(dr["Amount"])
+                    Convert.ToInt32(dr["StockID"]),
+                    Convert.ToInt32(dr["MenuItemID"]),
+                    dr["MenuName"].ToString(),
+                    Convert.ToInt32(dr["Amount"])
                 );
                 stockList.Add(stclist);
             }
             return stockList;
+        }
+
+        public Stock findStockWaarde(int menuItemId)
+        {
+            string query = "SELECT * from Stock Where MenuItemID = @id";
+            SqlParameter[] sqlParameters = new SqlParameter[1];
+
+            SqlParameter paraName = new SqlParameter("@id", SqlDbType.Int) { Value = menuItemId };
+            sqlParameters[0] = paraName;
+
+            return getSignleStockWaarde(ExecuteSelectQuery(query, sqlParameters));
+        }
+
+        private Stock getSignleStockWaarde(DataTable dataTable)
+        {
+            Stock m = new Stock(
+                Convert.ToInt32(dataTable.Rows[0]["StockId"]),
+                Convert.ToInt32(dataTable.Rows[0]["MenuItemID"]),
+                Convert.ToInt32(dataTable.Rows[0]["Amount"])
+            );
+            return m;
         }
     }
 }

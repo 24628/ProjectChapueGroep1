@@ -48,6 +48,11 @@ namespace ChapooDatabaseDal
             sqlParameter[1] = new SqlParameter("MenuName", MenuName);
             sqlParameter[2] = new SqlParameter("Price", Price);
             ExecuteEditQuery(query, sqlParameter);
+
+            string querySecond = $"insert into [Stock] (M.MenuItemID, Amount) VALUES ('{MenuID}','0')";
+            SqlParameter[] sqlParameterSecond = new SqlParameter[1];
+            sqlParameterSecond[0] = new SqlParameter("MenuID", MenuID);
+            ExecuteEditQuery(querySecond, sqlParameterSecond);
         }
         public void VerwijderMenuItem(int MenuItemID)
         {
