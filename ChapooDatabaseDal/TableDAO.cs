@@ -370,7 +370,7 @@ namespace ChapooDatabaseDal
         public int findOrderItem(int menuItemId, int orderId)
         {
             // the query for the database, selecting [type], amount, price, alcohol FROM drinks WHERE amount > 1 AND price > 1.00
-            string query = "SELECT ID FROM [OrderItem] Where OrderID = 9 and MenuItemID = 6";
+            string query = "SELECT ID FROM [OrderItem] Where OrderID = @OrderID and MenuItemID = @menuItemId";
             SqlParameter[] sqlParameters = new SqlParameter[2];
 
             SqlParameter paraMenuItemId = new SqlParameter("@menuItemId", SqlDbType.Int) { Value = menuItemId };

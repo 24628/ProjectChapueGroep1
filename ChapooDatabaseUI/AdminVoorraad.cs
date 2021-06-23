@@ -61,7 +61,14 @@ namespace ChapooDatabaseUI
                 MessageBox.Show("Selected An Item!");
                 return;
             }
+
+            
             Amount = Int32.Parse(TextBoxAmount.Text);
+            if (Amount <= -1)
+            {
+                MessageBox.Show("Value cant be minus!");
+                return;
+            }
             stockService.UpdateStock(this.selectedStock.StockID, this.selectedMenuItem.Id, Amount);
             MessageBox.Show("De Stock: " + this.selectedMenuItem.Name + " is gezet naar: " + Amount, "Item Wijzigingen!", MessageBoxButtons.OK);
             displayGrid();

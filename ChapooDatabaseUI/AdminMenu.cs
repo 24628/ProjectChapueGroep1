@@ -136,7 +136,13 @@ namespace ChapooDatabaseUI
         }
         private void BTN_MIDelete_Click(object sender, EventArgs e)
         {
+            if(this.selectedMenuItem == null)
+            {
+                MessageBox.Show("Select an item!");
+                return;
+            }
             menuItemService.DeleteMenuItem(this.selectedMenuItem.Id);
+            MessageBox.Show("MenuItem Gedelete", "MenuItem!", MessageBoxButtons.OK);
             displayGrid();
         }
 

@@ -50,12 +50,7 @@ namespace ChapooDatabaseUI
         private void BTN_ADUpdate_Click(object sender, EventArgs e)
         {
 
-            float Telephone;
-            if (!float.TryParse(TXTB_ADTelephone.Text, out Telephone))
-            {
-                MessageBox.Show("Incorrect phone number");
-                return;
-            }
+            
 
             IDictionary<System.Windows.Forms.TextBox, string> textFields = new Dictionary<System.Windows.Forms.TextBox, string>();
             textFields.Add(TXTB_ADFirstname, "Firstname");
@@ -70,6 +65,13 @@ namespace ChapooDatabaseUI
                     MessageBox.Show("fill in " + fields.Value);
                     return;
                 }
+            }
+
+            float Telephone;
+            if (!float.TryParse(TXTB_ADTelephone.Text, out Telephone))
+            {
+                MessageBox.Show("Incorrect phone number");
+                return;
             }
 
             bool foundPos = false;
@@ -119,13 +121,6 @@ namespace ChapooDatabaseUI
 
         private void BTN_ADToevoegen_Click(object sender, EventArgs e) 
         {
-            float Telephone;
-            if (!float.TryParse(TXTB_ADTelephone.Text, out Telephone))
-            {
-                MessageBox.Show("Incorrect phone number");
-                return;
-            }
-
             IDictionary<System.Windows.Forms.TextBox, string> textFields = new Dictionary<System.Windows.Forms.TextBox, string>();
             textFields.Add(TXTB_ADFirstname, "Firstname");
             textFields.Add(TXTB_ADLastname, "Lastname");
@@ -140,6 +135,13 @@ namespace ChapooDatabaseUI
                     MessageBox.Show("fill in " + fields.Value);
                     return;
                 }
+            }
+
+            float Telephone;
+            if (!float.TryParse(TXTB_ADTelephone.Text, out Telephone))
+            {
+                MessageBox.Show("Incorrect phone number");
+                return;
             }
 
             bool foundPos = false;
@@ -170,7 +172,13 @@ namespace ChapooDatabaseUI
 
         private void BTN_ADDelete_Click(object sender, EventArgs e)
         {
-            if(this.selectedEmployee.EmployeeID == getCurrentUser().EmployeeID) {
+            if (this.selectedEmployee == null)
+            {
+                MessageBox.Show("Select an employee!");
+                return;
+            }
+
+            if (this.selectedEmployee.EmployeeID == getCurrentUser().EmployeeID) {
                 MessageBox.Show("Cant delete ur self!");
                 return;
             }
