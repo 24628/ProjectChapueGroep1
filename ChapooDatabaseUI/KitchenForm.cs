@@ -104,7 +104,7 @@ namespace ChapooDatabaseUI
             this.orderList = tableService.getReceerdOrderForTableById(this.SelectedTable.TableId);
 
             ClearDataGridView(dataGridView1);
-            generateGridLayout(dataGridView1, new string[] { "id", "Naam", "Price", "Order date" });
+            generateGridLayout(dataGridView1, new string[] {"Naam", "Price", "Order date" });
 
             foreach (var item in orderList)
             {
@@ -117,7 +117,6 @@ namespace ChapooDatabaseUI
         public string[] dataGrid(OrderItem m)
         {
             return new string[] {
-                m.ID.ToString(),
                 m.MenuName,
                 string.Format("{0:C}", m.Price),
                 m.date
