@@ -1,4 +1,6 @@
 ﻿
+using System.Drawing;
+
 namespace ChapooDatabaseUI
 {
     partial class AdminMenu

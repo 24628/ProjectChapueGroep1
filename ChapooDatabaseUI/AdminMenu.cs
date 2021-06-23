@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Security.Cryptography;
 using System.Text;
 using System.Windows.Forms;
 using ChapooDatabaseDal;
@@ -37,7 +38,28 @@ namespace ChapooDatabaseUI
             {
                 FillDataInGridView(MenuTypesGrid, dataGridMenuTypes(e));
             }
-            
+
+            for (int row = 0; row < MenuTypesGrid.RowCount; row++)
+            {
+                foreach (var e in menuTypes)
+                {
+                    if (MenuTypesGrid.Rows[row].Cells[0].Value != null)
+                    {
+                        if (MenuTypesGrid.Rows[row].Cells[0].Value.ToString() == e.Type)
+                        {
+                            MenuTypesGrid.Rows[row].DefaultCellStyle.BackColor = setRowColor(e.Id * 15);
+                            MenuTypesGrid.Rows[row].DefaultCellStyle.ForeColor = Color.White;
+                        }
+                    }
+                }
+            }
+        }
+
+        private Color setRowColor(int id)
+        {
+            var md5 = MD5.Create();
+            var hash = md5.ComputeHash(Encoding.UTF8.GetBytes(id.ToString()));
+            return Color.FromArgb(hash[0], hash[1], hash[2]);
         }
 
         public string[] dataGridMenuTypes(Menu m)
@@ -56,6 +78,21 @@ namespace ChapooDatabaseUI
             foreach (var e in menu)
             {
                 FillDataInGridView(AdminMenuGrid, dataGrid(e));
+            }
+
+            for (int row = 0; row < AdminMenuGrid.RowCount; row++)
+            {
+                foreach (var e in menu)
+                {
+                    if (AdminMenuGrid.Rows[row].Cells[0].Value != null)
+                    {
+                        if (AdminMenuGrid.Rows[row].Cells[0].Value.ToString() == e.Name)
+                        {
+                            AdminMenuGrid.Rows[row].DefaultCellStyle.BackColor = setRowColor(e.menuId * 15);
+                            AdminMenuGrid.Rows[row].DefaultCellStyle.ForeColor = Color.White;
+                        }
+                    }
+                }
             }
         }
 

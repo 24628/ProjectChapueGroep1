@@ -24,7 +24,8 @@ namespace ChapooDatabaseUI
         private decimal totalPriceBtwAdd;
         private Table table = null;
         public decimal Btw;
-        private string Status;
+        private string Status = string.Empty;
+        private bool booleanTableIsClicked = false;
 
         public PaymentForm()
         {
@@ -71,6 +72,7 @@ namespace ChapooDatabaseUI
 
         private void Table_Click(object sender, EventArgs e)
         {
+            this.booleanTableIsClicked = true;
             Button button = (Button)sender;
             table = (Table)button.Tag;
 
@@ -132,6 +134,16 @@ namespace ChapooDatabaseUI
 
         private void SubmitReceedBTN_Click(object sender, EventArgs e)
         {
+            if (!booleanTableIsClicked) {
+                MessageBox.Show("Select an table!");
+                return;
+            }
+
+            if (Status == string.Empty)
+            {
+                MessageBox.Show("Select an payment method!");
+                return;
+            }
             (string FinalTotaal, string TotaalBTW) = calcPrice();
 
             if (Status == "CreditCard")
@@ -146,6 +158,7 @@ namespace ChapooDatabaseUI
             dispayTables();
             ClearDataGridView(dataGridView1);
             LBL_ShwBtw.Text = string.Empty;
+            this.booleanTableIsClicked = false;
         }
 
         public string FormatPrice(decimal price)
