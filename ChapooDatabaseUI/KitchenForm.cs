@@ -1,6 +1,7 @@
 ﻿using ChapooDatabaseLogic;
 using ChapooDatabaseModel;
 using ChapooDatabaseUI.Controls;
+using ChapooDatabaseUI.Enums;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -101,6 +102,7 @@ namespace ChapooDatabaseUI
             Button button = (Button)sender;
             this.SelectedTable = (Table)button.Tag;
 
+            
             this.orderList = tableService.getReceerdOrderForTableById(this.SelectedTable.TableId);
 
             ClearDataGridView(dataGridView1);
@@ -110,7 +112,16 @@ namespace ChapooDatabaseUI
             {
                 Order order = tableService.getSingleOrder(this.SelectedTable.TableId);
                 item.date = order.TimeOrder;
-                FillDataInGridView(dataGridView1, dataGrid(item));
+                
+                if(getCurrentUser().Position == RoleEnums.Kok.ToString() &&  item.MenuID <= 7)
+                    FillDataInGridView(dataGridView1, dataGrid(item));
+
+                if (getCurrentUser().Position == RoleEnums.Barman.ToString() && item.MenuID >= 8)
+                    FillDataInGridView(dataGridView1, dataGrid(item));
+
+                if (getCurrentUser().Position == RoleEnums.Eigenaar.ToString())
+                    FillDataInGridView(dataGridView1, dataGrid(item));
+
             }
         }
 
