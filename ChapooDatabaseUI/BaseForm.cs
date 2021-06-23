@@ -79,9 +79,10 @@ namespace ChapooDatabaseUI
             }
         }
          
-        public void AdministratorButton(BaseForm form) {           
-            if (getCurrentUser().Position != RoleEnums.Eigenaar.ToString()) return;
-            showNewForm(new AdministratorForm(), form, getCurrentUser());
+        public void AdministratorButton(BaseForm form) {
+            if (getCurrentUser().Position == RoleEnums.Eigenaar.ToString()) {
+                showNewForm(new AdministratorForm(), form, getCurrentUser());
+            }
         }
         protected override void OnFormClosing(FormClosingEventArgs e)
         {

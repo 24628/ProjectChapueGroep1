@@ -21,10 +21,6 @@ namespace ChapooUI
 
         private void LoginFormSubmitButton_Click(object sender, EventArgs e)
         {
-            setUserWithEmail("HenkChapoo@gmail.com");
-            showNewForm(new DashboardForm(), this, getCurrentUser());
-
-            /*
             ChapooDatabaseLogic.AuthenticationService AuthenticationService = new ChapooDatabaseLogic.AuthenticationService();
             string email = LoginFormEmailTextBox.Text;
             string password = LoginFormPasswordTextBox.Text;
@@ -45,8 +41,7 @@ namespace ChapooUI
                 MessageBox.Show("Wrong email or password!");
                 return;
             }
-            */
-            
+  
         }
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
