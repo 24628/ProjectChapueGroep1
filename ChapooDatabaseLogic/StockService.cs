@@ -55,5 +55,10 @@ namespace ChapooDatabaseLogic
                 throw new Exception(e.Message);
             }
         }
+
+        public Stock findStockWaarde(int menuItemId)
+        {
+            return dao.findStockWaarde(menuItemId);
+        }
     }
 }

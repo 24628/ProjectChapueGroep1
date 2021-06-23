@@ -15,6 +15,10 @@ namespace ChapooDatabaseUI
     public partial class AdminVoorraad : BaseForm
     {
         private StockService stockService = new StockService();
+        private TableService tableService = new TableService();
+        MenuItem selectedMenuItem;
+        Stock selectedStock;
+
         public AdminVoorraad()
         {
             InitializeComponent();
@@ -25,56 +29,74 @@ namespace ChapooDatabaseUI
         {
 
             ClearDataGridView(AdminVoorraadGrid);
-            generateGridLayout(AdminVoorraadGrid, new string[] { "StockID", "MenuItemID", "MenuName", "Amount" });
+            generateGridLayout(AdminVoorraadGrid, new string[] {"MenuName", "Amount" });
 
             List<Stock> emp = stockService.GetAllStock();
             foreach (var e in emp)
             {
-                FillDataInGridView(AdminVoorraadGrid, e.dataGrid(e));
+                FillDataInGridView(AdminVoorraadGrid, dataGrid(e));
             }
+        }
+
+        public string[] dataGrid(Stock m)
+        {
+            return new string[] {
+                m.MenuName,
+                m.Amount.ToString()
+            };
         }
 
         private void BTN_STUpdate_Click(object sender, EventArgs e)
         {
-            int StockID = Int32.Parse(TXTB_STStockIDs.Text);
-            int MenuItemID = Int32.Parse(TXTB_STMenuIDs.Text);
-           
-            int Amount = Int32.Parse(TXTB_STAmounts.Text);
-            stockService.UpdateStock(StockID, MenuItemID, Amount);
-            MessageBox.Show("De Stock wijzigingen zijn doorgevoerd", "Item Wijzigingen!", MessageBoxButtons.OK);
-            displayGrid();
-        }
+            int Amount;
 
-        public void EmtyTextboxStock() // maak de textbox leeg naar gebruik
-        {
-            TXTB_STStockIDs.Text = string.Empty;
-            TXTB_STMenuIDs.Text = string.Empty;
-            TXTB_STAmounts.Text = string.Empty;
-        }
+            if (!Int32.TryParse(TextBoxAmount.Text, out Amount))
+            {
+                MessageBox.Show("Correct stock amount in full integers!");
+                return;
+            }
 
-        private void BTN_STAdd_Click(object sender, EventArgs e)
-        {
-            int MenuItemID = Int32.Parse(TXTB_STMenuIDs.Text);
-            int Amount = Int32.Parse(TXTB_STAmounts.Text);
-            stockService.AddStock(MenuItemID, Amount);
-            MessageBox.Show("Stock toegevoegd", "Menu Item!", MessageBoxButtons.OK);
-            EmtyTextboxStock();
-            displayGrid();
-        }
+            if(this.selectedStock == null)
+            {
+                MessageBox.Show("Selected An Item!");
+                return;
+            }
 
-
-        private void BTN_STDelete_Click(object sender, EventArgs e)
-        {
-            int StockID = int.Parse(TXTB_STStockIDs.Text.ToString());
-            stockService.DeleteStock(StockID);
-
-            MessageBox.Show("Item in Stock Gedelete", "Voorraad!", MessageBoxButtons.OK);
+            
+            Amount = Int32.Parse(TextBoxAmount.Text);
+            if (Amount <= -1)
+            {
+                MessageBox.Show("Value cant be minus!");
+                return;
+            }
+            stockService.UpdateStock(this.selectedStock.StockID, this.selectedMenuItem.Id, Amount);
+            MessageBox.Show("De Stock: " + this.selectedMenuItem.Name + " is gezet naar: " + Amount, "Item Wijzigingen!", MessageBoxButtons.OK);
             displayGrid();
         }
 
         private void BTN_STTerug_Click(object sender, EventArgs e)
         {
             showNewForm(new AdministratorForm(), this, getCurrentUser());
+        }
+
+        private void AdminVoorraadGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //Voor elke row in de grid loopen wij er door heen
+            for (int row = 0; row < AdminVoorraadGrid.RowCount; row++)
+            {
+                //Kijken we er of een geselcteerde grid is
+                if (AdminVoorraadGrid.SelectedRows.Count == 1)
+                {
+                    //Kijken grid row data cell value 1 gelijk staat aan de geselecteerde grid!
+                    if (AdminVoorraadGrid.Rows[row].Cells[0] == AdminVoorraadGrid.SelectedRows[0].Cells[0])
+                    {
+                        string selectedMenuItemName = (string)AdminVoorraadGrid.SelectedRows[0].Cells[0].Value;
+                        string stockWaarde = (string)AdminVoorraadGrid.SelectedRows[0].Cells[1].Value;
+                        this.selectedMenuItem = tableService.findMenuItem(selectedMenuItemName);
+                        this.selectedStock = stockService.findStockWaarde(this.selectedMenuItem.Id);
+                    }
+                }
+            }
         }
     }
 }

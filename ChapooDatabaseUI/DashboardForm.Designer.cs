@@ -60,14 +60,14 @@ namespace ChapooDatabaseUI
             //this.NavBarContainer.Controls.Add(this.KassaButton);
             this.NavBarContainer.Location = new System.Drawing.Point(0, 0);
             this.NavBarContainer.Name = "NavBarContainer";
-            this.NavBarContainer.Size = new System.Drawing.Size(801, 51);
+            this.NavBarContainer.Size = new System.Drawing.Size(1801, 100);
             this.NavBarContainer.TabIndex = 2;
             // 
             // AdministratorButton
             // 
-            this.AdministratorButton.Location = new System.Drawing.Point(82, 0);
+            this.AdministratorButton.Location = new System.Drawing.Point(10, 0);
             this.AdministratorButton.Name = "AdministratorButton";
-            this.AdministratorButton.Size = new System.Drawing.Size(139, 51);
+            this.AdministratorButton.Size = new System.Drawing.Size(250, 91);
             this.AdministratorButton.TabIndex = 10;
             this.AdministratorButton.Text = "Administrator";
             this.AdministratorButton.UseVisualStyleBackColor = true;
@@ -75,9 +75,9 @@ namespace ChapooDatabaseUI
             // 
             // OrderButton
             // 
-            this.OrderButton.Location = new System.Drawing.Point(227, 0);
+            this.OrderButton.Location = new System.Drawing.Point(260, 0);
             this.OrderButton.Name = "OrderButton";
-            this.OrderButton.Size = new System.Drawing.Size(139, 51);
+            this.OrderButton.Size = new System.Drawing.Size(250, 91);
             this.OrderButton.TabIndex = 9;
             this.OrderButton.Text = "Order";
             this.OrderButton.UseVisualStyleBackColor = true;
@@ -85,18 +85,18 @@ namespace ChapooDatabaseUI
             // 
             // PaymentButton
             // 
-            this.KitchenButton.Location = new System.Drawing.Point(372, 0);
+            this.KitchenButton.Location = new System.Drawing.Point(510, 0);
             this.KitchenButton.Name = "KitchenButton";
-            this.KitchenButton.Size = new System.Drawing.Size(139, 51);
+            this.KitchenButton.Size = new System.Drawing.Size(250, 91);
             this.KitchenButton.TabIndex = 8;
             this.KitchenButton.Text = "Kitchen and Bar";
             this.KitchenButton.UseVisualStyleBackColor = true;
             this.KitchenButton.Click += (sender, e) => KitchenButton(this);
             // KitchenButton            // ManagementButton
             // 
-            this.PaymentButton.Location = new System.Drawing.Point(517, 0);
+            this.PaymentButton.Location = new System.Drawing.Point(760, 0);
             this.PaymentButton.Name = "PaymentButton";
-            this.PaymentButton.Size = new System.Drawing.Size(139, 51);
+            this.PaymentButton.Size = new System.Drawing.Size(250, 91);
             this.PaymentButton.TabIndex = 7;
             this.PaymentButton.Text = "Register";
             this.PaymentButton.UseVisualStyleBackColor = true;

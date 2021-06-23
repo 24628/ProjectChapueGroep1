@@ -1,4 +1,5 @@
 ﻿using ChapooDatabaseModel;
+using ChapooDatabaseUI.Enums;
 using ChapooUI;
 using System;
 using System.Collections.Generic;
@@ -61,10 +62,10 @@ namespace ChapooDatabaseUI
         }
 
         public void OrderButton(BaseForm form) {
-             if (getCurrentUser().Position == "Bediende" || getCurrentUser().Position == "Eigenaar")
-             {
+            if (getCurrentUser().Position == RoleEnums.Bediende.ToString() || getCurrentUser().Position == RoleEnums.Eigenaar.ToString())
+            {
                 showNewForm(new OrderForm(), form, getCurrentUser());
-             }
+            }
         }                       
 
         public void PaymentButton(BaseForm form) {
@@ -72,16 +73,16 @@ namespace ChapooDatabaseUI
         }
 
         public void KitchenButton(BaseForm form) {
-            if (getCurrentUser().Position == "Kok" || getCurrentUser().Position == "Barman" || getCurrentUser().Position == "Eigenaar")
+            if (getCurrentUser().Position == RoleEnums.Kok.ToString() || getCurrentUser().Position == RoleEnums.Barman.ToString() || getCurrentUser().Position == RoleEnums.Eigenaar.ToString())
             {
                 showNewForm(new KitchenForm(), form, getCurrentUser());
             }
-            
         }
          
-        public void AdministratorButton(BaseForm form) {           
-            if (getCurrentUser().Position != "Eigenaar") return;
-            showNewForm(new AdministratorForm(), form, getCurrentUser());
+        public void AdministratorButton(BaseForm form) {
+            if (getCurrentUser().Position == RoleEnums.Eigenaar.ToString()) {
+                showNewForm(new AdministratorForm(), form, getCurrentUser());
+            }
         }
         protected override void OnFormClosing(FormClosingEventArgs e)
         {

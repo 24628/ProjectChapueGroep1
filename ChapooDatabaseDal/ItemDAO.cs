@@ -32,6 +32,14 @@ namespace ChapooDatabaseDal
             sqlParameter[2] = new SqlParameter("Price", Price);
             ExecuteEditQuery(query, sqlParameter);
         }
+        public void UpdateMenuItemType(int MenuItemID, int MenuTypeId)
+        {
+            string query = $"UPDATE [MenuItem] SET MenuID = '{MenuTypeId}' WHERE MenuItemID = '{MenuItemID}'";
+            SqlParameter[] sqlParameter = new SqlParameter[2];
+            sqlParameter[0] = new SqlParameter("MenuItemID", MenuItemID);
+            sqlParameter[1] = new SqlParameter("MenuID", MenuTypeId);
+            ExecuteEditQuery(query, sqlParameter);
+        }
         public void AddMenuItem(int MenuID, string MenuName, decimal Price) //no menuitem cause auto increment
         {
             string query = $"insert into [MenuItem] (MenuID, MenuName, Price) VALUES ('{MenuID}','{MenuName}','{Price}')";
@@ -40,6 +48,11 @@ namespace ChapooDatabaseDal
             sqlParameter[1] = new SqlParameter("MenuName", MenuName);
             sqlParameter[2] = new SqlParameter("Price", Price);
             ExecuteEditQuery(query, sqlParameter);
+
+            string querySecond = $"insert into [Stock] (M.MenuItemID, Amount) VALUES ('{MenuID}','0')";
+            SqlParameter[] sqlParameterSecond = new SqlParameter[1];
+            sqlParameterSecond[0] = new SqlParameter("MenuID", MenuID);
+            ExecuteEditQuery(querySecond, sqlParameterSecond);
         }
         public void VerwijderMenuItem(int MenuItemID)
         {

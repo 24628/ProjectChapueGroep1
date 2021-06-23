@@ -36,7 +36,7 @@ namespace ChapooDatabaseUI
             this.PaymentButton = new System.Windows.Forms.Button();
             this.flowLayoutTableContainer = new System.Windows.Forms.FlowLayoutPanel();
             this.SuspendLayout();
-            this.initNavBar();
+            initNavBar();
             // 
             // flowLayoutTableContainer
             // 

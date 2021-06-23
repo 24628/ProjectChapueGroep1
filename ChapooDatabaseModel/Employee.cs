@@ -23,17 +23,5 @@ namespace ChapooDatabaseModel
             this.Telephone = v6;
             this.Position = v7;
         }
-
-        public string[] dataGrid(Employee m)
-        {
-            return new string[] {
-                m.EmployeeID.ToString(),
-                m.Firstname,
-                m.Lastname,
-                m.Email,
-                m.Telephone.ToString("F1", new CultureInfo("en-US").NumberFormat),
-                m.Position
-            };
-        }
     }
 }

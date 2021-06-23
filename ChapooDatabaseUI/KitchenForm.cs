@@ -1,6 +1,7 @@
 ﻿using ChapooDatabaseLogic;
 using ChapooDatabaseModel;
 using ChapooDatabaseUI.Controls;
+using ChapooDatabaseUI.Enums;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -101,17 +102,36 @@ namespace ChapooDatabaseUI
             Button button = (Button)sender;
             this.SelectedTable = (Table)button.Tag;
 
+            
             this.orderList = tableService.getReceerdOrderForTableById(this.SelectedTable.TableId);
 
             ClearDataGridView(dataGridView1);
-            generateGridLayout(dataGridView1, new string[] { "id", "Naam", "Price", "Order date" });
+            generateGridLayout(dataGridView1, new string[] {"Naam", "Price", "Order date" });
 
             foreach (var item in orderList)
             {
                 Order order = tableService.getSingleOrder(this.SelectedTable.TableId);
                 item.date = order.TimeOrder;
-                FillDataInGridView(dataGridView1, item.dataGrid(item));
+                
+                if(getCurrentUser().Position == RoleEnums.Kok.ToString() &&  item.MenuID <= 7)
+                    FillDataInGridView(dataGridView1, dataGrid(item));
+
+                if (getCurrentUser().Position == RoleEnums.Barman.ToString() && item.MenuID >= 8)
+                    FillDataInGridView(dataGridView1, dataGrid(item));
+
+                if (getCurrentUser().Position == RoleEnums.Eigenaar.ToString())
+                    FillDataInGridView(dataGridView1, dataGrid(item));
+
             }
+        }
+
+        public string[] dataGrid(OrderItem m)
+        {
+            return new string[] {
+                m.MenuName,
+                string.Format("{0:C}", m.Price),
+                m.date
+            };
         }
     }
 }

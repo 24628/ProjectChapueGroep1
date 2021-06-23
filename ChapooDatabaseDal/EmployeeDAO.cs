@@ -17,10 +17,10 @@ namespace ChapooDatabaseDal
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadTables(ExecuteSelectQuery(query, sqlParameters));
         }
-        public void UpdateEmploy(int EmployeeID, string Firstname, string Lastname, string Email, string password, float Telephone, string Position)
+        public void UpdateEmploy(int EmployeeID, string Firstname, string Lastname, string Email, float Telephone, string Position)
         {
-            string qu = "UPDATE Employees SET Firstname = @first, Lastname = @last, Email = @email, Password = @pass, Telephone = @tele, Position = @pos WHERE EmployeeID = @empid";
-            SqlParameter[] sqlp = new SqlParameter[7];
+            string qu = "UPDATE Employees SET Firstname = @first, Lastname = @last, Email = @email, Telephone = @tele, Position = @pos WHERE EmployeeID = @empid";
+            SqlParameter[] sqlp = new SqlParameter[6];
 
             SqlParameter eid = new SqlParameter("@empId", SqlDbType.Int) { Value = EmployeeID };
             sqlp[0] = eid;
@@ -34,14 +34,25 @@ namespace ChapooDatabaseDal
             SqlParameter enm = new SqlParameter("@email", SqlDbType.VarChar) { Value = Email };
             sqlp[3] = enm;
 
-            SqlParameter pnm = new SqlParameter("@pass", SqlDbType.VarChar) { Value = password };
-            sqlp[4] = pnm;
-
             SqlParameter tp = new SqlParameter("@tele", SqlDbType.Float) { Value = Telephone };
-            sqlp[5] = tp;
+            sqlp[4] = tp;
 
             SqlParameter pos = new SqlParameter("@pos", SqlDbType.VarChar) { Value = Position };
-            sqlp[6] = pos;
+            sqlp[5] = pos;
+
+            ExecuteEditQuery(qu, sqlp);
+        }
+        
+        public void UpdateEmployeePassword(int EmployeeID, string password)
+        {
+            string qu = "UPDATE Employees SET Password = @pass WHERE EmployeeID = @empid";
+            SqlParameter[] sqlp = new SqlParameter[2];
+
+            SqlParameter eid = new SqlParameter("@empId", SqlDbType.Int) { Value = EmployeeID };
+            sqlp[0] = eid;
+
+            SqlParameter fnm = new SqlParameter("@pass", SqlDbType.VarChar) { Value = password };
+            sqlp[1] = fnm;
 
             ExecuteEditQuery(qu, sqlp);
         }
@@ -100,6 +111,18 @@ namespace ChapooDatabaseDal
                 employeeList.Add(menu);
             }
             return employeeList;
+        }
+
+        public int EmployeeExist(int id)
+        {
+            string query = "SELECT COUNT(*) FROM Employee WHERE EmployeeID = @EmployeeID";
+
+            SqlParameter[] sqlParameters = new SqlParameter[1];
+
+            SqlParameter pid = new SqlParameter("@EmployeeID", SqlDbType.Int) { Value = id };
+            sqlParameters[0] = pid;
+
+            return ExecuteCountInteger(query, sqlParameters);
         }
     }
 }

@@ -30,7 +30,6 @@ namespace ChapooDatabaseUI
         private void InitializeComponent()
         {
             this.AdminEmployGrid = new System.Windows.Forms.DataGridView();
-            this.TXTB_ADEmployeeID = new System.Windows.Forms.TextBox();
             this.TXTB_ADLastname = new System.Windows.Forms.TextBox();
             this.TXTB_ADGebruikersnaam = new System.Windows.Forms.TextBox();
             this.TXTB_ADFirstname = new System.Windows.Forms.TextBox();
@@ -47,26 +46,18 @@ namespace ChapooDatabaseUI
             // AdminEmployGrid
             // 
             this.AdminEmployGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.AdminEmployGrid.Location = new System.Drawing.Point(101, 16);
+            this.AdminEmployGrid.Location = new System.Drawing.Point(300, 16);
             this.AdminEmployGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.AdminEmployGrid.Name = "AdminEmployGrid";
             this.AdminEmployGrid.RowHeadersWidth = 51;
             this.AdminEmployGrid.RowTemplate.Height = 25;
-            this.AdminEmployGrid.Size = new System.Drawing.Size(761, 209);
+            this.AdminEmployGrid.Size = new System.Drawing.Size(1146, 387);
             this.AdminEmployGrid.TabIndex = 0;
-            // 
-            // TXTB_ADEmployeeID
-            // 
-            this.TXTB_ADEmployeeID.Location = new System.Drawing.Point(101, 280);
-            this.TXTB_ADEmployeeID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.TXTB_ADEmployeeID.Name = "TXTB_ADEmployeeID";
-            this.TXTB_ADEmployeeID.PlaceholderText = "ID*";
-            this.TXTB_ADEmployeeID.Size = new System.Drawing.Size(245, 27);
-            this.TXTB_ADEmployeeID.TabIndex = 2;
+            this.AdminEmployGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.AdminEmployGrid_CellContentClick);
             // 
             // TXTB_ADLastname
             // 
-            this.TXTB_ADLastname.Location = new System.Drawing.Point(232, 326);
+            this.TXTB_ADLastname.Location = new System.Drawing.Point(432, 425);
             this.TXTB_ADLastname.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TXTB_ADLastname.Name = "TXTB_ADLastname";
             this.TXTB_ADLastname.PlaceholderText = "Last Name*";
@@ -75,7 +66,7 @@ namespace ChapooDatabaseUI
             // 
             // TXTB_ADGebruikersnaam
             // 
-            this.TXTB_ADGebruikersnaam.Location = new System.Drawing.Point(101, 370);
+            this.TXTB_ADGebruikersnaam.Location = new System.Drawing.Point(300, 470);
             this.TXTB_ADGebruikersnaam.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TXTB_ADGebruikersnaam.Name = "TXTB_ADGebruikersnaam";
             this.TXTB_ADGebruikersnaam.PlaceholderText = "Email Address*";
@@ -84,7 +75,7 @@ namespace ChapooDatabaseUI
             // 
             // TXTB_ADFirstname
             // 
-            this.TXTB_ADFirstname.Location = new System.Drawing.Point(101, 326);
+            this.TXTB_ADFirstname.Location = new System.Drawing.Point(300, 425);
             this.TXTB_ADFirstname.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TXTB_ADFirstname.Name = "TXTB_ADFirstname";
             this.TXTB_ADFirstname.PlaceholderText = "First Name*";
@@ -93,7 +84,7 @@ namespace ChapooDatabaseUI
             // 
             // TXTB_ADPassword
             // 
-            this.TXTB_ADPassword.Location = new System.Drawing.Point(101, 464);
+            this.TXTB_ADPassword.Location = new System.Drawing.Point(300, 564);
             this.TXTB_ADPassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TXTB_ADPassword.Name = "TXTB_ADPassword";
             this.TXTB_ADPassword.PasswordChar = '*';
@@ -103,7 +94,7 @@ namespace ChapooDatabaseUI
             // 
             // TXTB_ADPosition
             // 
-            this.TXTB_ADPosition.Location = new System.Drawing.Point(101, 513);
+            this.TXTB_ADPosition.Location = new System.Drawing.Point(300, 613);
             this.TXTB_ADPosition.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TXTB_ADPosition.Name = "TXTB_ADPosition";
             this.TXTB_ADPosition.PlaceholderText = "Position*";
@@ -112,10 +103,10 @@ namespace ChapooDatabaseUI
             // 
             // BTN_ADToevoegen
             // 
-            this.BTN_ADToevoegen.Location = new System.Drawing.Point(379, 280);
+            this.BTN_ADToevoegen.Location = new System.Drawing.Point(577, 425);
             this.BTN_ADToevoegen.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BTN_ADToevoegen.Name = "BTN_ADToevoegen";
-            this.BTN_ADToevoegen.Size = new System.Drawing.Size(136, 56);
+            this.BTN_ADToevoegen.Size = new System.Drawing.Size(177, 72);
             this.BTN_ADToevoegen.TabIndex = 13;
             this.BTN_ADToevoegen.Text = "Add";
             this.BTN_ADToevoegen.UseVisualStyleBackColor = true;
@@ -123,10 +114,10 @@ namespace ChapooDatabaseUI
             // 
             // BTN_ADUpdate
             // 
-            this.BTN_ADUpdate.Location = new System.Drawing.Point(379, 386);
+            this.BTN_ADUpdate.Location = new System.Drawing.Point(577, 505);
             this.BTN_ADUpdate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BTN_ADUpdate.Name = "BTN_ADUpdate";
-            this.BTN_ADUpdate.Size = new System.Drawing.Size(136, 56);
+            this.BTN_ADUpdate.Size = new System.Drawing.Size(177, 65);
             this.BTN_ADUpdate.TabIndex = 14;
             this.BTN_ADUpdate.Text = "Update";
             this.BTN_ADUpdate.UseVisualStyleBackColor = true;
@@ -134,10 +125,10 @@ namespace ChapooDatabaseUI
             // 
             // BTN_ADDelete
             // 
-            this.BTN_ADDelete.Location = new System.Drawing.Point(379, 484);
+            this.BTN_ADDelete.Location = new System.Drawing.Point(577, 578);
             this.BTN_ADDelete.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BTN_ADDelete.Name = "BTN_ADDelete";
-            this.BTN_ADDelete.Size = new System.Drawing.Size(136, 56);
+            this.BTN_ADDelete.Size = new System.Drawing.Size(177, 62);
             this.BTN_ADDelete.TabIndex = 15;
             this.BTN_ADDelete.Text = "Delete";
             this.BTN_ADDelete.UseVisualStyleBackColor = true;
@@ -145,7 +136,7 @@ namespace ChapooDatabaseUI
             // 
             // TXTB_ADTelephone
             // 
-            this.TXTB_ADTelephone.Location = new System.Drawing.Point(101, 415);
+            this.TXTB_ADTelephone.Location = new System.Drawing.Point(300, 514);
             this.TXTB_ADTelephone.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TXTB_ADTelephone.Name = "TXTB_ADTelephone";
             this.TXTB_ADTelephone.PlaceholderText = "Telephone*";
@@ -154,7 +145,7 @@ namespace ChapooDatabaseUI
             // 
             // BTN_ADTerug
             // 
-            this.BTN_ADTerug.Location = new System.Drawing.Point(2, 17);
+            this.BTN_ADTerug.Location = new System.Drawing.Point(-2, 16);
             this.BTN_ADTerug.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BTN_ADTerug.Name = "BTN_ADTerug";
             this.BTN_ADTerug.Size = new System.Drawing.Size(93, 49);
@@ -167,7 +158,7 @@ namespace ChapooDatabaseUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(874, 595);
+            this.ClientSize = new System.Drawing.Size(1714, 824);
             this.Controls.Add(this.BTN_ADTerug);
             this.Controls.Add(this.TXTB_ADTelephone);
             this.Controls.Add(this.BTN_ADDelete);
@@ -178,7 +169,6 @@ namespace ChapooDatabaseUI
             this.Controls.Add(this.TXTB_ADFirstname);
             this.Controls.Add(this.TXTB_ADGebruikersnaam);
             this.Controls.Add(this.TXTB_ADLastname);
-            this.Controls.Add(this.TXTB_ADEmployeeID);
             this.Controls.Add(this.AdminEmployGrid);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "AdminEmployee";
@@ -201,6 +191,7 @@ namespace ChapooDatabaseUI
             view.GridColor = System.Drawing.Color.Black;
             view.RowHeadersVisible = false;
             view.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            view.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
 
 
             for (int i = 0; i < columnArr.Length; i++)
@@ -220,7 +211,6 @@ namespace ChapooDatabaseUI
         }
 
         private System.Windows.Forms.DataGridView AdminEmployGrid;
-        private System.Windows.Forms.TextBox TXTB_ADEmployeeID;
         private System.Windows.Forms.TextBox TXTB_ADLastname;
         private System.Windows.Forms.TextBox TXTB_ADGebruikersnaam;
         private System.Windows.Forms.TextBox TXTB_ADFirstname;

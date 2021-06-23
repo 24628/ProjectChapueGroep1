@@ -1,4 +1,6 @@
 ﻿
+using System.Windows.Forms;
+
 namespace ChapooDatabaseUI
 {
     partial class OrderTableForm : BaseForm
@@ -35,11 +37,9 @@ namespace ChapooDatabaseUI
             this.label1 = new System.Windows.Forms.Label();
             this.MenuItemsDataGridView = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
-            this.AddItemFromOrderTextBox = new System.Windows.Forms.TextBox();
             this.AddMenuItemToOrderButton = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.RemoveItemFromOrderTextBox = new System.Windows.Forms.TextBox();
             this.RemoveMenuItemToOrderButton = new System.Windows.Forms.Button();
             this.GoToTableDashboardButton = new System.Windows.Forms.Button();
             this.LunchButton = new System.Windows.Forms.Button();
@@ -53,10 +53,10 @@ namespace ChapooDatabaseUI
             // 
             // CreateOrderButton
             // 
-            this.CreateOrderButton.Location = new System.Drawing.Point(589, 23);
+            this.CreateOrderButton.Location = new System.Drawing.Point(781, 257);
             this.CreateOrderButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.CreateOrderButton.Name = "CreateOrderButton";
-            this.CreateOrderButton.Size = new System.Drawing.Size(136, 52);
+            this.CreateOrderButton.Size = new System.Drawing.Size(215, 112);
             this.CreateOrderButton.TabIndex = 0;
             this.CreateOrderButton.Text = "Create Order";
             this.CreateOrderButton.UseVisualStyleBackColor = true;
@@ -115,17 +115,9 @@ namespace ChapooDatabaseUI
             this.label2.TabIndex = 5;
             this.label2.Text = "All menu items";
             // 
-            // AddItemFromOrderTextBox
-            // 
-            this.AddItemFromOrderTextBox.Location = new System.Drawing.Point(190, 429);
-            this.AddItemFromOrderTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.AddItemFromOrderTextBox.Name = "AddItemFromOrderTextBox";
-            this.AddItemFromOrderTextBox.Size = new System.Drawing.Size(534, 27);
-            this.AddItemFromOrderTextBox.TabIndex = 6;
-            // 
             // AddMenuItemToOrderButton
             // 
-            this.AddMenuItemToOrderButton.Location = new System.Drawing.Point(589, 468);
+            this.AddMenuItemToOrderButton.Location = new System.Drawing.Point(589, 373);
             this.AddMenuItemToOrderButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.AddMenuItemToOrderButton.Name = "AddMenuItemToOrderButton";
             this.AddMenuItemToOrderButton.Size = new System.Drawing.Size(136, 52);
@@ -148,23 +140,15 @@ namespace ChapooDatabaseUI
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(190, 544);
+            this.label4.Location = new System.Drawing.Point(190, 460);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(349, 46);
             this.label4.TabIndex = 9;
             this.label4.Text = "Remove Item to order";
             // 
-            // RemoveItemFromOrderTextBox
-            // 
-            this.RemoveItemFromOrderTextBox.Location = new System.Drawing.Point(190, 597);
-            this.RemoveItemFromOrderTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.RemoveItemFromOrderTextBox.Name = "RemoveItemFromOrderTextBox";
-            this.RemoveItemFromOrderTextBox.Size = new System.Drawing.Size(534, 27);
-            this.RemoveItemFromOrderTextBox.TabIndex = 10;
-            // 
             // RemoveMenuItemToOrderButton
             // 
-            this.RemoveMenuItemToOrderButton.Location = new System.Drawing.Point(589, 636);
+            this.RemoveMenuItemToOrderButton.Location = new System.Drawing.Point(589, 457);
             this.RemoveMenuItemToOrderButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.RemoveMenuItemToOrderButton.Name = "RemoveMenuItemToOrderButton";
             this.RemoveMenuItemToOrderButton.Size = new System.Drawing.Size(136, 52);
@@ -175,10 +159,10 @@ namespace ChapooDatabaseUI
             // 
             // GoToTableDashboardButton
             // 
-            this.GoToTableDashboardButton.Location = new System.Drawing.Point(438, 23);
+            this.GoToTableDashboardButton.Location = new System.Drawing.Point(559, 257);
             this.GoToTableDashboardButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.GoToTableDashboardButton.Name = "GoToTableDashboardButton";
-            this.GoToTableDashboardButton.Size = new System.Drawing.Size(136, 52);
+            this.GoToTableDashboardButton.Size = new System.Drawing.Size(216, 112);
             this.GoToTableDashboardButton.TabIndex = 14;
             this.GoToTableDashboardButton.Text = "Go Back";
             this.GoToTableDashboardButton.UseVisualStyleBackColor = true;
@@ -186,7 +170,7 @@ namespace ChapooDatabaseUI
             // 
             // LunchButton
             // 
-            this.LunchButton.Location = new System.Drawing.Point(12, 82);
+            this.LunchButton.Location = new System.Drawing.Point(11, 83);
             this.LunchButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.LunchButton.Name = "LunchButton";
             this.LunchButton.Size = new System.Drawing.Size(136, 52);
@@ -197,7 +181,7 @@ namespace ChapooDatabaseUI
             // 
             // DinerButton
             // 
-            this.DinerButton.Location = new System.Drawing.Point(12, 160);
+            this.DinerButton.Location = new System.Drawing.Point(11, 160);
             this.DinerButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.DinerButton.Name = "DinerButton";
             this.DinerButton.Size = new System.Drawing.Size(136, 52);
@@ -208,7 +192,7 @@ namespace ChapooDatabaseUI
             // 
             // DrankAlcholButton
             // 
-            this.DrankAlcholButton.Location = new System.Drawing.Point(12, 238);
+            this.DrankAlcholButton.Location = new System.Drawing.Point(11, 237);
             this.DrankAlcholButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.DrankAlcholButton.Name = "DrankAlcholButton";
             this.DrankAlcholButton.Size = new System.Drawing.Size(136, 52);
@@ -219,7 +203,7 @@ namespace ChapooDatabaseUI
             // 
             // DrankButton
             // 
-            this.DrankButton.Location = new System.Drawing.Point(12, 317);
+            this.DrankButton.Location = new System.Drawing.Point(11, 317);
             this.DrankButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.DrankButton.Name = "DrankButton";
             this.DrankButton.Size = new System.Drawing.Size(136, 52);
@@ -251,11 +235,9 @@ namespace ChapooDatabaseUI
             this.Controls.Add(this.LunchButton);
             this.Controls.Add(this.GoToTableDashboardButton);
             this.Controls.Add(this.RemoveMenuItemToOrderButton);
-            this.Controls.Add(this.RemoveItemFromOrderTextBox);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.AddMenuItemToOrderButton);
-            this.Controls.Add(this.AddItemFromOrderTextBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.MenuItemsDataGridView);
             this.Controls.Add(this.label1);
@@ -281,6 +263,8 @@ namespace ChapooDatabaseUI
 
             view.GridColor = System.Drawing.Color.Black;
             view.RowHeadersVisible = false;
+            view.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+
             view.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
 
 
@@ -308,11 +292,9 @@ namespace ChapooDatabaseUI
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView MenuItemsDataGridView;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox AddItemFromOrderTextBox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button AddMenuItemToOrderButton;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox RemoveItemFromOrderTextBox;
         private System.Windows.Forms.Button RemoveMenuItemToOrderButton;
         private System.Windows.Forms.Button GoToTableDashboardButton;
         private System.Windows.Forms.Button LunchButton;

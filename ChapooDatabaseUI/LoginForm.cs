@@ -21,9 +21,6 @@ namespace ChapooUI
 
         private void LoginFormSubmitButton_Click(object sender, EventArgs e)
         {
-
-            
-            
             ChapooDatabaseLogic.AuthenticationService AuthenticationService = new ChapooDatabaseLogic.AuthenticationService();
             string email = LoginFormEmailTextBox.Text;
             string password = LoginFormPasswordTextBox.Text;
@@ -44,7 +41,7 @@ namespace ChapooUI
                 MessageBox.Show("Wrong email or password!");
                 return;
             }
-            
+  
         }
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
