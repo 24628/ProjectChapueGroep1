@@ -105,25 +105,25 @@ namespace ChapooDatabaseUI
         {
             decimal tip = 0.00m;
             decimal TotaalBTW = 0;
-            decimal totaalprijs = 0;
+            decimal totaalprijsWithoutBTW = 0;
             decimal FinalTotaal = 0;
-            if (textBox1.Text != string.Empty)
-                tip = Convert.ToDecimal(textBox1.Text);
+            if (TXT_Tip.Text != string.Empty)
+                tip = Convert.ToDecimal(TXT_Tip.Text);
             foreach (var x in orderList)
             {
                 if (x.MenuItemID >= 29 && x.MenuItemID <= 43)
                 {
                     Btw = x.Price * Convert.ToDecimal(0.21);
                     totalPriceBtwAdd = totalPrice * Convert.ToDecimal(1.21);
-                    totaalprijs = x.Price * Convert.ToDecimal(1.21);
+                    totaalprijsWithoutBTW = x.Price * Convert.ToDecimal(1.21);
                 }
                 else
                 {
                     Btw = x.Price * Convert.ToDecimal(0.06);
                     totalPriceBtwAdd = totalPrice * Convert.ToDecimal(1.06);
-                    totaalprijs = x.Price * Convert.ToDecimal(1.06);
+                    totaalprijsWithoutBTW = x.Price * Convert.ToDecimal(1.06);
                 }
-                FinalTotaal += totaalprijs;
+                FinalTotaal += totaalprijsWithoutBTW;
                 TotaalBTW += Btw;
             }
             priceLabelPayment.Text = pricePlaceHolder + FormatPrice(FinalTotaal + tip);
