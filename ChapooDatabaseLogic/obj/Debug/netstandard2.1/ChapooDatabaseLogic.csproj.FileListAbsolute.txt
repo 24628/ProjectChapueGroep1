@@ -1,0 +1,15 @@
+C:\Users\sedva\OneDrive\Documenten\GitHub\ProjectChapueGroep1\ChapooDatabaseLogic\bin\Debug\netstandard2.1\ChapooDatabaseLogic.deps.json
+C:\Users\sedva\OneDrive\Documenten\GitHub\ProjectChapueGroep1\ChapooDatabaseLogic\bin\Debug\netstandard2.1\ChapooDatabaseLogic.dll
+C:\Users\sedva\OneDrive\Documenten\GitHub\ProjectChapueGroep1\ChapooDatabaseLogic\bin\Debug\netstandard2.1\ChapooDatabaseLogic.pdb
+C:\Users\sedva\OneDrive\Documenten\GitHub\ProjectChapueGroep1\ChapooDatabaseLogic\bin\Debug\netstandard2.1\ChapooDatabaseDal.dll
+C:\Users\sedva\OneDrive\Documenten\GitHub\ProjectChapueGroep1\ChapooDatabaseLogic\bin\Debug\netstandard2.1\ChapooDatabaseModel.dll
+C:\Users\sedva\OneDrive\Documenten\GitHub\ProjectChapueGroep1\ChapooDatabaseLogic\bin\Debug\netstandard2.1\ChapooDatabaseDal.pdb
+C:\Users\sedva\OneDrive\Documenten\GitHub\ProjectChapueGroep1\ChapooDatabaseLogic\bin\Debug\netstandard2.1\ChapooDatabaseDal.dll.config
+C:\Users\sedva\OneDrive\Documenten\GitHub\ProjectChapueGroep1\ChapooDatabaseLogic\bin\Debug\netstandard2.1\ChapooDatabaseModel.pdb
+C:\Users\sedva\OneDrive\Documenten\GitHub\ProjectChapueGroep1\ChapooDatabaseLogic\obj\Debug\netstandard2.1\ChapooDatabaseLogic.csprojAssemblyReference.cache
+C:\Users\sedva\OneDrive\Documenten\GitHub\ProjectChapueGroep1\ChapooDatabaseLogic\obj\Debug\netstandard2.1\ChapooDatabaseLogic.AssemblyInfoInputs.cache
+C:\Users\sedva\OneDrive\Documenten\GitHub\ProjectChapueGroep1\ChapooDatabaseLogic\obj\Debug\netstandard2.1\ChapooDatabaseLogic.AssemblyInfo.cs
+C:\Users\sedva\OneDrive\Documenten\GitHub\ProjectChapueGroep1\ChapooDatabaseLogic\obj\Debug\netstandard2.1\ChapooDatabaseLogic.csproj.CoreCompileInputs.cache
+C:\Users\sedva\OneDrive\Documenten\GitHub\ProjectChapueGroep1\ChapooDatabaseLogic\obj\Debug\netstandard2.1\ChapooDatabaseLogic.csproj.CopyComplete
+C:\Users\sedva\OneDrive\Documenten\GitHub\ProjectChapueGroep1\ChapooDatabaseLogic\obj\Debug\netstandard2.1\ChapooDatabaseLogic.dll
+C:\Users\sedva\OneDrive\Documenten\GitHub\ProjectChapueGroep1\ChapooDatabaseLogic\obj\Debug\netstandard2.1\ChapooDatabaseLogic.pdb

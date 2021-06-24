@@ -1,0 +1,13 @@
+C:\Users\sedva\OneDrive\Documenten\GitHub\ProjectChapueGroep1\ChapooDatabaseDal\bin\Debug\netstandard2.1\ChapooDatabaseDal.dll.config
+C:\Users\sedva\OneDrive\Documenten\GitHub\ProjectChapueGroep1\ChapooDatabaseDal\bin\Debug\netstandard2.1\ChapooDatabaseDal.deps.json
+C:\Users\sedva\OneDrive\Documenten\GitHub\ProjectChapueGroep1\ChapooDatabaseDal\bin\Debug\netstandard2.1\ChapooDatabaseDal.dll
+C:\Users\sedva\OneDrive\Documenten\GitHub\ProjectChapueGroep1\ChapooDatabaseDal\bin\Debug\netstandard2.1\ChapooDatabaseDal.pdb
+C:\Users\sedva\OneDrive\Documenten\GitHub\ProjectChapueGroep1\ChapooDatabaseDal\bin\Debug\netstandard2.1\ChapooDatabaseModel.dll
+C:\Users\sedva\OneDrive\Documenten\GitHub\ProjectChapueGroep1\ChapooDatabaseDal\bin\Debug\netstandard2.1\ChapooDatabaseModel.pdb
+C:\Users\sedva\OneDrive\Documenten\GitHub\ProjectChapueGroep1\ChapooDatabaseDal\obj\Debug\netstandard2.1\ChapooDatabaseDal.csprojAssemblyReference.cache
+C:\Users\sedva\OneDrive\Documenten\GitHub\ProjectChapueGroep1\ChapooDatabaseDal\obj\Debug\netstandard2.1\ChapooDatabaseDal.AssemblyInfoInputs.cache
+C:\Users\sedva\OneDrive\Documenten\GitHub\ProjectChapueGroep1\ChapooDatabaseDal\obj\Debug\netstandard2.1\ChapooDatabaseDal.AssemblyInfo.cs
+C:\Users\sedva\OneDrive\Documenten\GitHub\ProjectChapueGroep1\ChapooDatabaseDal\obj\Debug\netstandard2.1\ChapooDatabaseDal.csproj.CoreCompileInputs.cache
+C:\Users\sedva\OneDrive\Documenten\GitHub\ProjectChapueGroep1\ChapooDatabaseDal\obj\Debug\netstandard2.1\ChapooDatabaseDal.csproj.CopyComplete
+C:\Users\sedva\OneDrive\Documenten\GitHub\ProjectChapueGroep1\ChapooDatabaseDal\obj\Debug\netstandard2.1\ChapooDatabaseDal.dll
+C:\Users\sedva\OneDrive\Documenten\GitHub\ProjectChapueGroep1\ChapooDatabaseDal\obj\Debug\netstandard2.1\ChapooDatabaseDal.pdb
