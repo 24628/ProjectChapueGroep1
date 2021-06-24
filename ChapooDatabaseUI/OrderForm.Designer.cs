@@ -38,41 +38,6 @@ namespace ChapooDatabaseUI
             this.SuspendLayout();
             initNavBar();
             // 
-            // NavBarContainer
-            // 
-            this.NavBarContainer.Location = new System.Drawing.Point(0, 0);
-            this.NavBarContainer.Name = "NavBarContainer";
-            this.NavBarContainer.Size = new System.Drawing.Size(200, 100);
-            this.NavBarContainer.TabIndex = 0;
-            // 
-            // AdministratorButton
-            // 
-            this.AdministratorButton.Location = new System.Drawing.Point(0, 0);
-            this.AdministratorButton.Name = "AdministratorButton";
-            this.AdministratorButton.Size = new System.Drawing.Size(75, 23);
-            this.AdministratorButton.TabIndex = 0;
-            // 
-            // OrderButton
-            // 
-            this.OrderButton.Location = new System.Drawing.Point(0, 0);
-            this.OrderButton.Name = "OrderButton";
-            this.OrderButton.Size = new System.Drawing.Size(75, 23);
-            this.OrderButton.TabIndex = 0;
-            // 
-            // KitchenButton
-            // 
-            this.KitchenButton.Location = new System.Drawing.Point(0, 0);
-            this.KitchenButton.Name = "KitchenButton";
-            this.KitchenButton.Size = new System.Drawing.Size(75, 23);
-            this.KitchenButton.TabIndex = 0;
-            // 
-            // PaymentButton
-            // 
-            this.PaymentButton.Location = new System.Drawing.Point(0, 0);
-            this.PaymentButton.Name = "PaymentButton";
-            this.PaymentButton.Size = new System.Drawing.Size(75, 23);
-            this.PaymentButton.TabIndex = 0;
-            // 
             // flowLayoutTableContainer
             // 
             this.flowLayoutTableContainer.Location = new System.Drawing.Point(1, 150);

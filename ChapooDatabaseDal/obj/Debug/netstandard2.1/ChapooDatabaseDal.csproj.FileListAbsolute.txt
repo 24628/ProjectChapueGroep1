@@ -11,3 +11,16 @@ C:\Users\sedva\OneDrive\Documenten\GitHub\ProjectChapueGroep1\ChapooDatabaseDal\
 C:\Users\sedva\OneDrive\Documenten\GitHub\ProjectChapueGroep1\ChapooDatabaseDal\obj\Debug\netstandard2.1\ChapooDatabaseDal.csproj.CopyComplete
 C:\Users\sedva\OneDrive\Documenten\GitHub\ProjectChapueGroep1\ChapooDatabaseDal\obj\Debug\netstandard2.1\ChapooDatabaseDal.dll
 C:\Users\sedva\OneDrive\Documenten\GitHub\ProjectChapueGroep1\ChapooDatabaseDal\obj\Debug\netstandard2.1\ChapooDatabaseDal.pdb
+C:\Users\merli\source\repos\ProjectChapueGroep1\ChapooDatabaseDal\bin\Debug\netstandard2.1\ChapooDatabaseDal.dll.config
+C:\Users\merli\source\repos\ProjectChapueGroep1\ChapooDatabaseDal\bin\Debug\netstandard2.1\ChapooDatabaseDal.deps.json
+C:\Users\merli\source\repos\ProjectChapueGroep1\ChapooDatabaseDal\bin\Debug\netstandard2.1\ChapooDatabaseDal.dll
+C:\Users\merli\source\repos\ProjectChapueGroep1\ChapooDatabaseDal\bin\Debug\netstandard2.1\ChapooDatabaseDal.pdb
+C:\Users\merli\source\repos\ProjectChapueGroep1\ChapooDatabaseDal\bin\Debug\netstandard2.1\ChapooDatabaseModel.dll
+C:\Users\merli\source\repos\ProjectChapueGroep1\ChapooDatabaseDal\bin\Debug\netstandard2.1\ChapooDatabaseModel.pdb
+C:\Users\merli\source\repos\ProjectChapueGroep1\ChapooDatabaseDal\obj\Debug\netstandard2.1\ChapooDatabaseDal.csprojAssemblyReference.cache
+C:\Users\merli\source\repos\ProjectChapueGroep1\ChapooDatabaseDal\obj\Debug\netstandard2.1\ChapooDatabaseDal.AssemblyInfoInputs.cache
+C:\Users\merli\source\repos\ProjectChapueGroep1\ChapooDatabaseDal\obj\Debug\netstandard2.1\ChapooDatabaseDal.AssemblyInfo.cs
+C:\Users\merli\source\repos\ProjectChapueGroep1\ChapooDatabaseDal\obj\Debug\netstandard2.1\ChapooDatabaseDal.csproj.CoreCompileInputs.cache
+C:\Users\merli\source\repos\ProjectChapueGroep1\ChapooDatabaseDal\obj\Debug\netstandard2.1\ChapooDatabaseDal.csproj.CopyComplete
+C:\Users\merli\source\repos\ProjectChapueGroep1\ChapooDatabaseDal\obj\Debug\netstandard2.1\ChapooDatabaseDal.dll
+C:\Users\merli\source\repos\ProjectChapueGroep1\ChapooDatabaseDal\obj\Debug\netstandard2.1\ChapooDatabaseDal.pdb

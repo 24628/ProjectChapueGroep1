@@ -1,8 +1,8 @@
 {
   "runtimeOptions": {
     "additionalProbingPaths": [
-      "C:\\Users\\sedva\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\sedva\\.nuget\\packages"
+      "C:\\Users\\merli\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\merli\\.nuget\\packages"
     ]
   }
 }
